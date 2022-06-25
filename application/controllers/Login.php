@@ -145,7 +145,7 @@ class Login extends CI_Controller
 
 
 
-                redirect("admin/home/view_team", "refresh");
+                redirect("dcadmin/home/view_team", "refresh");
             } else {
                 echo validation_error();
                 exit;
