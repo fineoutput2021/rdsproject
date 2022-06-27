@@ -224,10 +224,20 @@ li {
     display: block;
     margin-top: -7px;
     padding-bottom: 73px;
+    justify-content: center; 
+}
+
+.sec-title {
+    position: relative;
+    display: block;
+    margin-top: -7px;
+    padding-bottom: 73px;
+    justify-content: center;
 }
 .sec-title .title{
     position: relative;
     display: block;
+    justify-content: center; 
 }
 .sec-title .title span {
     position: relative;
@@ -239,6 +249,7 @@ li {
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
     z-index: 1;
+    justify-content: center; 
 }
 .sec-title .title span:before {
     position: absolute;
@@ -248,6 +259,7 @@ li {
     height: 1px;
     background: #f2f1f9;
     content: "";
+    justify-content: center; 
 }
 .sec-title .title span:after{
     position: absolute;
@@ -256,7 +268,9 @@ li {
     width: 60px;
     height: 1px;
     background: #f36727;
-    content: "";    
+    content: ""; 
+   
+    justify-content: center;   
 }
 .sec-title.clr-white{}
 .sec-title.clr-white .title span{
@@ -2304,6 +2318,14 @@ select:focus {
 	padding: 0px 0px;
 }
 
+.adi{
+    font-size:12px;
+}
+
+.adi2{
+    color:#ed6f36;
+}
+
 
 .single-project-style1{
     position: relative;
@@ -2837,6 +2859,17 @@ select:focus {
     position: relative;
     margin-bottom: 20px;
 }
+
+.raone{
+    font-size:10px;
+}
+
+.robo{
+    font-size:11px;
+    color:red;
+    text-align: right !important;
+    padding:0px 28px;
+}
 .contact-info-form form .input-box input[type=text],
 .contact-info-form form .input-box input[type=email],
 .contact-info-form form .input-box textarea{
@@ -2871,6 +2904,23 @@ select:focus {
     border-color: #f36727;    
 }
 .contact-info-form form .input-box button:hover{}
+
+.contact-info-form1 form .input-box1 textarea{
+    height: 205px;
+    padding: 15px 0px;
+    ;
+    
+}
+
+.contact-info-form1 form .input-box1 button {
+    padding: 7px 20px 7px;
+    border-radius: 4px;
+    
+}
+
+.contact-info-form1 {
+
+}
 
 
 
@@ -4019,7 +4069,7 @@ select:focus {
     background-repeat: no-repeat;
     background-size: cover;
     border-top: 3px solid #241f40;
-    padding: 140px 0 132px;
+    padding: 30px  132px;
     z-index: 1;
 }
 .breadcrumb-area::before {
@@ -4042,11 +4092,11 @@ select:focus {
 }
 .breadcrumb-area .title h1{
     color: #222222;
-    font-size: 50px;
+    font-size: 30px;
     line-height: 60px;
     font-weight: 700;
-    text-transform: capitalize;
-    margin: 0 0 10px;
+    text-transfo0rm: capitalize;
+    margin: 0 0 px;
 }
 .breadcrumb-area .title p{
     color: #f36727;
@@ -8657,6 +8707,24 @@ select:focus {
 .related-product .single-product-item {}
 
 
+/* search member buttons style */
+.buttons
+{
+   background: #f36727;
+   border: none;
+   color: white;
+   padding: 20px 35px;
+   font-size: 20px;
+   border-radius: 5px;
+   cursor: pointer;
+}
+/* table color change */
+.changecolor td 
+{
+  color: #484463;
+  padding: 5px 0px;
+}
+
 
 /*** 
 =============================================
@@ -8673,7 +8741,7 @@ select:focus {
     width: 100%;
 }
 .cart-area .cart-table {
-    min-width: 1024px;
+    
     width: 100%;
 }
 .cart-area .cart-table .cart-header {
