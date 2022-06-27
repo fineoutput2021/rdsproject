@@ -88,6 +88,13 @@
   } 
 
 
+@media (max-width:600px) {
+    .top-bar-style1 {
+        display:none !important;
+    }
+}
+
+
 /*==============================================
    Base Css
 ===============================================*/
@@ -204,6 +211,11 @@ li {
     text-transform: capitalize;
     font-family: 'Rubik', sans-serif;
     transition: all 500ms ease;
+}
+
+.rob {
+    display:contents !important;
+    
 }
 .btn-two span:before {
     position: relative;
@@ -2907,7 +2919,7 @@ select:focus {
 
 .contact-info-form1 form .input-box1 textarea{
     height: 205px;
-    padding: 15px 0px;
+    padding: 15px 20px;
     ;
     
 }
@@ -2915,6 +2927,7 @@ select:focus {
 .contact-info-form1 form .input-box1 button {
     padding: 7px 20px 7px;
     border-radius: 4px;
+    width:100% !important;
     
 }
 
