@@ -18,7 +18,11 @@
           <!-- Info boxes -->
           <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-12">
+              <? if ($this->load->get_var('position')=="Super Admin") {?>
                 <a href="<?=base_url()?>dcadmin/Member/view_member">
+                  <?}else{?>
+                    <a href="javascript:void(0);">
+                    <?}?>
               <div class="info-box">
                 <span class="info-box-icon bg-aqua"><i class="fa fa-users" aria-hidden="true"></i></span>
                 <div class="info-box-content">
@@ -36,7 +40,11 @@
             <div class="clearfix visible-sm-block"></div>
 
             <div class="col-md-3 col-sm-6 col-xs-12">
+                <? if ($this->load->get_var('position')=="Super Admin") {?>
               <a href="<?=base_url()?>dcadmin/Magazine/view_magazine">
+                <?}else{?>
+                  <a href="javascript:void(0);">
+                  <?}?>
               <div class="info-box">
                 <span class="info-box-icon bg-green"><i class="fa fa-book" aria-hidden="true"></i></span>
                 <div class="info-box-content">
@@ -50,6 +58,11 @@
               </div><!-- /.info-box -->
             </div><!-- /.col -->
             <div class="col-md-3 col-sm-6 col-xs-12">
+              <? if ($this->load->get_var('position')=="Super Admin") {?>
+              <a href="<?=base_url()?>dcadmin/News/view_news">
+                <?}else{?>
+                  <a href="javascript:void(0);">
+                  <?}?>
               <div class="info-box">
                 <span class="info-box-icon bg-yellow"><i class="fa fa-newspaper-o" aria-hidden="true"></i>
 </span>

@@ -39,22 +39,17 @@ if(!empty($this->session->flashdata('emessage'))){ ?>
 <div class="table-responsive">
 <table class="table table-hover">
 <input type="hidden" name="member_id" value="<?=$id?>" />
+
+<tr>
+<td> <strong>Title</strong>  <span style="color:red;">*</span></strong> </td>
+<td>
+<input type="text" name="title"  class="form-control" placeholder="" required value="" />
+</td>
+</tr>
 <tr>
 <td> <strong>Amount</strong>  <span style="color:red;">*</span></strong> </td>
 <td>
 <input type="text" name="amount"  class="form-control" placeholder="" required value="" />
-</td>
-</tr>
-<tr>
-<td> <strong>Date</strong>  <span style="color:red;">*</span></strong> </td>
-<td>
-<input type="date" name="date"  class="form-control" placeholder="" required value="" />
-</td>
-</tr>
-<tr>
-<td> <strong>Year</strong>  <span style="color:red;">*</span></strong> </td>
-<td>
-<input type="text" name="year"  class="form-control" placeholder="" required value="" />
 </td>
 </tr>
 <tr>

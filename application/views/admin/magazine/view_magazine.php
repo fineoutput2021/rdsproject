@@ -11,7 +11,7 @@ RDS Magazine
 <section class="content">
 <div class="row">
  <div class="col-lg-12">
-	   <a class="btn btn-info cticket" href="<?php echo base_url() ?>dcadmin/Magazine/add_magazine" role="button" style="margin-bottom:12px;"> Add Magazine</a>
+	   <a class="btn custom_btn" href="<?php echo base_url() ?>dcadmin/Magazine/add_magazine" role="button" style="margin-bottom:12px;"> Add Magazine</a>
                   <div class="panel panel-default">
                       <div class="panel-heading">
                           <h3 class="panel-title"><i class="fa fa-money fa-fw"></i>View Magazine</h3>

@@ -12,7 +12,7 @@ Member
 <section class="content">
 <div class="row">
 <div class="col-lg-12">
-<a class="btn btn-info cticket" href="<?php echo base_url() ?>dcadmin/Member/add_member" role="button" style="margin-bottom:12px;"> Add Member</a>
+<a class="btn custom_btn" href="<?php echo base_url() ?>dcadmin/Member/add_member" role="button" style="margin-bottom:12px;"> Add Member</a>
 <div class="panel panel-default">
 <div class="panel-heading">
 <h3 class="panel-title"><i class="fa fa-money fa-fw"></i>View Member</h3>
@@ -117,7 +117,6 @@ Member
             <div style="display:none" id="cnfbox<?php echo $i ?>">
               <p> Are you sure delete this </p>
               <a href="<?php echo base_url() ?>dcadmin/Member/delete_member/<?php echo base64_encode($data->id); ?>" class="btn btn-danger">Yes</a>
-              <a href="<?php echo base_url() ?>dcadmin/Member/delete_pending_dues/<?php echo base64_encode($data->id); ?>" class="btn btn-danger">Yes</a>
               <a href="javasript:;" class="cans btn btn-default" mydatas="<?php echo $i ?>">No</a>
             </div>
           </td>

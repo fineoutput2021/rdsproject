@@ -5,7 +5,7 @@
     </h1>
     <ol class="breadcrumb">
       <li><a href="<?php echo base_url() ?>dcadmin/home"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-      <li><a href="<?php echo base_url() ?>dcadmin/Posting/view_posting"><i class="fa fa-arrow-left" aria-hidden="true"></i> View Present Posting </a></li>
+      <!-- <li><a href="<?php echo base_url() ?>dcadmin/Posting/view_posting"><i class="fa fa-arrow-left" aria-hidden="true"></i> View Present Posting </a></li> -->
       <li><a href="<?php echo base_url() ?>dcadmin/Member/view_member"><i class="fa fa-arrow-left" aria-hidden="true"></i> View Member </a></li>
     </ol>
   </section>
@@ -39,7 +39,7 @@
               <form action="<?php echo base_url() ?>dcadmin/Posting/add_posting_data/<? echo base64_encode(1); ?>" method="POST" id="slide_frm" enctype="multipart/form-data">
                 <div class="table-responsive">
                   <table class="table table-hover">
-
+<input type="hidden" name="member_id" value="<?=$id?>" />
                     <tr>
                       <td> <strong>Present Posting</strong> <span style="color:red;">*</span></strong> </td>
                       <td>
@@ -58,7 +58,6 @@
                         <input type="date" name="date_to" class="form-control" placeholder="" required value="" />
                       </td>
                     </tr>
-
                     <tr>
                       <td colspan="2">
                         <input type="submit" class="btn btn-success" value="save">
@@ -78,15 +77,7 @@
     </div>
   </section>
 </div>
-<!-- <script>
-function change(x){
-if(x==1){
-$('#change').html('<td><strong>File</strong><span style="color:red;">*</span></strong></td><td><input type="file" name="pdf_link" class="form-control" placeholder="" required value="" /></td>');
-}else{
-$('#change').html('<td><strong>Link</strong><span style="color:red;">*</span></strong></td><td><input type="url" name="pdf_link" class="form-control" placeholder="" required  value="" /></td>');
-}
-}
-</script> -->
+
 
 <script type="text/javascript" src="<?php echo base_url() ?>assets/slider/ajaxupload.3.5.js"></script>
 <link href="<? echo base_url() ?>assets/cowadmin/css/jqvmap.css" rel='stylesheet' type='text/css' />

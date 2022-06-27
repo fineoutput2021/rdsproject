@@ -5,14 +5,14 @@
   </h1>
   <ol class="breadcrumb">
    <li><a href="<?php echo base_url() ?>dcadmin/home"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-    <li><a href="<?php echo base_url() ?>dcadmin/Posting/view_posting"><i class="fa fa-arrow-left" aria-hidden="true"></i> View Present Posting </a></li>
+    <!-- <li><a href="<?php echo base_url() ?>dcadmin/Posting/view_posting"><i class="fa fa-arrow-left" aria-hidden="true"></i> View Present Posting </a></li> -->
     <li><a href="<?php echo base_url() ?>dcadmin/Member/view_member"><i class="fa fa-arrow-left" aria-hidden="true"></i> View Member </a></li>
   </ol>
 </section>
 	<section class="content">
 	<div class="row">
      <div class="col-lg-12">
-			   <a class="btn btn-info cticket" href="<?php echo base_url() ?>dcadmin/Posting/add_posting" role="button" style="margin-bottom:12px;"> Add Present Posting</a>
+			   <a class="btn custom_btn" href="<?php echo base_url() ?>dcadmin/Posting/add_posting/<?=$id?>" role="button" style="margin-bottom:12px;"> Add Present Posting</a>
                       <div class="panel panel-default">
                           <div class="panel-heading">
                               <h3 class="panel-title"><i class="fa fa-money fa-fw"></i>View Present Posting</h3>
@@ -41,10 +41,10 @@
                                   <thead>
                                       <tr>
                                           <th>#</th>
+                                          <th>Member Name</th>
                                           <th>Present posting</th>
                                           <th>Date From</th>
                                           <th>Date To</th>
-                                          <th>Status</th>
                                           <th>Action</th>
                                             </tr>
                                         </thead>
@@ -52,31 +52,29 @@
                                         	<?php $i=1; foreach($posting_data->result() as $data) { ?>
                 <tr>
                     <td><?php echo $i ?> </td>
+                    <td><?            $this->db->select('*');
+                    $this->db->from('tbl_member');
+                    $this->db->where('id',$data->member_id);
+                    $mem_data = $this->db->get()->row();
+                    if(!empty($mem_data)){echo $mem_data->name;}
+                    ?></td>
                     <td><?php echo $data->name ?></td>
                     <td><?php echo $data->date_from ?></td>
                     <td><?php echo $data->date_to ?></td>
 
-                      <td><?php if($data->is_active==1){ ?>
-<p class="label bg-green" >Active</p>
 
-<?php } else { ?>
-<p class="label bg-yellow" >Inactive</p>
-
-
-<?php		}   ?>
-</td>
             <td>
 <div class="btn-group" id="btns<?php echo $i ?>">
 <div class="btn-group">
 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> Action <span class="caret"></span></button>
 <ul class="dropdown-menu" role="menu">
 
-<?php if($data->is_active==1){ ?>
+<!-- <?php if($data->is_active==1){ ?>
 <li><a href="<?php echo base_url() ?>dcadmin/Posting/updatepostingStatus/<?php echo base64_encode($data->id) ?>/inactive">Inactive</a></li>
 <?php } else { ?>
 <li><a href="<?php echo base_url() ?>dcadmin/Posting/updatepostingStatus/<?php echo base64_encode($data->id) ?>/active">Active</a></li>
-<?php		}   ?>
-<li><a href="<?php echo base_url() ?>dcadmin/Posting/update_posting/<?php echo base64_encode($data->id) ?>">Edit</a></li>
+<?php		}   ?> -->
+<!-- <li><a href="<?php echo base_url() ?>dcadmin/Posting/update_posting/<?php echo base64_encode($data->id) ?>">Edit</a></li> -->
 <li><a href="javascript:;" class="dCnf" mydata="<?php echo $i ?>">Delete</a></li>
 </ul>
 </div>

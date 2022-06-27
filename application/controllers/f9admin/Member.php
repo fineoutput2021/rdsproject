@@ -355,17 +355,17 @@ public function view_pending_dues($idd){
               // print_r($this->input->post());
               // exit;
               $this->form_validation->set_rules('member_id', 'member_id', 'required|xss_clean');
+              $this->form_validation->set_rules('title', 'title', 'required|xss_clean');
               $this->form_validation->set_rules('amount', 'amount', 'required|xss_clean');
-              $this->form_validation->set_rules('date', 'date', 'required|xss_clean');
-              $this->form_validation->set_rules('year', 'year', 'required|xss_clean');
+              // $this->form_validation->set_rules('year', 'year', 'required|xss_clean');
 
               if($this->form_validation->run()== TRUE)
               {
                 $member_id=$this->input->post('member_id');
                 $member_id_decode = base64_decode($member_id);
+                $title=$this->input->post('title');
                 $amount=$this->input->post('amount');
-                $date=$this->input->post('date');
-                $year=$this->input->post('year');
+                // $year=$this->input->post('year');
 
                   $ip = $this->input->ip_address();
           date_default_timezone_set("Asia/Calcutta");
@@ -377,9 +377,9 @@ public function view_pending_dues($idd){
           if($typ==1){
 
           $data_insert = array('member_id'=>$member_id_decode,
+                    'title'=>$title,
                     'amount'=>$amount,
-                    'date'=>$date,
-                    'year'=>$year,
+                    // 'year'=>$year,
                     'ip' =>$ip,
                     'added_by' =>$addedby,
                     'is_active' =>1,
@@ -392,6 +392,12 @@ public function view_pending_dues($idd){
 
 
           $last_id=$this->base_model->insert_table("tbl_pending_dues",$data_insert,1) ;
+          if($last_id!=0){
+
+          $this->session->set_flashdata('smessage','Data inserted successfully');
+          redirect("dcadmin/Member/view_pending_dues/".$member_id,"refresh");
+
+                  }
 
           }
           if($typ==2){
@@ -600,17 +606,17 @@ public function view_completed_dues($idd){
               // print_r($this->input->post());
               // exit;
               $this->form_validation->set_rules('member_id', 'member_id', 'required|xss_clean');
+                $this->form_validation->set_rules('title', 'title', 'required|xss_clean');
               $this->form_validation->set_rules('amount', 'amount', 'required|xss_clean');
-              $this->form_validation->set_rules('date', 'date', 'required|xss_clean');
-              $this->form_validation->set_rules('year', 'year', 'required|xss_clean');
+              // $this->form_validation->set_rules('year', 'year', 'required|xss_clean');
 
               if($this->form_validation->run()== TRUE)
               {
                 $member_id=$this->input->post('member_id');
                 $member_id_decode = base64_decode($member_id);
+                $title=$this->input->post('title');
                 $amount=$this->input->post('amount');
-                $date=$this->input->post('date');
-                $year=$this->input->post('year');
+                // $year=$this->input->post('year');
 
                   $ip = $this->input->ip_address();
           date_default_timezone_set("Asia/Calcutta");
@@ -622,9 +628,9 @@ public function view_completed_dues($idd){
           if($typ==1){
 
           $data_insert = array('member_id'=>$member_id_decode,
+                    'title'=>$title,
                     'amount'=>$amount,
-                    'date'=>$date,
-                    'year'=>$year,
+                    // 'year'=>$year,
                     'ip' =>$ip,
                     'added_by' =>$addedby,
                     'is_active' =>0,
@@ -637,6 +643,12 @@ public function view_completed_dues($idd){
 
 
           $last_id=$this->base_model->insert_table("tbl_pending_dues",$data_insert,1) ;
+          if($last_id!=0){
+
+          $this->session->set_flashdata('smessage','Data inserted successfully');
+          redirect("dcadmin/Member/view_completed_dues/".$member_id,"refresh");
+
+                  }
 
           }
           if($typ==2){
