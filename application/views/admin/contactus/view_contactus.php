@@ -14,7 +14,7 @@
                  <!-- <a class="btn custom_btn" href="<?php echo base_url() ?>dcadmin/Contactus/add_users" role="button" style="margin-bottom:12px;"> Add Users</a> -->
                               <div class="panel panel-default">
                                   <div class="panel-heading">
-                                      <h3 class="panel-title"><i class="fa fa-money fa-fw"></i>View Users</h3>
+                                      <h3 class="panel-title"><i class="fa fa-money fa-fw"></i>View Contact Us</h3>
                                   </div>
                                      <div class="panel panel-default">
 

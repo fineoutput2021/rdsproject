@@ -41,9 +41,9 @@ Member Completed dues
                     <tr>
                         <th>#</th>
                         <th>Member Name </th>
+                        <th>Title</th>
                         <th>Amount</th>
-                        <th>Date</th>
-                        <th>Year</th>
+                        <!-- <th>Year</th> -->
                         <!-- <th>Action</th> -->
                           </tr>
                       </thead>
@@ -57,9 +57,9 @@ Member Completed dues
   $mem_data = $this->db->get()->row();
   if(!empty($mem_data)){echo $mem_data->name;}
   ?></td>
+  <td><?php echo $data->title ?></td>
   <td><?php echo $data->amount ?></td>
-  <td><?php echo $data->date ?></td>
-  <td><?php echo $data->year ?></td>
+
 
 <!-- <td>
 <div class="btn-group" id="btns<?php echo $i ?>">

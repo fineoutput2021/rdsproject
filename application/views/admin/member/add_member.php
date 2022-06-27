@@ -102,7 +102,7 @@ Add New Member
           </td>
         </tr>
         <tr>
-          <td> <strong>Executive Council</strong> <span style="color:red;">*</span></strong> </td>
+          <td> <strong>Member</strong> <span style="color:red;">*</span></strong> </td>
           <td>
             <input type="radio" id="Executive Council" name="exe" value="1" onclick="change(1)">
             <label for="executive council">Executive Council</label>

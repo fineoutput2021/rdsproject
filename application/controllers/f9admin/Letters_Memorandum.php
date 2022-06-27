@@ -216,7 +216,7 @@ $this->session->set_flashdata('emessage','Please insert some data, No data avail
                       $zapak=$this->db->delete('tbl_letters_memorandum', array('id' => $id));
                       if ($zapak!=0) {
                           $this->session->set_flashdata('smessage', 'Letters&Memorandum deleted successfully');
-                          redirect("dcadmin/letters_memorandum/view_letters_memorandum", "refresh");
+                          redirect("dcadmin/Letters_Memorandum/view_letters_memorandum", "refresh");
                       } else {
                           echo "Error";
                           exit;
@@ -253,7 +253,7 @@ $this->session->set_flashdata('emessage','Please insert some data, No data avail
 
                       if ($zapak!=0) {
                           $this->session->set_flashdata('smessage', 'Status updated successfully');
-                          redirect("dcadmin/letters_memorandum/view_letters_memorandum", "refresh");
+                          redirect("dcadmin/Letters_Memorandum/view_letters_memorandum", "refresh");
                       } else {
                           echo "Error";
                           exit;
@@ -270,7 +270,7 @@ $this->session->set_flashdata('emessage','Please insert some data, No data avail
 
                       if ($zapak!=0) {
                           $this->session->set_flashdata('smessage', 'Status updated successfully');
-                          redirect("dcadmin/letters_memorandum/view_letters_memorandum", "refresh");
+                          redirect("dcadmin/Letters_Memorandum/view_letters_memorandum", "refresh");
                       } else {
                           $data['e']="Error Occured";
                           // exit;

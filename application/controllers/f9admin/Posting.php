@@ -15,14 +15,15 @@
                      $this->load->library('upload');
                  }
 
-                 public function view_posting()
+                 public function view_posting($idd)
                  {
                      if (!empty($this->session->userdata('admin_data'))) {
                          $data['user_name']=$this->load->get_var('user_name');
-
-                         $this->db->select('*');
+                         $id=base64_decode($idd);
+                         $data['id']=$idd;
+                       $this->db->select('*');
                          $this->db->from('tbl_posting');
-                         // $this->db->order_by('id','desc');
+                     $this->db->where('member_id',$id);
                          $data['posting_data']= $this->db->get();
 
                          $this->load->view('admin/common/header_view', $data);
@@ -32,18 +33,15 @@
                          redirect("login/admin_login", "refresh");
                      }
                  }
-                 public function add_posting(){
+                 public function add_posting($idd){
 
                                   if(!empty($this->session->userdata('admin_data'))){
 
 
                                     $data['user_name']=$this->load->get_var('user_name');
 
-                                    // echo SITE_NAME;
-                                    // echo $this->session->userdata('image');
-                                    // echo $this->session->userdata('position');
-                                    // exit;
-
+                                     $id=base64_decode($idd);
+                                    $data['id']=$idd;
 
                                     $this->load->view('admin/common/header_view',$data);
                                     $this->load->view('admin/posting/add_posting');
@@ -70,12 +68,15 @@
                                 {
                                   // print_r($this->input->post());
                                   // exit;
+                                  $this->form_validation->set_rules('member_id', 'member_id', 'required|xss_clean|trim');
                                   $this->form_validation->set_rules('name', 'name', 'required|xss_clean|trim');
                                   $this->form_validation->set_rules('date_from', 'date_from', 'required|xss_clean|trim');
                                   $this->form_validation->set_rules('date_to', 'date_to', 'required|xss_clean|trim');
 
                                   if($this->form_validation->run()== TRUE)
                                   {
+                                    $member_id=$this->input->post('member_id');
+                                    $member_id_decode = base64_decode($member_id);
                                     $name=$this->input->post('name');
                                     $date_from=$this->input->post('date_from');
                                     $date_to=$this->input->post('date_to');
@@ -89,7 +90,8 @@
                               $typ=base64_decode($t);
                               if($typ==1){
 
-                              $data_insert = array('name'=>$name,
+                              $data_insert = array('member_id'=>$member_id_decode,
+                                'name'=>$name,
                                         'date_from'=>$date_from,
                                         'date_to'=>$date_to,
                                         'ip' =>$ip,
@@ -106,7 +108,7 @@
                               $last_id=$this->base_model->insert_table("tbl_posting",$data_insert,1) ;
                               if($last_id!=0){
                               $this->session->set_flashdata('smessage','Data inserted successfully');
-                              redirect("dcadmin/Posting/view_posting","refresh");
+                              redirect("dcadmin/Posting/view_posting/".$member_id,"refresh");
 
                                       }
 
@@ -115,23 +117,11 @@
 
                             $idw=base64_decode($iw);
 
-                            // $this->db->select('*');
-                            //     $this->db->from('tbl_minor_category');
-                            //    $this->db->where('name',$name);
-                            //     $damm= $this->db->get();
-                            //    foreach($damm->result() as $da) {
-                            //      $uid=$da->id;
-                            // if($uid==$idw)
-                            // {
-                            //
-                            //  }
-                            // else{
-                            //    echo "Multiple Entry of Same Name";
-                            //       exit;
-                            //  }
-                            //     }
 
-                              $data_insert = array('name'=>$name,
+
+                              $data_insert = array(
+                                'member_id'=>$member_id_decode,
+                                'name'=>$name,
                                         'date_from'=>$date_from,
                                         'date_to'=>$date_to,
                                         );
@@ -167,31 +157,31 @@
                             redirect("login/admin_login","refresh");
                               }
                               }
-                              public function update_posting($idd)
-                              {
-                                  if (!empty($this->session->userdata('admin_data'))) {
-                                      $data['image_name']=$this->load->get_var('image_name');
-
-                                      // echo SITE_NAME;
-                                      // echo $this->session->userdata('image');
-                                      // echo $this->session->userdata('position');
-                                      // exit;
-                                      $id=base64_decode($idd);
-                                      $data['id']=$idd;
-
-                                      $this->db->select('*');
-                                      $this->db->from('tbl_posting');
-                                      $this->db->where('id', $id);
-                                      $data['posting']= $this->db->get()->row();
-
-
-                                      $this->load->view('admin/common/header_view', $data);
-                                      $this->load->view('admin/posting/update_posting');
-                                      $this->load->view('admin/common/footer_view');
-                                  } else {
-                                      redirect("login/admin_login", "refresh");
-                                  }
-                              }
+                              // public function update_posting($idd)
+                              // {
+                              //     if (!empty($this->session->userdata('admin_data'))) {
+                              //         $data['image_name']=$this->load->get_var('image_name');
+                              //
+                              //         // echo SITE_NAME;
+                              //         // echo $this->session->userdata('image');
+                              //         // echo $this->session->userdata('position');
+                              //         // exit;
+                              //         $id=base64_decode($idd);
+                              //         $data['id']=$idd;
+                              //
+                              //         $this->db->select('*');
+                              //         $this->db->from('tbl_posting');
+                              //         $this->db->where('memberid', $id);
+                              //         $data['posting']= $this->db->get()->row();
+                              //
+                              //
+                              //         $this->load->view('admin/common/header_view', $data);
+                              //         $this->load->view('admin/posting/update_posting');
+                              //         $this->load->view('admin/common/footer_view');
+                              //     } else {
+                              //         redirect("login/admin_login", "refresh");
+                              //     }
+                              // }
 
                               public function delete_posting($idd)
                               {
@@ -202,14 +192,14 @@
 
                                       if ($this->load->get_var('position')=="Super Admin") {
                                           $this->db->from('tbl_posting');
-                                          $this->db->where('id', $id);
-                                          $dsa= $this->db->get();
-                                          $da=$dsa->row();
+                                        $this->db->where('member_id', $id);
+
+                                          $data['posting']= $this->db->get();
 
                                           $zapak=$this->db->delete('tbl_posting', array('id' => $id));
                                           if ($zapak!=0) {
                                               $this->session->set_flashdata('smessage', 'Present Posting deleted successfully');
-                                              redirect("dcadmin/Posting/view_posting", "refresh");
+                                              redirect($_SERVER['HTTP_REFERER']);
                                           } else {
                                               echo "Error";
                                               exit;
@@ -224,54 +214,54 @@
                                   }
                               }
 
-                              public function updatepostingStatus($idd, $t)
-                              {
-                                  if (!empty($this->session->userdata('admin_data'))) {
-                                      $data['image_name']=$this->load->get_var('image_name');
-
-                                      // echo SITE_NAME;
-                                      // echo $this->session->userdata('image');
-                                      // echo $this->session->userdata('position');
-                                      // exit;
-                                      $id=base64_decode($idd);
-
-                                      if ($t=="active") {
-                                          $data_update = array(
-                                  'is_active'=>1
-
-                                  );
-
-                                          $this->db->where('id', $id);
-                                          $zapak=$this->db->update('tbl_posting', $data_update);
-
-                                          if ($zapak!=0) {
-                                              $this->session->set_flashdata('smessage', 'Status updated successfully');
-                                              redirect("dcadmin/Posting/view_posting", "refresh");
-                                          } else {
-                                              echo "Error";
-                                              exit;
-                                          }
-                                      }
-                                      if ($t=="inactive") {
-                                          $data_update = array(
-                                   'is_active'=>0
-
-                                   );
-
-                                          $this->db->where('id', $id);
-                                          $zapak=$this->db->update('tbl_posting', $data_update);
-
-                                          if ($zapak!=0) {
-                                              $this->session->set_flashdata('smessage', 'Status updated successfully');
-                                              redirect("dcadmin/Posting/view_posting", "refresh");
-                                          } else {
-                                              $data['e']="Error Occured";
-                                              // exit;
-                                              $this->load->view('errors/error500admin', $data);
-                                          }
-                                      }
-                                  } else {
-                                      $this->load->view('admin/login/index');
-                                  }
-                              }
+                              // public function updatepostingStatus($idd, $t)
+                              // {
+                              //     if (!empty($this->session->userdata('admin_data'))) {
+                              //         $data['image_name']=$this->load->get_var('image_name');
+                              //
+                              //         // echo SITE_NAME;
+                              //         // echo $this->session->userdata('image');
+                              //         // echo $this->session->userdata('position');
+                              //         // exit;
+                              //         $id=base64_decode($idd);
+                              //
+                              //         if ($t=="active") {
+                              //             $data_update = array(
+                              //     'is_active'=>1
+                              //
+                              //     );
+                              //
+                              //             $this->db->where('id', $id);
+                              //             $zapak=$this->db->update('tbl_posting', $data_update);
+                              //
+                              //             if ($zapak!=0) {
+                              //                 $this->session->set_flashdata('smessage', 'Status updated successfully');
+                              //                 redirect("dcadmin/Posting/view_posting", "refresh");
+                              //             } else {
+                              //                 echo "Error";
+                              //                 exit;
+                              //             }
+                              //         }
+                              //         if ($t=="inactive") {
+                              //             $data_update = array(
+                              //      'is_active'=>0
+                              //
+                              //      );
+                              //
+                              //             $this->db->where('id', $id);
+                              //             $zapak=$this->db->update('tbl_posting', $data_update);
+                              //
+                              //             if ($zapak!=0) {
+                              //                 $this->session->set_flashdata('smessage', 'Status updated successfully');
+                              //                 redirect("dcadmin/Posting/view_posting", "refresh");
+                              //             } else {
+                              //                 $data['e']="Error Occured";
+                              //                 // exit;
+                              //                 $this->load->view('errors/error500admin', $data);
+                              //             }
+                              //         }
+                              //     } else {
+                              //         $this->load->view('admin/login/index');
+                              //     }
+                              // }
 }

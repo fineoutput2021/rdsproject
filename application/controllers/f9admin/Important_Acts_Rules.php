@@ -31,7 +31,7 @@ if (!empty($this->session->userdata('admin_data'))) {
  $data['important_acts_rules_data']= $this->db->get();
 
  $this->load->view('admin/common/header_view', $data);
- $this->load->view('admin/Important_Acts_Rules/view_important_acts_rules');
+ $this->load->view('admin/important_acts_rules/view_important_acts_rules');
  $this->load->view('admin/common/footer_view');
 } else {
  redirect("login/admin_login", "refresh");
@@ -44,7 +44,7 @@ if (!empty($this->session->userdata('admin_data'))) {
  $data['user_name']=$this->load->get_var('user_name');
 
  $this->load->view('admin/common/header_view', $data);
- $this->load->view('admin/Important_Acts_Rules/add_important_acts_rules');
+ $this->load->view('admin/important_acts_rules/add_important_acts_rules');
  $this->load->view('admin/common/footer_view');
 } else {
  redirect("login/admin_login", "refresh");
