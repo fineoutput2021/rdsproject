@@ -12,7 +12,7 @@
 	<section class="content">
 	<div class="row">
      <div class="col-lg-12">
-			   <a class="btn btn-info cticket" href="<?php echo base_url() ?>dcadmin/Posting/add_posting/<?=$id?>" role="button" style="margin-bottom:12px;"> Add Present Posting</a>
+			   <a class="btn custom_btn" href="<?php echo base_url() ?>dcadmin/Posting/add_posting/<?=$id?>" role="button" style="margin-bottom:12px;"> Add Present Posting</a>
                       <div class="panel panel-default">
                           <div class="panel-heading">
                               <h3 class="panel-title"><i class="fa fa-money fa-fw"></i>View Present Posting</h3>
