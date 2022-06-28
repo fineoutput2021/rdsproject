@@ -213,9 +213,11 @@ li {
     transition: all 500ms ease;
 }
 
-.rob {
-    display:contents !important;
-    
+
+@media (max-width:991px) {
+.logof{
+  display:none !important;  
+}
 }
 .btn-two span:before {
     position: relative;
