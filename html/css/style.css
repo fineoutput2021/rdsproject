@@ -219,6 +219,29 @@ li {
   display:none !important;  
 }
 }
+
+@media (max-width:991px) {
+    .breadcrumb-area {
+    
+        padding: 20px  132px !important;
+    }
+    }
+
+.breadcrumb-area {
+    
+    padding: 30px  132px;
+}
+
+@media (max-width:991px) {
+    .navigation{
+        margin-left:0px !important;
+    }
+    }
+    .align tr td
+    {
+        vertical-align: top;
+    }
+
 .btn-two span:before {
     position: relative;
     top: 2px;
