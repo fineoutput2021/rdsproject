@@ -5094,7 +5094,7 @@ select:focus {
     background: rgba(60, 55, 90, 0.85);
     content: "";
     opacity: 0;
-    transform: scale(0)
+    transform: scale(0);
     z-index: 1;
     transition: all 900ms ease;
 }
