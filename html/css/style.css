@@ -184,7 +184,21 @@ li {
     font-size: 18px;
     line-height: 18px;
     font-weight: 400;
-    padding: 15px 29px 16px;
+    padding: 15px 18px 16px;
+    text-transform: capitalize;
+    border-radius: 5px;
+    font-family: 'Rubik', sans-serif;
+    transition: all 500ms ease;
+    border-radius: 3px;
+}
+.btn-two {
+    position: relative;
+    display: inline-block;
+    color:white !important;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 400;
+    padding: 15px 18px 25px;
     text-transform: capitalize;
     border-radius: 5px;
     font-family: 'Rubik', sans-serif;
@@ -204,7 +218,7 @@ li {
     color: #f5f5f5;
     background: #da4f0f;
 }
-.btn-two{
+.btn-other{
     color: #f36727;
     font-size: 18px;
     font-weight: 400;
@@ -242,7 +256,7 @@ li {
         vertical-align: top;
     }
 
-.btn-two span:before {
+.btn-other span:before {
     position: relative;
     top: 2px;
     font-weight: 400;
@@ -251,7 +265,7 @@ li {
     display: inline-block;
     padding-left: 10px;
 }
-.btn-two:hover{
+.btn-other:hover{
     color: #d14302;
 }
 
@@ -1401,7 +1415,7 @@ select:focus {
     display: block;
     background: #39345a;
     padding-left: 30px;
-    padding-right: 30px;
+    padding-right: 13px;
 }
 .main-menu {
     position: relative;
@@ -2341,7 +2355,7 @@ select:focus {
     position: relative;
     display: block;
     background: #1a172c;
-    padding: 100px 0 100px;
+    padding: 100px 0 70px;
 }
 .latest-project{}
 .latest-project .owl-carousel{
@@ -2361,6 +2375,11 @@ select:focus {
 
 .adi2{
     color:#ed6f36;
+}
+
+/* nes button */
+.bts {
+    border-radius: 3px;
 }
 
 
@@ -2952,7 +2971,7 @@ select:focus {
 .contact-info-form1 form .input-box1 button {
     padding: 7px 20px 7px;
     border-radius: 4px;
-    width:100% !important;
+   
     
 }
 
@@ -8761,7 +8780,37 @@ select:focus {
 {
   color: #484463;
   padding: 5px 0px;
+  
 }
+.changecolor th {
+    color: #484463;
+}
+
+@media (min-width:991px){
+    .photo{
+        display: none;
+    }
+}
+
+@media (max-width:991px){
+    .photo1{
+        display: none;
+    }
+}
+
+@media (min-width:991px){
+    .mobi1{
+        display: none;
+    }
+}
+
+
+@media (max-width:991px){
+    .btn5{
+        display: none;
+    }
+}
+
 
 
 /*** 
@@ -9806,6 +9855,8 @@ select:focus {
     cursor: pointer;
     display: block;
 }
+
+
 
 .how-can-help-box {
     position: relative;
