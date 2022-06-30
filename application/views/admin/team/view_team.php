@@ -121,7 +121,7 @@
 														<li><a href="<?php echo base_url() ?>dcadmin/system/updateteamStatus/<?php echo base64_encode($data->id) ?>/active">Active</a></li>
 														<?php		}   ?>
 
-														<li><a href="javascript:;" class="dCnf" mydata="<?php echo $i ?>">Delete User</a></li>
+														<li><a href="javascript:;" class="dCnf" mydata="<?php echo $i ?>">Delete Team</a></li>
 													  </ul>
 													</div>
 												</div>
