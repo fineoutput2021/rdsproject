@@ -343,7 +343,7 @@
         <!-- /.sidebar -->
       </aside>
       <script src="<?php echo base_url() ?>assets/admin/plugins/jQuery/jQuery-2.1.3.min.js"></script>
-          <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.min.js" type="text/javascript"></script>
+          <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js" type="text/javascript"></script>
           <script type="text/javascript" >
       	var base_url="<?php echo base_url() ?>";
       	</script>
