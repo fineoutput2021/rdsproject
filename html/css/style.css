@@ -3012,7 +3012,16 @@ select:focus {
     width: auto;
 }
 
-
+.paybutton
+{
+    background: #f36727;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;  
+}
 
 /*** 
 =============================================
@@ -8770,7 +8779,7 @@ select:focus {
    background: #f36727;
    border: none;
    color: white;
-   padding: 20px 35px;
+   padding: 6px 35px;
    font-size: 20px;
    border-radius: 5px;
    cursor: pointer;
@@ -9851,12 +9860,18 @@ select:focus {
 }
 .contact-form form button {
     width: 100%;
-    padding: 21px 0 21px;
+    padding: 17px 0 21px;
     cursor: pointer;
     display: block;
 }
 
+#html5-elem-box {
+    top:60px;
+}
 
+#html5-close {
+    top:60px !important;
+}
 
 .how-can-help-box {
     position: relative;

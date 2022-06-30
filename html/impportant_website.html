@@ -34,8 +34,8 @@
 
  
 <!--Start header style1 area-->
-<!--Start header style1 area-->
-<header class="header-style1-area logof">
+  <!--Start header style1 area-->
+  <header class="header-style1-area logof">
     <div class="container">
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12">
@@ -148,7 +148,15 @@
                         </div>
 
                     </div>
+                    <div class="quote-button-box btn d-none">
+                        <a class="btn-two" href="#myModal" data-toggle="modal"
+                            data-target="#myModal">&nbsp;<i class="fa fa-user"
+                                aria-hidden="true" style="font-size:30px;"></i></a>
+                    </div>
+                    
+                    
                 </div>
+                
             </div>
         </div>
 </section>
@@ -171,14 +179,19 @@
                     <form id="contact-info-form" name="contact_info_form" class="default-form" action="#"
                         method="post">
                         <div class="input-box1 text-center mt-5">
-                            <input type="text" name="form_name" value="" placeholder="Enter Number" required
+                            <input type="text" name="form_name" value="" placeholder="Enter Email" required
+                                class="form-control">
+                        </div>
+                        <div class="input-box1 text-center mt-5">
+                            <input type="text" name="form_name" value="" placeholder="Enter Password" required
                                 class="form-control">
                         </div>
                         <div class="input-box1 text-center mt-3 mb-5">
                             <button class="btn-one" type="submit">Log in</button>
                         </div>
-                         <div class="text-center"><span class="mt-3"> New Here? <a href="#" data-target="#myModal1" data-toggle="modal" data-dismiss="modal">Signup</a></span>
+                         <div class="text-center"><span class="mt-3"> New Here? <a href="#" data-target="#myModal1" data-toggle="modal" data-dismiss="modal">Forgot Password?</a></span>
                          </div>
+                       
                     </form>
                 </div>
 
@@ -196,7 +209,7 @@
         <!-- Modal content-->
         <div class="modal-content" style="margin-top:8rem">
             <div class="modal-header">
-                <h3 class="">Signup</h3>
+                <h3 class="">Forgot Your Password</h3>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body ">
@@ -208,12 +221,8 @@
                             <input type="text" name="form_name" value="" placeholder="Enter Name" required
                                 class="form-control">
                         </div>
-                        <div class="input-box1 text-center mt-5">
-                            <input type="text" name="form_name" value="" placeholder="Enter Number" required
-                                class="form-control">
-                        </div>
                         <div class="input-box1 text-center mt-3 mb-5">
-                            <button class="btn-one" type="submit">Sign Up</button>
+                            <button class="btn-one" type="submit">Submit</button>
                         </div>
                          
                     </form>
@@ -225,8 +234,6 @@
 
     </div>
 </div>
-
-  
 
 <!--Start breadcrumb area-->     
 <section class="breadcrumb-area" style="background-image: url(images/slides/photo4.jpg );">
@@ -313,8 +320,8 @@
 
 <!-- Detail Area End -->
 
-<!--Start footer area-->  
-<footer class="footer-area">
+ <!--Start footer area-->
+ <footer class="footer-area">
     <div class="container">
         <div class="row">
             <!--Start single footer widget-->
@@ -325,17 +332,18 @@
                     </div>
                     <div class="company-info-text">
                         <div class="text-box">
-                            
+
                         </div>
-                     <!--    <div class="call-officers">
-                            <div class="icon">
-                                <span class="icon-phone-call"></span>       
-                            </div> 
+                        <div class="newsletter-box">
                             <div class="text">
-                                <span>Talk to Our Officers</span>
-                                <h3 class="clr1">+1 001-765-4321</h3>
-                            </div>  
-                        </div>  -->     
+                                <p>2, Institutional Area
+                                    Near Danik Bhaskar, JLN Marg, Jaipur</p>
+                            </div>
+                            <p>Phone: +91-141-2703692 </p>
+                            <p>Email: info@rdsassociation.com
+                                Web: http://rdsassociation.com</p>
+                          
+                        </div>
                     </div>
                 </div>
             </div>
@@ -344,42 +352,41 @@
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class="single-footer-widget">
                     <div class="title">
-                        <h3>Quick Links</h3>
+                        <h3>Other Links</h3>
                     </div>
                     <ul class="useful-links">
                         <li><a href="index.html">HOME</a></li>
-                        <li><a href="exicutive.html">EXECUTIVE COUNCIL</a></li>
-                        <li><a href="civil.html">MEMBERS</a></li>
-                        <li><a href="letters_and_memoradum.html">QUICK LINKS</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a href="civil.html">EXECUTIVE COUNCIL</a></li>
+                       
+                         
+            
                         <li><a href="magzine.html">RDS MAGZINE</a></li>
                         <li><a href="gallery.html">GALLERY</a></li>
-                        
+                        <li><a href="myprofile.html">MY PROFILE</a></li>
+
                     </ul>
                 </div>
-                      
-                
+
+
             </div>
             <!--End single footer widget-->
             <!--Start single footer widget-->
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class="single-footer-widget pdtop50">
                     <div class="title">
-                        <h3>Locations</h3>
+                        <h3> Quick Links</h3>
+                    
                     </div>
-                    <div class="newsletter-box">
-                        <div class="text">
-                            <p>2, Institutional Area
-                                Near Danik Bhaskar, JLN Marg, Jaipur</p>
-                        </div>
-                        <form class="newsletter-form" action="#">
-                            <input type="email" name="email" placeholder="Your Email">
-                            <button type="submit"><i class="fa fa-check" aria-hidden="true"></i></button>
-                        </form> 
-                    </div>
+                    <ul class="useful-links">
+                        <li><a href="letters_and_memoradum.html">Letters & Memorandum</a></li>
+                            <li><a href="important.html">Important Acts & Rules</a></li>
+                            <li><a href="impportant_website.html">Important Websites</a></li>
+                      </ul>
+
+                  
                     <div class="footer-social-links">
-                        <p>Phone: +91-141-2703692                        </p>
-                        <p>Email: info@rasassociation.com
-                            Web: http://rasassociation.com</p>
+                       
                         <ul class="sociallinks-style-two fix">
                             <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -392,7 +399,7 @@
             <!--End single footer widget-->
         </div>
     </div>
-</footer>   
+</footer>
 <!--End footer area-->
 
 <!--Start footer bottom area-->
@@ -404,12 +411,15 @@
                     <div class="copyright-text float-left">
                         <p>© 2019 All Rights Reserved</p>
                     </div>
-                </div>   
-            </div> 
+                </div>
+            </div>
         </div>
-    </div>    
+    </div>
 </section>
-<!--End footer bottom area-->   
+<!--End footer bottom area-->
+
+</div>
+
 
 </div>  
 

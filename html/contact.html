@@ -36,8 +36,8 @@
 
  
 <!--Start header style1 area-->
-<!--Start header style1 area-->
-<header class="header-style1-area logof">
+  <!--Start header style1 area-->
+  <header class="header-style1-area logof">
     <div class="container">
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12">
@@ -150,7 +150,15 @@
                         </div>
 
                     </div>
+                    <div class="quote-button-box btn d-none">
+                        <a class="btn-two" href="#myModal" data-toggle="modal"
+                            data-target="#myModal">&nbsp;<i class="fa fa-user"
+                                aria-hidden="true" style="font-size:30px;"></i></a>
+                    </div>
+                    
+                    
                 </div>
+                
             </div>
         </div>
 </section>
@@ -173,14 +181,19 @@
                     <form id="contact-info-form" name="contact_info_form" class="default-form" action="#"
                         method="post">
                         <div class="input-box1 text-center mt-5">
-                            <input type="text" name="form_name" value="" placeholder="Enter Number" required
+                            <input type="text" name="form_name" value="" placeholder="Enter Email" required
+                                class="form-control">
+                        </div>
+                        <div class="input-box1 text-center mt-5">
+                            <input type="text" name="form_name" value="" placeholder="Enter Password" required
                                 class="form-control">
                         </div>
                         <div class="input-box1 text-center mt-3 mb-5">
                             <button class="btn-one" type="submit">Log in</button>
                         </div>
-                         <div class="text-center"><span class="mt-3"> New Here? <a href="#" data-target="#myModal1" data-toggle="modal" data-dismiss="modal">Signup</a></span>
+                         <div class="text-center"><span class="mt-3"> New Here? <a href="#" data-target="#myModal1" data-toggle="modal" data-dismiss="modal">Forgot Password?</a></span>
                          </div>
+                       
                     </form>
                 </div>
 
@@ -198,7 +211,7 @@
         <!-- Modal content-->
         <div class="modal-content" style="margin-top:8rem">
             <div class="modal-header">
-                <h3 class="">Signup</h3>
+                <h3 class="">Forgot Your Password</h3>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body ">
@@ -210,12 +223,8 @@
                             <input type="text" name="form_name" value="" placeholder="Enter Name" required
                                 class="form-control">
                         </div>
-                        <div class="input-box1 text-center mt-5">
-                            <input type="text" name="form_name" value="" placeholder="Enter Number" required
-                                class="form-control">
-                        </div>
                         <div class="input-box1 text-center mt-3 mb-5">
-                            <button class="btn-one" type="submit">Sign Up</button>
+                            <button class="btn-one" type="submit">Submit</button>
                         </div>
                          
                     </form>
@@ -227,6 +236,7 @@
 
     </div>
 </div>
+
 
                    
 <!--End mainmenu area-->  
@@ -345,266 +355,9 @@
             </div>
             </section>
 
-<!--Start contact form area-->
-<section class="contact-info-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
-                <div class="contact-form">
-                    <form id="contact-form" name="contact_form" class="default-form" action="inc/sendmail.php" method="post">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="input-box">   
-                                    <input type="text" name="form_name" value="" placeholder="First Name" required="">
-                                    <div class="icon">
-                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                    </div>
-                                </div>    
-                            </div>
-                            <div class="col-md-6">
-                                <div class="input-box">   
-                                    <input type="text" name="form_last_name" value="" placeholder="Last Name" required="">
-                                    <div class="icon">
-                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                    </div>
-                                </div>    
-                            </div>     
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="input-box"> 
-                                    <input type="email" name="form_email" value="" placeholder="Email Address" required="">
-                                    <div class="icon">
-                                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    </div>
-                                </div>    
-                            </div>
-                            <div class="col-md-6">
-                                <div class="input-box"> 
-                                    <input type="text" name="form_phone" value="" placeholder="Phone">
-                                    <div class="icon">
-                                        <i class="fa fa-phone" aria-hidden="true"></i>
-                                    </div>
-                                </div>    
-                            </div>      
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="input-box">
-                                    <select class="selectmenu">
-                                        <option selected="selected">Enquire About</option>
-                                        <option>Automotive Parts and System</option>
-                                        <option>Construction and Engineering</option>
-                                        <option>Energy Distribution and Grids</option>
-                                        <option>Petroleum and Gas Engineering</option>
-                                        <option>Designing Cooling and Heating System</option>
-                                        <option>Robot Production and Safety System</option>
-                                    </select>
-                                    <div class="icon">
-                                        <i class="fa fa-question" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="input-box">    
-                                    <textarea name="form_message" placeholder="Your Message..." required=""></textarea>
-                                    <div class="icon">
-                                        <i class="fa fa-comment" aria-hidden="true"></i>
-                                    </div>
-                                </div>   
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="button-box">
-                                    <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
-                                    <button class="btn-one" type="submit" data-loading-text="Please wait...">Submit Here</button>    
-                                </div>     
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
-                <div class="how-can-help-box">
-                    <div class="sec-title">
-                        <div class="title"><span>How Can We Help?</span></div>
-                        <p>Provides a wide range of high performance services across multiple industries and technologies</p>
-                    </div>
-                    <div class="inner-content">
-                        <ul>
-                            <li>
-                                <div class="left float-left">
-                                    <div class="icon">
-                                        <span class="icon-faq"></span>
-                                    </div>
-                                    <div class="text">
-                                        <h3>FAQ’s</h3>
-                                        <span>For quick answers to our customers FAQ’s.</span>
-                                    </div>
-                                </div>
-                                <div class="right float-right">
-                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="left float-left">
-                                    <div class="icon">
-                                        <span class="icon-press"></span>
-                                    </div>
-                                    <div class="text">
-                                        <h3>Press, Media & Blog</h3>
-                                        <span>Subscribe to get latest news & updates in your inbox.</span>
-                                    </div>
-                                </div>
-                                <div class="right float-right">
-                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="left float-left">
-                                    <div class="icon">
-                                        <span class="icon-partner"></span>
-                                    </div>
-                                    <div class="text">
-                                        <h3>Become a Partner</h3>
-                                        <span>Let’s start create something innovative together.</span>
-                                    </div>
-                                </div>
-                                <div class="right float-right">
-                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="live-chat-button">
-                            <a class="btn-two" href="#">Live Chat With Our Team<span class="icon-thin-right-arrow"></span></a>
-                        </div>
-                    </div>
-                </div>      
-            </div>
-            
-        </div>
-    </div>
-</section>
-<!--End contact form area-->
 
-<!--Start Branches section-->
-<section class="branches-section">
-    <div class="container inner-content">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="sec-title branches_s2_title">
-                    <div class="title"><span>Other Branches</span></div>
-                </div>
-                <div class="branches_s2_text">
-                    <p>Our 190 branches in 36 countries, serve the # 1 quality industrial service to our customers.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                <div class="branches-carousel owl-carousel owl-theme">
-                    <!--Start Single Branches Box-->
-                    <div class="single-branches-box">
-                        <div class="title-box"><h3>Sanfransico</h3></div>
-                        <ul>
-                            <li>
-                                <div class="title">
-                                    <h5>Address:</h5>
-                                </div>
-                                <div class="text">
-                                    <p>24/7, Global Factory Street, 2nd Cross, Newyork 10002.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="title">
-                                    <h5>Phone:</h5>
-                                </div>
-                                <div class="text">
-                                    <p>+0 (625) 07520-6644 & 55</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="title">
-                                    <h5>Email:</h5>
-                                </div>
-                                <div class="text">
-                                    <p>supportteam@example.com</p>
-                                </div>
-                            </li>
-                        </ul>   
-                    </div>
-                    <!--End Single Branches Box-->
-                    <!--Start Single Branches Box-->
-                    <div class="single-branches-box">
-                        <div class="title-box"><h3>Sanfransico</h3></div>
-                        <ul>
-                            <li>
-                                <div class="title">
-                                    <h5>Address:</h5>
-                                </div>
-                                <div class="text">
-                                    <p>24/7, Global Factory Street, 2nd Cross, Newyork 10002.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="title">
-                                    <h5>Phone:</h5>
-                                </div>
-                                <div class="text">
-                                    <p>+0 (625) 07520-6644 & 55</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="title">
-                                    <h5>Email:</h5>
-                                </div>
-                                <div class="text">
-                                    <p>supportteam@example.com</p>
-                                </div>
-                            </li>
-                        </ul>   
-                    </div>
-                    <!--End Single Branches Box-->
-                    <!--Start Single Branches Box-->
-                    <div class="single-branches-box">
-                        <div class="title-box"><h3>Sanfransico</h3></div>
-                        <ul>
-                            <li>
-                                <div class="title">
-                                    <h5>Address:</h5>
-                                </div>
-                                <div class="text">
-                                    <p>24/7, Global Factory Street, 2nd Cross, Newyork 10002.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="title">
-                                    <h5>Phone:</h5>
-                                </div>
-                                <div class="text">
-                                    <p>+0 (625) 07520-6644 & 55</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="title">
-                                    <h5>Email:</h5>
-                                </div>
-                                <div class="text">
-                                    <p>supportteam@example.com</p>
-                                </div>
-                            </li>
-                        </ul>   
-                    </div>
-                    <!--End Single Branches Box-->
-                </div> 
-            </div>
-        </div>
-    </div>
-</section>
-<!--End Branches section-->
+
+
 
 <!--Start Google Map Area-->
 <section class="google-map-area">
@@ -634,86 +387,73 @@
 </section>
 <!--End Google Map Area-->
 
-<!--Start footer area-->  
-<footer class="footer-area">
+ <!--Start footer area-->
+ <footer class="footer-area">
     <div class="container">
         <div class="row">
             <!--Start single footer widget-->
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class="single-footer-widget marbtm50">
                     <div class="title">
-                        <h3>About Our Company</h3>
+                        <h4 style="color:#ed6f36">RDS ASSOCIATION</h4>
                     </div>
                     <div class="company-info-text">
                         <div class="text-box">
-                            <p>We are the world class engineering manufacturer providing the highest quality products to our customers. With more than half a century of experience and 1000 of innovative achievements</p>
+
                         </div>
-                        <div class="call-officers">
-                            <div class="icon">
-                                <span class="icon-phone-call"></span>       
-                            </div> 
+                        <div class="newsletter-box">
                             <div class="text">
-                                <span>Talk to Our Officers</span>
-                                <h3 class="clr1">+1 001-765-4321</h3>
-                            </div>  
-                        </div>      
+                                <p>2, Institutional Area
+                                    Near Danik Bhaskar, JLN Marg, Jaipur</p>
+                            </div>
+                            <p>Phone: +91-141-2703692 </p>
+                            <p>Email: info@rdsassociation.com
+                                Web: http://rdsassociation.com</p>
+                          
+                        </div>
                     </div>
                 </div>
             </div>
             <!--End single footer widget-->
             <!--Start single footer widget-->
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                <div class="single-footer-widget marbtm50">
-                    <div class="title">
-                        <h3>Our Solutions</h3>
-                    </div>
-                    <ul class="solutions-links">
-                        <li><a href="#">Mechanical Engineering</a></li>
-                        <li><a href="#">Automotive Parts and System</a></li>
-                        <li><a href="#">Construction and Engineering</a></li>
-                        <li><a href="#">Energy Distribution and Gridsn</a></li>
-                        <li><a href="#">Bridge Construction</a></li>
-                        <li><a href="#">Oil & Gas Energy</a></li>
-                        <li><a href="#">Request  a Quote</a></li>
-                    </ul>   
-                </div>
-            </div>
-            <!--End single footer widget-->
-            <!--Start single footer widget-->
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class="single-footer-widget">
                     <div class="title">
-                        <h3>Useful links</h3>
+                        <h3>Other Links</h3>
                     </div>
                     <ul class="useful-links">
-                        <li><a href="#">Online Documentation</a></li>
-                        <li><a href="#">Latest news</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">General enquiries</a></li>
-                        <li><a href="#">Case Studies</a></li>
-                        <li><a href="#">Customers Feedback</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a href="civil.html">EXECUTIVE COUNCIL</a></li>
+                       
+                         
+            
+                        <li><a href="magzine.html">RDS MAGZINE</a></li>
+                        <li><a href="gallery.html">GALLERY</a></li>
+                        <li><a href="myprofile.html">MY PROFILE</a></li>
+
                     </ul>
                 </div>
+
+
             </div>
             <!--End single footer widget-->
             <!--Start single footer widget-->
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class="single-footer-widget pdtop50">
                     <div class="title">
-                        <h3>Locations</h3>
+                        <h3> Quick Links</h3>
+                    
                     </div>
-                    <div class="newsletter-box">
-                        <div class="text">
-                            <p>Subscribing to our mailing list and receive weekly newsletter with latest news and offers.</p>
-                        </div>
-                        <form class="newsletter-form" action="#">
-                            <input type="email" name="email" placeholder="Your Email">
-                            <button type="submit"><i class="fa fa-check" aria-hidden="true"></i></button>
-                        </form> 
-                    </div>
+                    <ul class="useful-links">
+                        <li><a href="letters_and_memoradum.html">Letters & Memorandum</a></li>
+                            <li><a href="important.html">Important Acts & Rules</a></li>
+                            <li><a href="impportant_website.html">Important Websites</a></li>
+                      </ul>
+
+                  
                     <div class="footer-social-links">
-                        <p>*We never spam!</p>
+                       
                         <ul class="sociallinks-style-two fix">
                             <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -726,7 +466,7 @@
             <!--End single footer widget-->
         </div>
     </div>
-</footer>   
+</footer>
 <!--End footer area-->
 
 <!--Start footer bottom area-->
@@ -736,21 +476,17 @@
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                 <div class="inner clearfix">
                     <div class="copyright-text float-left">
-                        <p>© 2019 Screwer Theme by <a href="#">Themekalia.</a> All Rights Reserved</p>
+                        <p>© 2019 All Rights Reserved</p>
                     </div>
-                    <ul class="footer-menu float-right">
-                        <li><a href="#">UNSUBSCRIBE</a></li>
-                        <li><a href="#">TERMS OF USE</a></li>
-                        <li><a href="#">PRIVACY</a></li>
-                    </ul>
-                </div>   
+                </div>
             </div>
         </div>
-    </div>    
+    </div>
 </section>
-<!--End footer bottom area-->    
+<!--End footer bottom area-->
 
-</div>  
+</div>
+
 
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target thm-bg-clr" data-target="html"><span class="fa fa-angle-up"></span></div>

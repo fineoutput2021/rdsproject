@@ -18,6 +18,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
     
     
 
@@ -195,9 +196,9 @@ display: none;
 </style>
 <div class="container mt-5">
     <div class="card">
-        <input type="radio" name="select" id="slide_1" checked>
-        <input type="radio" name="select" id="slide_2">
-        <input type="radio" name="select" id="slide_3">
+        <input type="radio" name="select" class="dot"  id="slide_1" checked>
+        <input type="radio" name="select" class="dot"  id="slide_2">
+        <input type="radio" name="select" class="dot"  id="slide_3">
         <input type="checkbox" id="slideImg">
       
         <div class="slider">
@@ -205,9 +206,8 @@ display: none;
           <label for="slide_2" class="slide slide_2"></label>
           <label for="slide_3" class="slide slide_3"></label>
         </div>
-        
       
-        <div class="inner_part confetti"  id="canvas">
+        <div class="inner_part">
           <label for="slideImg" class="img">
             <img class="img_1" src="images\slides\dummy-image.jpg">
           </label>
@@ -229,7 +229,7 @@ display: none;
                 <h1>Happy Birthday!</h1>
             </div>
             <p>We hope you have a wonderful birthday</p>
-              <p>Goku</p>
+              <p>Go</p>
           </div>
         </div>
       
@@ -242,13 +242,43 @@ display: none;
                 <h1>Happy Birthday!</h1>
             </div>
             <p>We hope you have a wonderful birthday</p>
-              <p>Goku</p>
+              <p>ku</p>
           </div>
         </div>
       </div>
       </div>
+      <!-- <script>
+        w3.slideshow(".inner_part", 3000);
+        </script> -->
+
+<!-- 
+      <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("inner_part");
+          let dots = document.getElementsByClassName("");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        </script> -->
+
+
+
 
       <script>
+
         var colors = ["#f36727", "#6a696b"];
 
 function frame() {
