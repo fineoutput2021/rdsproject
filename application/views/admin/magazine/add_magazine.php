@@ -58,6 +58,12 @@ Add New Magazine
                   </td>
 </tr>
 <tr>
+                    <td> <strong>Image</strong> </strong> </td>
+                    <td>
+<input type="file" name="image"  class="form-control" placeholder=""  value="" />
+                  </td>
+</tr>
+<tr>
 <td colspan="2" >
 	<input type="submit" class="btn btn-success" value="save">
 </td>

@@ -1,4 +1,3 @@
-
         <!--Start footer area-->
         <footer class="footer-area">
             <div class="container">
@@ -7,7 +6,7 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                         <div class="single-footer-widget marbtm50">
                             <div class="title">
-                                <h4 style="color:#ed6f36">RDS ASSOCIATION</h4>
+                              <img src="<?=base_url()?>assets/frontend/images/logo.png" style="width:70%" class="img-fluid">
                             </div>
                             <div class="company-info-text">
                                 <div class="text-box">
@@ -37,11 +36,9 @@
                                 <li><a href="<?=base_url()?>Home">HOME</a></li>
                                 <li><a href="<?=base_url()?>Home/about_us">ABOUT US</a></li>
                                 <li><a href="<?=base_url()?>Home/executive_council">EXECUTIVE COUNCIL</a></li>
-
-
-                                <li><a href="">RDS MAGZINE</a></li>
-                                <li><a href="gallery.html">GALLERY</a></li>
-                                <li><a href="myprofile.html">MY PROFILE</a></li>
+                                <li><a href="<?=base_url()?>Home/magazines">RDS MAGZINE</a></li>
+                                <li><a href="<?=base_url()?>Home/gallery">GALLERY</a></li>
+                                <!-- <li><a href="myprofile.html">MY PROFILE</a></li> -->
 
                             </ul>
                         </div>
@@ -68,8 +65,7 @@
                                 <ul class="sociallinks-style-two fix">
                                     <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -87,7 +83,10 @@
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                         <div class="inner clearfix">
                             <div class="copyright-text float-left">
-                                <p>© 2019 All Rights Reserved</p>
+                                <p>© 2022 All Rights Reserved by RDS Association</p>
+                            </div>
+                            <div class="copyright-text float-right">
+                                <p>Powered by <a href="https://www.fineoutput.com/" target="_blank" rel="noreferrer">Fineoutput Technologies</a></p>
                             </div>
                         </div>
                     </div>

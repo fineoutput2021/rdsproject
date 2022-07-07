@@ -23,12 +23,14 @@ class Home extends CI_Controller
         $this->db->select('*');
         $this->db->from('tbl_news');
         $this->db->where('is_active', 1);
+        $this->db->order_by('id', 'desc');
         $data['news_data']= $this->db->get();
 
 
         $this->db->select('*');
         $this->db->from('tbl_video');
         $this->db->where('is_active', 1);
+        $this->db->order_by('id', 'desc');
         $data['video_data']= $this->db->get();
 
         $this->load->view('frontend/common/header', $data);
@@ -98,6 +100,7 @@ class Home extends CI_Controller
         $this->db->select('*');
         $this->db->from('tbl_video');
         $this->db->where('is_active', 1);
+        $this->db->order_by('id', 'desc');
         $data['video_data']= $this->db->get();
         $this->load->view('frontend/common/header', $data);
         $this->load->view('frontend/all_video');
@@ -166,6 +169,7 @@ class Home extends CI_Controller
         $this->db->select('*');
         $this->db->from('tbl_magazine');
         $this->db->where('is_active', 1);
+        $this->db->order_by('id', 'desc');
         $data['magazine_data']= $this->db->get();
         $this->load->view('frontend/common/header', $data);
         $this->load->view('frontend/magazine');
@@ -177,6 +181,7 @@ class Home extends CI_Controller
         $this->db->select('*');
         $this->db->from('tbl_letters_memorandum');
         $this->db->where('is_active', 1);
+        $this->db->order_by('id', 'desc');
         $data['letters_data']= $this->db->get();
         $this->load->view('frontend/common/header', $data);
         $this->load->view('frontend/letters_and_memorandum');
@@ -188,6 +193,7 @@ class Home extends CI_Controller
         $this->db->select('*');
         $this->db->from('tbl_important_acts_rules');
         $this->db->where('is_active', 1);
+        $this->db->order_by('id', 'desc');
         $data['important_data']= $this->db->get();
         $this->load->view('frontend/common/header', $data);
         $this->load->view('frontend/important_acts_rules');
@@ -200,6 +206,7 @@ class Home extends CI_Controller
         $this->db->select('*');
         $this->db->from('tbl_important_website');
         $this->db->where('is_active', 1);
+        $this->db->order_by('id', 'desc');
         $data['important_website_data']= $this->db->get();
         $this->load->view('frontend/common/header', $data);
         $this->load->view('frontend/important_website');
@@ -213,12 +220,41 @@ class Home extends CI_Controller
         $this->db->select('*');
         $this->db->from('tbl_gallery');
         $this->db->where('is_active', 1);
+        $this->db->order_by('id', 'desc');
         $data['gallery_data']= $this->db->get();
         $this->load->view('frontend/common/header', $data);
         $this->load->view('frontend/gallery');
         $this->load->view('frontend/common/footer');
     }
+    //==============  Gallery slider ==============================
 
+    public function gallery_slider($idd)
+    {
+        $id=base64_decode($idd);
+        $data['id']=$idd;
+        $this->db->select('*');
+        $this->db->from('tbl_gallery');
+        $this->db->where('is_active', 1);
+        $this->db->where('id', $id);
+        $data['gallery_data']= $this->db->get()->row();
+        $this->load->view('frontend/common/header', $data);
+        $this->load->view('frontend/gallery_slider');
+        $this->load->view('frontend/common/footer');
+    }
+    //====================================================== ALL NEWS ===========================
+
+        public function all_news()
+        {
+            $this->db->select('*');
+            $this->db->from('tbl_news');
+            $this->db->where('is_active', 1);
+            $this->db->order_by('id', 'desc');
+            $data['news_data']= $this->db->get();
+            $this->load->view('frontend/common/header', $data);
+            $this->load->view('frontend/all_news');
+            $this->load->view('frontend/common/footer');
+        }
+//====================================================== 404 ===========================
     public function error404()
     {
         $this->load->view('errors/error404');

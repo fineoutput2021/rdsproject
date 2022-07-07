@@ -1,11 +1,11 @@
 <!--Start breadcrumb area-->
-<section class="breadcrumb-area" style="background-image: url(images/slides/photo4.jpg );">
+<section class="breadcrumb-area" style="background-image: url(<?=base_url()?>assets/frontend/images/slides/photo4.jpg );">
   <div class="container">
     <div class="row">
       <div class="col-xl-12">
         <div class="inner-content clearfix">
           <div class="title text-center">
-            <h1>Details</h1>
+            <h1>OFFICER DETAILS</h1>
           </div>
         </div>
       </div>
@@ -14,7 +14,7 @@
 </section>
 <!-- Detail Area Start -->
 
-<div class="container">
+<div class="container mb-2">
 
   <h3 style="color: black;text-transform: uppercase;background: #ed6f36;color: #fff;" class="pt-3 pb-3 text-center">&nbsp;&nbsp;&nbsp;&nbsp;Service History of RDS Office</h3>
   <table border="1" style="border-color:#000;">
@@ -25,7 +25,12 @@
       <tr class="changecolor ">
         <th width="15%">&nbsp;&nbsp;Name</th>
         <td width="65%">&nbsp;&nbsp;<?=$member_data->name?></td>
-        <td rowspan="3" class="text-center photo1"><img src="<?=$member_data->image?>" class="img-fluid" style="width:80%;"></td>
+        <td rowspan="3" class="text-center photo1">
+          <?if(!empty($member_data->image)){?>
+          <img src="<?=$member_data->image?>" class="img-fluid" style="width:80%;" alt="Member Image">
+          <?}else{?>
+          <img src="<?=base_url()?>assets/frontend/images/user.png" style="width:80%;" alt="Member Image">
+          <?}?>
       </tr>
       <tr class="changecolor">
         <th width="15%">&nbsp;&nbsp;Date Of Birth</th>
@@ -59,14 +64,13 @@
   </table>
 </div>
 
-
+<?if(!empty($posting_data->row())){?>
 <!--Start civil list-->
 <section class="cart-area p-0">
   <div class="container">
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
         <div class="table-outer">
-
           <table class="cart-table">
             <thead class="cart-header">
               <tr class="">
@@ -77,10 +81,11 @@
               </tr>
             </thead>
             <tbody>
-              <?php $i=1; foreach($posting_data->result() as $post) { ?>
+              <?php
+               $i=1; foreach($posting_data->result() as $post) { ?>
               <tr>
                 <td>
-                <?=$i?>
+                  <?=$i?>
                 </td>
 
                 <td colspan="4">
@@ -93,21 +98,6 @@
                 </td>
               </tr>
               <?php $i++; } ?>
-
-
-              <tr>
-                <td>
-                  2
-                </td>
-
-                <td colspan="4">
-                  GENERAL MANAGER, RISL, DOIT
-                </td>
-                <td>
-                  02/12/2014
-                </td>
-                <td>20/05/2021</td>
-              </tr>
             </tbody>
 
           </table>
@@ -117,4 +107,5 @@
 
   </div>
 </section>
+<?}?>
 <!--End cart area-->

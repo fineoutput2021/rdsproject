@@ -43,11 +43,6 @@ class Gallery extends CI_finecontrol
     {
         if (!empty($this->session->userdata('admin_data'))) {
             $data['image_name']=$this->load->get_var('image_name');
-
-            // echo SITE_NAME;
-            // echo $this->session->userdata('image');
-            // echo $this->session->userdata('position');
-            // exit;
             $this->db->select('*');
             $this->db->from('tbl_gallery');
             //$this->db->where('id',$usr);

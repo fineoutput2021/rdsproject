@@ -51,6 +51,7 @@ Member
           <th>Email</th>
           <th>Password</th>
           <th>Phone</th>
+          <th>Order Date/Join Date</th>
           <th>Member</th>
           <th>Officer's Designation</th>
           <th>Status</th>
@@ -79,6 +80,7 @@ Member
           <td><?php echo $data->email ?></td>
           <td><?php echo $data->password?></td>
           <td><?php echo $data->phone?></td>
+          <td><?php echo $data->join_date?></td>
           <td><?php if($data->exe==1){
             echo "Executive Council";
           }else{

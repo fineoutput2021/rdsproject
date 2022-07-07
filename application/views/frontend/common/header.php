@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>RDS ASSOCIATION</title>
@@ -51,7 +52,7 @@
             <div class="header-style1 ">
               <div class="header-style1-logo float-left">
                 <a href="<?=base_url()?>">
-                <img src="<?base_url()?>assets/frontend/images/logo.png" width="30%">
+                  <img src="<?=base_url()?>assets/frontend/images/logo.png" width="30%">
                 </a>
               </div>
               <div class="headers1-header-right float-right logof">
@@ -60,7 +61,7 @@
                     <span class="icon-phone-call"></span>
                   </div>
                   <div class="text">
-                    <span>Contact Us</span>
+                    <span>Contact Number</span>
                     <h3 class="clr1">+91-141-2703692
                     </h3>
                   </div>
@@ -91,7 +92,7 @@
                     </div>
                     <div class="col-5 pb-3 margin">
                       <a href="index.html">
-                        <h3 class="text-white text-center mlogo" style="margin-top:-50px;"> <img src="<?base_url()?>assets/frontend/images/logo.png" class="img-fluid"></h3>
+                        <h3 class="text-white text-center mlogo" style="margin-top:-50px;"> <img src="<?=base_url()?>assets/frontend/images/logo.png" class="img-fluid"></h3>
                       </a>
                     </div>
 
@@ -106,17 +107,12 @@
                 </div>
                 <div class="navbar-collapse collapse clearfix">
                   <ul class="navigation clearfix" style="margin-left:50px;">
-                    <li><a href="<?=base_url()?>">Home</a>
-
-                    </li>
-                    <li><a href="<?=base_url()?>Home/executive_council">EXECUTIVE COUNCIL </a>
-
-                    </li>
+                    <li><a href="<?=base_url()?>">Home</a></li>
+                    <li><a href="<?=base_url()?>Home/executive_council">EXECUTIVE COUNCIL </a></li>
                     <li class="dropdown" style="color:whute;"><a href="#">MEMBERS</a>
                       <ul>
                         <li><a href="<?=base_url()?>Home/members">List of Officers</a></li>
                         <li><a href="<?=base_url()?>Home/search_members">Search Member</a></li>
-
                       </ul>
                     </li>
                     <li class="dropdown"><a href="#">QUICK LINKS </a>
@@ -124,38 +120,28 @@
                         <li><a href="<?=base_url()?>Home/letters_memorandum">Letters & Memorandum</a></li>
                         <li><a href="<?=base_url()?>Home/important_acts_and_rules">Important Acts & Rules</a></li>
                         <li><a href="<?=base_url()?>Home/important_website">Important Websites</a></li>
-
                       </ul>
                     </li>
-                    <li><a href="<?=base_url()?>Home/magazines">RDS Magazine</a>
-                    </li>
-                    <li><a href="<?=base_url()?>Home/gallery">GALLERY</a>
-                    </li>
+                    <li><a href="<?=base_url()?>Home/magazines">RDS Magazine</a></li>
+                    <li><a href="<?=base_url()?>Home/gallery">GALLERY</a></li>
                   </ul>
                 </div>
               </nav>
-
-
               <!-- <div class="mainmenu-right">
-
                         <div class="quote-button-box float-right btn5">
                             <a class="btn-one" href="#myModal"  data-toggle="modal" data-target="#myModal">Member's Login &nbsp;<i class="fa fa-lock" aria-hidden="true"></i></a>
                         </div>
                     </div>  -->
-              <div class="mainmenu-right">
-
+              <!-- <div class="mainmenu-right">
                 <div class="quote-button-box float-right btn5">
                   <a class="btn-one" href="#myModal" data-toggle="modal" data-target="#myModal">Member's Login &nbsp;<i class="fa fa-lock" aria-hidden="true"></i></a>
                 </div>
 
-              </div>
+              </div> -->
               <div class="quote-button-box btn d-none">
                 <a class="btn-two" href="#myModal" data-toggle="modal" data-target="#myModal">&nbsp;<i class="fa fa-user" aria-hidden="true" style="font-size:30px;"></i></a>
               </div>
-
-
             </div>
-
           </div>
         </div>
     </section>
@@ -228,13 +214,13 @@
 
       </div>
     </div>
-		<? if(!empty($this->session->flashdata('smessage'))){ ?>
-    <div class="alert alert-success alert-dismissible fade in">
+    <? if(!empty($this->session->flashdata('smessage'))){ ?>
+    <div class="alert alert-success alert-dismissible fade in mt-5" style="z-index:9999">
       <strong><? echo $this->session->flashdata('smessage'); ?></strong>
     </div>
-  <? }
+    <? }
    if(!empty($this->session->flashdata('emessage'))){ ?>
-  <div class="alert alert-danger alert-dismissible fade in">
-    <strong><? echo $this->session->flashdata('emessage'); ?></strong>
-  </div>
-<? } ?>
+    <div class="alert alert-danger alert-dismissible fade in mt-5"  style="z-index:9999">
+      <strong><? echo $this->session->flashdata('emessage'); ?></strong>
+    </div>
+    <? } ?>

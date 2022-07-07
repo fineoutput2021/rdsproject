@@ -1,7 +1,7 @@
 
 
 <!--Start breadcrumb area-->
-<section class="breadcrumb-area" style="background-image: url(images/slides/photo4.jpg);">
+<section class="breadcrumb-area" style="background-image: url(<?=base_url()?>assets/frontend/images/slides/photo4.jpg);">
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
@@ -39,7 +39,7 @@
                                   <?=$i?>
                                    </td>
                                 <td colspan="2">
-                                    <a href="officer_detail.html" style="color:#ed6f36;"<?=$member->name?></a><br>
+                                    <a href="<?=base_url()?>Home/officer_details/<?=base64_encode($member->id)?>" style="color:#ed6f36;"><?=$member->name?></a><br>
                               <?=$member->home_town?>
                                 </td>
                                 <td>
@@ -49,12 +49,11 @@
                                     <?=$member->post?>, <?=$member->district?>
                                 </td>
                                 <td>
-                                    12/11/2014
-                                    02/12/2014
+                                    <?=$member->join_date?>
                                 </td>
                             </tr>
 <?php $i++; } ?>
-                            
+
 
                         </tbody>
                     </table>

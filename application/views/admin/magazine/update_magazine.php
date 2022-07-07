@@ -53,9 +53,13 @@ Update Magazine
 </tr>
 <tr>
                     <td> <strong>File</strong>  <span style="color:red;"></span></strong> </td>
-
                       <td> <input type="file" name="file" class="form-control" placeholder="" />
                         <?php if($magazine->file!=""){ echo base_url().$magazine->file; ?>  <?php }else{ ?> Sorry No File Found <?php } ?> </td>
+</tr>
+<tr>
+                    <td> <strong>Image</strong>  <span style="color:red;"></span></strong> </td>
+                      <td> <input type="file" name="image" class="form-control" placeholder="" />
+                      <img id="slide_img_path" height=50 width=100 src="<?php echo base_url().$magazine->image ?>"></td>
 </tr>
 <tr>
 <td colspan="2" >

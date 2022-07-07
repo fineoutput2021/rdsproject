@@ -95,6 +95,13 @@ Add New Member
           </td>
         </tr>
         <tr>
+        <tr>
+          <td> <strong>Order Date/Join Date</strong> <span style="color:red;">*</span></strong> </td>
+          <td>
+            <input type="date" name="join_date" class="form-control" placeholder="" required value="" />
+          </td>
+        </tr>
+        <tr>
           <td> <strong>phone</strong> <span style="color:red;">*</span></strong> </td>
           <td>
             <input type="text" onkeydown="if(event.key==='.'){event.preventDefault();}" oninput="event.target.value = event.target.value.replace(/[^0-9]*/g,'');" maxlength="10" name="phone" class="form-control" placeholder=""

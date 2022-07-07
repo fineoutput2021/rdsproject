@@ -1801,8 +1801,8 @@ select:focus {
 @media(max-width:530px){
     .mlogo{
         margin-top: -40px !important;
-        margin-right: 20px !important;
-        margin-left: 20px !important;
+        /* margin-right: 20px !important;
+        margin-left: 20px !important; */
     }
 }
 
@@ -7331,7 +7331,7 @@ select:focus {
 }
  @media(max-width:400px){
     .margin{
-        margin-left:-20px;
+        margin-left:-2px;
     }
  }
 
@@ -9710,7 +9710,12 @@ select:focus {
 .login-register-area .form .social-icon li a:hover i.gplus{
     background: #c62d1a;
 }
-
+.tfx
+{
+    font-size:20px !important;
+    font-weight: 700 !important;
+    text-align: center;
+}
 
 
 /***

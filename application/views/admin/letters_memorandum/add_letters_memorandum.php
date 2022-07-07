@@ -1,11 +1,11 @@
 <div class="content-wrapper">
 <section class="content-header">
  <h1>
-Add New Letters&Memorandum
+Add New Letters & Memorandum
 </h1>
 <ol class="breadcrumb">
  <li><a href="<?php echo base_url() ?>dcadmin/home"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-  <li><a href="<?php echo base_url() ?>dcadmin/Letters_Memorandum/view_letters_memorandum"><i class="fa fa-arrow-left" aria-hidden="true"></i></i> View letters&memorandum </a></li>
+  <li><a href="<?php echo base_url() ?>dcadmin/Letters_Memorandum/view_letters_memorandum"><i class="fa fa-arrow-left" aria-hidden="true"></i></i> View letters & Memorandum </a></li>
 
 </ol>
 </section>
@@ -15,7 +15,7 @@ Add New Letters&Memorandum
 
               <div class="panel panel-default">
                   <div class="panel-heading">
-                      <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Add New letters&memorandum</h3>
+                      <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Add New letters & Memorandum</h3>
                   </div>
 
                   			  <? if(!empty($this->session->flashdata('smessage'))){ ?>
