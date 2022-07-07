@@ -52,6 +52,7 @@ Member
           <th>Password</th>
           <th>Phone</th>
           <th>Member</th>
+          <th>Officer's Designation</th>
           <th>Status</th>
           <th>Action</th>
         </tr>
@@ -83,7 +84,7 @@ Member
           }else{
             echo "Member";
           } ?></td>
-
+    <td><?php echo $data->officers_designation?></td>
 
           <td><?php if ($data->is_active==1) { ?>
             <p class="label bg-green">Active</p>

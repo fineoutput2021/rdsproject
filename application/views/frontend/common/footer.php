@@ -34,13 +34,12 @@
                                 <h3>Other Links</h3>
                             </div>
                             <ul class="useful-links">
-                                <li><a href="index.html">HOME</a></li>
-                                <li><a href="about.html">ABOUT US</a></li>
-                                <li><a href="civil.html">EXECUTIVE COUNCIL</a></li>
+                                <li><a href="<?=base_url()?>Home">HOME</a></li>
+                                <li><a href="<?=base_url()?>Home/about_us">ABOUT US</a></li>
+                                <li><a href="<?=base_url()?>Home/executive_council">EXECUTIVE COUNCIL</a></li>
 
 
-
-                                <li><a href="magzine.html">RDS MAGZINE</a></li>
+                                <li><a href="">RDS MAGZINE</a></li>
                                 <li><a href="gallery.html">GALLERY</a></li>
                                 <li><a href="myprofile.html">MY PROFILE</a></li>
 

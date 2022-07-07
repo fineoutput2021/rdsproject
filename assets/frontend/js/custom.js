@@ -12,7 +12,7 @@
 05. prettyPhoto
 06. BrandCarousel
 07. Testimonial carousel
-08. ScrollToTop 
+08. ScrollToTop
 09. Cart Touch Spin
 10. PriceFilter
 11. Cart touch spin
@@ -34,7 +34,7 @@ function mainmenu() {
 	//Submenu Dropdown Toggle
 	if($('.main-menu li.dropdown ul').length){
 		$('.main-menu li.dropdown').append('<div class="dropdown-btn"></div>');
-		
+
 		//Dropdown Button
 		$('.main-menu li.dropdown .dropdown-btn').on('click', function() {
 			$(this).prev('ul').slideToggle(500);
@@ -208,9 +208,9 @@ function accordion() {
             }else{
                 $(this).addClass('active');
                 $('.accordion .accord-content').slideUp(500);
-                $(this).next('.accord-content').slideDown(500);	
+                $(this).next('.accord-content').slideDown(500);
             }
-        });	
+        });
     }
 }
 
@@ -230,7 +230,7 @@ if($('.accordion-holder').length){
     else{
             $(this).addClass('active');
             $('.accordion-holder .acc-content').slideUp(500);
-            $(this).next('.acc-content').slideDown(500);	
+            $(this).next('.acc-content').slideDown(500);
         }
     });
 }
@@ -281,7 +281,7 @@ if($('.count-box').length){
 
 
 
-	
+
 
 
 // Cart Touch Spin
@@ -355,7 +355,7 @@ function projectMasonaryLayout() {
             var count = $('.gallery-content').find(filterElement).length;
             $(this).children('span').append('<span class="count"><b>' + count + '</b></span>');
         });
-    };  
+    };
 }
 
 
@@ -372,7 +372,7 @@ function countDownTimer () {
 	   		});
 		});
 	};
-    
+
 	if ($('.time-countdown-two').length) {
 		$('.time-countdown-two').each(function () {
 			var Self = $(this);
@@ -403,7 +403,7 @@ function countryInfo() {
 
 
 
-// Select menu 
+// Select menu
 function selectDropdown() {
     if ($(".selectmenu").length) {
         $(".selectmenu").selectmenu();
@@ -422,7 +422,7 @@ function latestProjectCarousel () {
     if ($('.latest-project-carousel').length) {
         $('.latest-project-carousel').owlCarousel({
             dots: false,
-            loop:true,
+            loop:false,
             margin:10,
             nav:true,
             navText: [
@@ -452,7 +452,7 @@ function latestProjectCarousel () {
                     items:1
                 }
             }
-        });    		
+        });
     }
 }
 
@@ -494,7 +494,7 @@ function testimonialCarousel () {
                     items:1
                 }
             }
-        });    		
+        });
     }
 }
 
@@ -534,7 +534,7 @@ function testimonialCarousel2 () {
                     items:1
                 }
             }
-        });    		
+        });
     }
 }
 
@@ -575,7 +575,7 @@ function certificationsCarousel () {
                     items:1
                 }
             }
-        });    		
+        });
     }
 }
 
@@ -616,7 +616,7 @@ function projectSingleCarousel () {
                     items:1
                 }
             }
-        });    		
+        });
     }
 }
 
@@ -657,7 +657,7 @@ function branchesCarousel () {
                     items:1
                 }
             }
-        });    		
+        });
     }
 }
 
@@ -736,7 +736,7 @@ if ($('.single-product-carousel .content-carousel').length && $('.single-product
     })
     .on('changed.owl.carousel', function (e) {
         if (!flags) {
-            flags = true;		
+            flags = true;
             $sync3.trigger('to.owl.carousel', [e.item.index, durations, true]);
             flags = false;
         }
@@ -783,8 +783,8 @@ if ($('.hidden-bar').length) {
         navToggler.toggleClass('open');
     });
 }
-    
-    
+
+
 
 
 
@@ -807,12 +807,12 @@ if($('.lightbox-image').length) {
     $('.lightbox-image').fancybox({
         openEffect  : 'fade',
         closeEffect : 'fade',
-        
+
         youtube : {
         controls : 0,
         showinfo : 0
     },
-        
+
         helpers : {
             media : {}
         }
@@ -952,13 +952,13 @@ jQuery(document).on('ready', function () {
         certificationsCarousel();
         projectSingleCarousel();
         branchesCarousel()
-       
 
-  
-        
-        
-   
- 
+
+
+
+
+
+
 	})(jQuery);
 });
 
@@ -967,8 +967,8 @@ jQuery(document).on('ready', function () {
 jQuery(window).on('scroll', function(){
 	(function ($) {
 	stickyHeader ();
-    headerStyle ()  
-    
+    headerStyle ()
+
 	})(jQuery);
 });
 
@@ -978,7 +978,6 @@ jQuery(window).on('scroll', function(){
 jQuery(window).on('load', function() {
     (function($) {
         prealoader ();
-        
+
     })(jQuery);
 });
-

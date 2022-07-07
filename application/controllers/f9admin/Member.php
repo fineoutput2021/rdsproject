@@ -72,6 +72,7 @@ if (!empty($this->session->userdata('admin_data'))) {
      $this->form_validation->set_rules('password', 'password', 'required');
      $this->form_validation->set_rules('phone', 'phone', 'required');
      $this->form_validation->set_rules('exe', 'exe', 'required');
+     $this->form_validation->set_rules('officers_designation', 'officers_designation', 'required');
 
 
 
@@ -87,6 +88,7 @@ if (!empty($this->session->userdata('admin_data'))) {
          $password=$this->input->post('password');
          $phone=$this->input->post('phone');
          $exe=$this->input->post('exe');
+         $officers_designation=$this->input->post('officers_designation');
 
          $ip = $this->input->ip_address();
          date_default_timezone_set("Asia/Calcutta");
@@ -141,6 +143,7 @@ if (!empty($this->session->userdata('admin_data'))) {
             'password'=>$password,
             'phone'=>$phone,
             'exe'=>$exe,
+            'officers_designation'=>$officers_designation,
 'image'=>$nnnn1,
 
                'ip' =>$ip,
@@ -228,6 +231,7 @@ if (!empty($this->session->userdata('admin_data'))) {
             'password'=>$password,
             'phone'=>$phone,
             'exe'=>$exe,
+            'officers_designation'=>$officers_designation,
 'image'=>$nnnn1,
 
                );

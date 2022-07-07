@@ -112,7 +112,7 @@ Update Member
       </tr>
       <tr id="post">
         <?if($member->exe==1){?>
-        <td><strong>Name of post</strong><span style="color:red;">*</span></strong></td><td><input type="text" name="post" class="form-control" placeholder="" required value="<?=$member->post?>" /></td>
+        <td><strong>Officer's Designation</strong><span style="color:red;">*</span></strong></td><td><input type="text" name="officers_designation" class="form-control" placeholder="" required value="<?=$member->post?>" /></td>
         <?}?>
       </tr>
 
@@ -142,7 +142,7 @@ Update Member
     <script>
     function change(x){
     if(x==1){
-    $('#post').html('<td><strong>Name of post</strong><span style="color:red;">*</span></strong></td><td><input type="text" name="post" class="form-control" placeholder="" required value="<?=$member->post?>" /></td>');
+    $('#post').html('<td><strong>Designation</strong><span style="color:red;">*</span></strong></td><td><input type="text" name="officers_designation" class="form-control" placeholder="" required value="<?=$member->post?>" /></td>');
     $('#start').html('<td><strong>start Date</strong><span style="color:red;">*</span></strong></td><td><input type="date" name="start" class="form-control" placeholder="" required value="" /></td>');
     }else{
     $('#post').html('');

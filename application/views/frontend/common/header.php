@@ -61,7 +61,7 @@
                     <span class="icon-phone-call"></span>
                   </div>
                   <div class="text">
-                    <span>Talk to Our Officers</span>
+                    <span>Contact Us</span>
                     <h3 class="clr1">+91-141-2703692
                     </h3>
                   </div>
@@ -111,7 +111,7 @@
                     <li><a href="<?=base_url()?>">Home</a>
 
                     </li>
-                    <li><a href="exicutive.html">EXECUTIVE COUNCIL </a>
+                    <li><a href="<?=base_url()?>Home/executive_council">EXECUTIVE COUNCIL </a>
 
                     </li>
                     <li class="dropdown" style="color:whute;"><a href="#">MEMBERS</a>

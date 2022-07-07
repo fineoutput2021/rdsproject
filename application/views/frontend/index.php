@@ -380,28 +380,7 @@ input {
                         <div class="latest-project">
                             <div class="latest-project-carousel owl-carousel owl-theme">
                                 <!--Start single featured project-->
-                                <div class="single-project-style1">
-
-                                    <div class="video-holder-box wow slideInLeft" data-wow-delay="0ms"
-                                        data-wow-duration="1500ms">
-                                        <div class="img-holder">
-                                            <img src="<?=base_url()?>assets/frontend/images/resources/video-gallery.jpg" alt="Awesome Image">
-                                            <div class="icon-holder">
-                                                <div class="icon">
-                                                    <div class="inner">
-                                                        <a class="html5lightbox" title="Screwer Video Gallery"
-                                                            href="https://www.youtube.com/watch?v=p25gICT63ek">
-                                                            <span class="flaticon-music-player-play"></span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <!--End single featured project-->
-                                <!--Start single featured project-->
+                                <?php $i=1; foreach($video_data->result() as $video) { ?>
                                 <div class="single-project-style1">
                                     <div class="video-holder-box wow slideInLeft" data-wow-delay="0ms"
                                         data-wow-duration="1500ms">
@@ -411,7 +390,7 @@ input {
                                                 <div class="icon">
                                                     <div class="inner">
                                                         <a class="html5lightbox" title="Screwer Video Gallery"
-                                                            href="https://www.youtube.com/watch?v=p25gICT63ek">
+                                                            href="<?=$video->link?>">
                                                             <span class="flaticon-music-player-play"></span>
                                                         </a>
                                                     </div>
@@ -420,66 +399,7 @@ input {
                                         </div>
                                     </div>
                                 </div>
-                                <!--End single featured project-->
-                                <!--Start single featured project-->
-                                <div class="single-project-style1">
-                                    <div class="video-holder-box wow slideInLeft" data-wow-delay="0ms"
-                                        data-wow-duration="1500ms">
-                                        <div class="img-holder">
-                                            <img src="<?=base_url()?>assets/frontend/images/resources/video-gallery.jpg" alt="Awesome Image">
-                                            <div class="icon-holder">
-                                                <div class="icon">
-                                                    <div class="inner">
-                                                        <a class="html5lightbox" title="Screwer Video Gallery"
-                                                            href="https://www.youtube.com/watch?v=p25gICT63ek">
-                                                            <span class="flaticon-music-player-play"></span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--End single featured project-->
-                                <!--Start single featured project-->
-                                <div class="single-project-style1">
-                                    <div class="video-holder-box wow slideInLeft" data-wow-delay="0ms"
-                                        data-wow-duration="1500ms">
-                                        <div class="img-holder">
-                                            <img src="<?=base_url()?>assets/frontend/images/resources/video-gallery.jpg" alt="Awesome Image">
-                                            <div class="icon-holder">
-                                                <div class="icon">
-                                                    <div class="inner">
-                                                        <a class="html5lightbox" title="Screwer Video Gallery"
-                                                            href="https://www.youtube.com/watch?v=p25gICT63ek">
-                                                            <span class="flaticon-music-player-play"></span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--End single featured project-->
-                                <!--Start single featured project-->
-                                <div class="single-project-style1">
-                                    <div class="video-holder-box wow slideInLeft" data-wow-delay="0ms"
-                                        data-wow-duration="1500ms">
-                                        <div class="img-holder">
-                                            <img src="<?=base_url()?>assets/frontend/images/resources/video-gallery.jpg" alt="Awesome Image">
-                                            <div class="icon-holder">
-                                                <div class="icon">
-                                                    <div class="inner">
-                                                        <a class="html5lightbox" title="Screwer Video Gallery"
-                                                            href="https://www.youtube.com/watch?v=p25gICT63ek">
-                                                            <span class="flaticon-music-player-play"></span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <?php $i++; } ?>
                                 <!--End single featured project-->
                             </div>
                         </div>
@@ -487,7 +407,7 @@ input {
                 </div>
             </div>
             <div class="input-box text-center pt-5">
-                <a href="videos.html"><button class="btn-one" type="submit">View All</button></a>
+                <a href="<?=base_url()?>Home/all_video"><button class="btn-one" type="submit">View All</button></a>
             </div>
         </section>
         <!--End Featured project area-->
