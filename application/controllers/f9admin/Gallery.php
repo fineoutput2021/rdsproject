@@ -80,6 +80,7 @@ if ($this->form_validation->run()== true) {
 
             $addedby=$this->session->userdata('admin_id');
 
+//========================image_1 upload========================\\
             $img1='image';
             $nnnn = '';
 
@@ -111,10 +112,183 @@ if ($this->form_validation->run()== true) {
                 }
             }
 
+            //========================image_2 upload========================\\
+            $this->load->library('upload');
+
+            $img2='image2';
+            $nnnn2 = '';
+
+            $file_check=($_FILES['image2']['error']);
+            if ($file_check!=4) {
+                $image_upload_folder = FCPATH . "assets/uploads/gallery/";
+                if (!file_exists($image_upload_folder)) {
+                    mkdir($image_upload_folder, DIR_WRITE_MODE, true);
+                }
+                $new_file_name="gallery2".date("Ymdhms");
+                $this->upload_config = array(
+          'upload_path'   => $image_upload_folder,
+          'file_name' => $new_file_name,
+          'allowed_types' =>'jpg|jpeg|png',
+          'max_size'      => 25000
+          );
+                $this->upload->initialize($this->upload_config);
+                if (!$this->upload->do_upload($img2)) {
+                    $upload_error = $this->upload->display_errors();
+                    // echo json_encode($upload_error);
+                    $this->session->set_flashdata('emessage', $upload_error);
+                    //echo $upload_error;
+                    redirect($_SERVER['HTTP_REFERER']);
+                } else {
+                    $file_info = $this->upload->data();
+
+                    $videoNAmePath = "assets/uploads/gallery/".$new_file_name.$file_info['file_ext'];
+                    $nnnn2=$videoNAmePath;
+
+                    // echo json_encode($file_info);
+                }
+            }
+            //============================image_3 upload=======================\\
+            $this->load->library('upload');
+            $img3='image3';
+            $nnnn3="";
+
+            $file_check=($_FILES['image3']['error']);
+            if ($file_check!=4) {
+                $image_upload_folder = FCPATH . "assets/uploads/gallery/";
+                if (!file_exists($image_upload_folder)) {
+                    mkdir($image_upload_folder, DIR_WRITE_MODE, true);
+                }
+                $new_file_name="gallery3".date("Ymdhms");
+                $this->upload_config = array(
+          'upload_path'   => $image_upload_folder,
+          'file_name' => $new_file_name,
+          'allowed_types' =>'jpg|jpeg|png',
+          'max_size'      => 25000
+          );
+                $this->upload->initialize($this->upload_config);
+                if (!$this->upload->do_upload($img3)) {
+                    $upload_error = $this->upload->display_errors();
+                    // echo json_encode($upload_error);
+                    $this->session->set_flashdata('emessage', $upload_error);
+                    //echo $upload_error;
+                    redirect($_SERVER['HTTP_REFERER']);
+                } else {
+                    $file_info = $this->upload->data();
+
+                    $videoNAmePath = "assets/uploads/gallery/".$new_file_name.$file_info['file_ext'];
+                    $nnnn3=$videoNAmePath;
+
+                    // echo json_encode($file_info);
+                }
+            }
+            //=============================image_4 upload===============================\\
+            $this->load->library('upload');
+            $img4='image4';
+            $nnnn4="";
+
+            $file_check=($_FILES['image4']['error']);
+            if ($file_check!=4) {
+                $image_upload_folder = FCPATH . "assets/uploads/gallery/";
+                if (!file_exists($image_upload_folder)) {
+                    mkdir($image_upload_folder, DIR_WRITE_MODE, true);
+                }
+                $new_file_name="gallery4".date("Ymdhms");
+                $this->upload_config = array(
+          'upload_path'   => $image_upload_folder,
+          'file_name' => $new_file_name,
+          'allowed_types' =>'jpg|jpeg|png',
+          'max_size'      => 25000
+          );
+                $this->upload->initialize($this->upload_config);
+                if (!$this->upload->do_upload($img4)) {
+                    $upload_error = $this->upload->display_errors();
+                    // echo json_encode($upload_error);
+                    $this->session->set_flashdata('emessage', $upload_error);
+                    //echo $upload_error;
+                    redirect($_SERVER['HTTP_REFERER']);
+                } else {
+                    $file_info = $this->upload->data();
+
+                    $videoNAmePath = "assets/uploads/gallery/".$new_file_name.$file_info['file_ext'];
+                    $nnnn4=$videoNAmePath;
+
+                    // echo json_encode($file_info);
+                }
+            }
+            //==========================image_5 upload=======================\\
+            $this->load->library('upload');
+            $img5='image5';
+            $nnnn5="";
+
+            $file_check=($_FILES['image5']['error']);
+            if ($file_check!=4) {
+                $image_upload_folder = FCPATH . "assets/uploads/gallery/";
+                if (!file_exists($image_upload_folder)) {
+                    mkdir($image_upload_folder, DIR_WRITE_MODE, true);
+                }
+                $new_file_name="gallery5".date("Ymdhms");
+                $this->upload_config = array(
+          'upload_path'   => $image_upload_folder,
+          'file_name' => $new_file_name,
+          'allowed_types' =>'jpg|jpeg|png',
+          'max_size'      => 25000
+          );
+                $this->upload->initialize($this->upload_config);
+                if (!$this->upload->do_upload($img5)) {
+                    $upload_error = $this->upload->display_errors();
+                    // echo json_encode($upload_error);
+                    $this->session->set_flashdata('emessage', $upload_error);
+                    //echo $upload_error;
+                    redirect($_SERVER['HTTP_REFERER']);
+                } else {
+                    $file_info = $this->upload->data();
+
+                    $videoNAmePath = "assets/uploads/gallery/".$new_file_name.$file_info['file_ext'];
+                    $nnnn5=$videoNAmePath;
+                }
+            }
+            //==========================image_6 upload=======================\\
+            $this->load->library('upload');
+            $img6='image6';
+            $nnnn6="";
+
+            $file_check=($_FILES['image6']['error']);
+            if ($file_check!=4) {
+                $image_upload_folder = FCPATH . "assets/uploads/gallery/";
+                if (!file_exists($image_upload_folder)) {
+                    mkdir($image_upload_folder, DIR_WRITE_MODE, true);
+                }
+                $new_file_name="gallery6".date("Ymdhms");
+                $this->upload_config = array(
+          'upload_path'   => $image_upload_folder,
+          'file_name' => $new_file_name,
+          'allowed_types' =>'jpg|jpeg|png',
+          'max_size'      => 25000
+          );
+                $this->upload->initialize($this->upload_config);
+                if (!$this->upload->do_upload($img6)) {
+                    $upload_error = $this->upload->display_errors();
+                    // echo json_encode($upload_error);
+                    $this->session->set_flashdata('emessage', $upload_error);
+                    //echo $upload_error;
+                    redirect($_SERVER['HTTP_REFERER']);
+                } else {
+                    $file_info = $this->upload->data();
+
+                    $videoNAmePath = "assets/uploads/gallery/".$new_file_name.$file_info['file_ext'];
+                    $nnnn6=$videoNAmePath;
+                }
+            }
+
             $typ=base64_decode($t);
             if ($typ==1) {
                 $data_insert = array('heading'=>$heading,
                   'image'=>$nnnn,
+                  'image2'=>$nnnn2,
+                  'image3'=>$nnnn3,
+                  'image4'=>$nnnn4,
+                  'image5'=>$nnnn5,
+                  'image6'=>$nnnn6,
                                   'added_by' =>$addedby,
                                   'ip'=>$ip,
                                   'is_active'=>1,
@@ -131,11 +305,36 @@ if ($this->form_validation->run()== true) {
                 }
             }
             if ($typ==2) {
-                $idw=base64_decode($iw);
-
-                if (!empty($nnnn)) {
+                                        $idw=base64_decode($iw);
+                                        $this->db->select('*');
+                                        $this->db->from('tbl_gallery');
+                                        $this->db->where('id', $idw);
+                                        $pro_data= $this->db->get()->row();
+                                        if (empty($nnnn)) {
+                                            $nnnn=$pro_data->image;
+                                        }
+                                        if (empty($nnnn2)) {
+                                            $nnnn2=$pro_data->image2;
+                                        }
+                                        if (empty($nnnn3)) {
+                                            $nnnn3=$pro_data->image3;
+                                        }
+                                        if (empty($nnnn4)) {
+                                            $nnnn4=$pro_data->image4;
+                                        }
+                                        if (empty($nnnn5)) {
+                                            $nnnn5=$pro_data->image5;
+                                        }
+                                        if (empty($nnnn6)) {
+                                            $nnnn6=$pro_data->image6;
+                                        }
                     $data_insert = array('heading'=>$heading,
-                      'image'=>$nnnn
+                      'image'=>$nnnn,
+                      'image2'=>$nnnn2,
+                      'image3'=>$nnnn3,
+                      'image4'=>$nnnn4,
+                      'image5'=>$nnnn5,
+                      'image6'=>$nnnn6,
                                   );
                     $this->db->where('id', $idw);
                     $last_id=$this->db->update('tbl_gallery', $data_insert);
@@ -159,7 +358,7 @@ if ($this->form_validation->run()== true) {
             redirect("login/admin_login", "refresh");
         }
     }
-}
+
     public function update_gallery($idd)
     {
         if (!empty($this->session->userdata('admin_data'))) {

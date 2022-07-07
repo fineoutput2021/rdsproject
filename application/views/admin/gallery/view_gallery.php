@@ -42,6 +42,11 @@
                       <th>#</th>
                       <th>Heading</th>
                       <th>Image</th>
+                      <th>Image2</th>
+                      <th>Image3</th>
+                      <th>Image4</th>
+                      <th>Image5</th>
+                      <th>Image6</th>
                       <th>Status</th>
                       <th>Action</th>
                     </tr>
@@ -54,6 +59,41 @@
                       <td>
                         <?php if ($data->image!="") {  ?>
                         <img id="slide_img_path" height=50 width=100 src="<?php echo base_url().$data->image ?>">
+                        <?php } else {  ?>
+                        Sorry No image Found
+                        <?php } ?>
+                      </td>
+                      <td>
+                        <?php if ($data->image2!="") {  ?>
+                        <img id="slide_img_path" height=50 width=100 src="<?php echo base_url().$data->image2 ?>">
+                        <?php } else {  ?>
+                        Sorry No image Found
+                        <?php } ?>
+                      </td>
+                      <td>
+                        <?php if ($data->image3!="") {  ?>
+                        <img id="slide_img_path" height=50 width=100 src="<?php echo base_url().$data->image3 ?>">
+                        <?php } else {  ?>
+                        Sorry No image Found
+                        <?php } ?>
+                      </td>
+                      <td>
+                        <?php if ($data->image4!="") {  ?>
+                        <img id="slide_img_path" height=50 width=100 src="<?php echo base_url().$data->image4 ?>">
+                        <?php } else {  ?>
+                        Sorry No image Found
+                        <?php } ?>
+                      </td>
+                      <td>
+                        <?php if ($data->image5!="") {  ?>
+                        <img id="slide_img_path" height=50 width=100 src="<?php echo base_url().$data->image5 ?>">
+                        <?php } else {  ?>
+                        Sorry No image Found
+                        <?php } ?>
+                      </td>
+                      <td>
+                        <?php if ($data->image6!="") {  ?>
+                        <img id="slide_img_path" height=50 width=100 src="<?php echo base_url().$data->image6 ?>">
                         <?php } else {  ?>
                         Sorry No image Found
                         <?php } ?>
