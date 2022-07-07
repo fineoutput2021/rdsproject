@@ -58,7 +58,7 @@
                       <?if($important_acts_rules->type==1){?>
                       <td> <strong>File</strong> <span style="color:red;">*</span></strong> </td>
                       <td>
-                        <input type="file" name="pdf_link" class="form-control" placeholder="" required />
+                        <input type="file" name="pdf_link" class="form-control" placeholder="" />
                       </td>
                     <?}else{?>
                       <td> <strong>Link</strong> <span style="color:red;">*</span></strong> </td>
@@ -91,7 +91,7 @@
 
 function change(x){
 if(x==1){
-$('#change').html('<td><strong>File</strong><span style="color:red;">*</span></strong></td><td><input type="file" name="pdf_link" class="form-control" placeholder="" required /></td>');
+$('#change').html('<td><strong>File</strong><span style="color:red;">*</span></strong></td><td><input type="file" name="pdf_link" class="form-control" placeholder="" /></td>');
 }else{
 $('#change').html('<td><strong>Link</strong><span style="color:red;">*</span></strong></td><td><input type="url" name="pdf_link" class="form-control" placeholder="" required  value="<?=$important_acts_rules->pdf_link?>" /></td>');
 }

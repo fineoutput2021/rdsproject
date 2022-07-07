@@ -6,7 +6,7 @@
                 <!--Main Slider-->
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
-          <a href="gallery_slider.html">
+          <!-- <a href="gallery_slider.html"> -->
             <div class="carousel-inner">
             <?php $i=1; foreach($slider_data->result() as $slider) { ?>
               <div class="carousel-item <?if($i==1){echo 'active';}?>">
@@ -23,7 +23,9 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
-        </p></a>
+        </p>
+      <!-- </a> -->
+
         </div>
     <!--End Main Slider-->
 

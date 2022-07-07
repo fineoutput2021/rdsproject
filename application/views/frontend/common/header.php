@@ -50,12 +50,11 @@
           <div class="col-xl-12 col-lg-12 col-md-12">
             <div class="header-style1 ">
               <div class="header-style1-logo float-left">
-                <a href="index.html">
-                  <h4>RDS ASSOCIATION</h4>
+                <a href="<?=base_url()?>">
+                <img src="<?base_url()?>assets/frontend/images/logo.png" width="30%">
                 </a>
               </div>
               <div class="headers1-header-right float-right logof">
-
                 <div class="headers1-button">
                   <div class="icon">
                     <span class="icon-phone-call"></span>
@@ -83,31 +82,30 @@
 
                 <div class="navbar-header clearfix mobi1">
                   <div class="row">
-                    <div class="col-4 pb-2">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="margin-top:-44px; margin-left:20px;">
+                    <div class="col-3 pb-2">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="margin-top:-47px; margin-left:13px;">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                       </button>
                     </div>
-                    <div class="col-4 pb-3 margin">
+                    <div class="col-5 pb-3 margin">
                       <a href="index.html">
-                        <h3 class="text-white text-center" style="margin-top:-40px;">RDS
-                          ASSOCIATION</h3>
+                        <h3 class="text-white text-center mlogo" style="margin-top:-50px;"> <img src="<?base_url()?>assets/frontend/images/logo.png" class="img-fluid"></h3>
                       </a>
                     </div>
 
-                    <div class="mainmenu-right col-4">
+                    <div class="mainmenu-right col-3 pb-5">
 
-                      <div class="quote-button-box float-right btn">
-                        <a class="btn-two" href="#myModal" data-toggle="modal" data-target="#myModal">&nbsp;<i class="fa fa-user" aria-hidden="true" style="font-size:30px;"></i></a>
+                      <div class="quote-button-box float-right btn" style="margin-top:2px">
+                        <a class="btn-two userx" href="#myModal" data-toggle="modal" data-target="#myModal">&nbsp;<i class="fa fa-user" aria-hidden="true" style="font-size:30px;"></i></a>
                       </div>
 
                     </div>
                   </div>
                 </div>
                 <div class="navbar-collapse collapse clearfix">
-                  <ul class="navigation clearfix" style="margin-left:60px;">
+                  <ul class="navigation clearfix" style="margin-left:50px;">
                     <li><a href="<?=base_url()?>">Home</a>
 
                     </li>
@@ -116,22 +114,22 @@
                     </li>
                     <li class="dropdown" style="color:whute;"><a href="#">MEMBERS</a>
                       <ul>
-                        <li><a href="civil.html">List of Officers</a></li>
-                        <li><a href="search_member.html">Search Member</a></li>
+                        <li><a href="<?=base_url()?>Home/members">List of Officers</a></li>
+                        <li><a href="<?=base_url()?>Home/search_members">Search Member</a></li>
 
                       </ul>
                     </li>
                     <li class="dropdown"><a href="#">QUICK LINKS </a>
                       <ul>
-                        <li><a href="letters_and_memoradum.html">Letters & Memorandum</a></li>
-                        <li><a href="important.html">Important Acts & Rules</a></li>
-                        <li><a href="impportant_website.html">Important Websites</a></li>
+                        <li><a href="<?=base_url()?>Home/letters_memorandum">Letters & Memorandum</a></li>
+                        <li><a href="<?=base_url()?>Home/important_acts_and_rules">Important Acts & Rules</a></li>
+                        <li><a href="<?=base_url()?>Home/important_website">Important Websites</a></li>
 
                       </ul>
                     </li>
-                    <li><a href="magzine.html">RDS Magazine</a>
+                    <li><a href="<?=base_url()?>Home/magazines">RDS Magazine</a>
                     </li>
-                    <li><a href="gallery.html">GALLERY</a>
+                    <li><a href="<?=base_url()?>Home/gallery">GALLERY</a>
                     </li>
                   </ul>
                 </div>

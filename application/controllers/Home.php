@@ -103,12 +103,15 @@ class Home extends CI_Controller
         $this->load->view('frontend/all_video');
         $this->load->view('frontend/common/footer');
     }
+
+
     //===================================== EXECUTIVE COUNCIL =========================
     public function executive_council()
     {
         $this->db->select('*');
         $this->db->from('tbl_member');
         $this->db->where('is_active', 1);
+        $this->db->where('exe', 1);
         $data['executive_data']= $this->db->get();
         $this->load->view('frontend/common/header', $data);
         $this->load->view('frontend/executive_council');
@@ -116,52 +119,108 @@ class Home extends CI_Controller
     }
 
     //===================================== OFFICER DETAILS =========================
-    public function officer_details($id)
+    public function officer_details($idd)
     {
+        $id=base64_decode($idd);
+        $data['id']=$idd;
         $this->db->select('*');
         $this->db->from('tbl_member');
-        $this->db->where('is_active', $id);
+        $this->db->where('id', $id);
         $this->db->where('is_active', 1);
-        $data['executive_data']= $this->db->get();
+        $data['member_data']= $this->db->get()->row();
+
+        $this->db->select('*');
+        $this->db->from('tbl_posting');
+        $this->db->where('member_id', $id);
+        $this->db->where('is_active', 1);
+        $data['posting_data']= $this->db->get();
+
         $this->load->view('frontend/common/header', $data);
-        $this->load->view('frontend/executive_council');
+        $this->load->view('frontend/officer_details');
         $this->load->view('frontend/common/footer');
     }
 
+    //==================================== MEMBERS ==============================
+    public function members()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_member');
+        $this->db->where('is_active', 1);
+        $this->db->where('exe', 2);
+        $data['members_data']= $this->db->get();
+
+        $this->load->view('frontend/common/header', $data);
+        $this->load->view('frontend/members');
+        $this->load->view('frontend/common/footer');
+    }
+    //============================search===============================\\
+    public function search_members()
+    {
+        $this->load->view('frontend/common/header');
+        $this->load->view('frontend/search_members');
+        $this->load->view('frontend/common/footer');
+    }
+    //============================magazine===============================\\
+    public function magazines()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_magazine');
+        $this->db->where('is_active', 1);
+        $data['magazine_data']= $this->db->get();
+        $this->load->view('frontend/common/header', $data);
+        $this->load->view('frontend/magazine');
+        $this->load->view('frontend/common/footer');
+    }
+    //============================letters & memorandum ===============================\\
+    public function letters_memorandum()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_letters_memorandum');
+        $this->db->where('is_active', 1);
+        $data['letters_data']= $this->db->get();
+        $this->load->view('frontend/common/header', $data);
+        $this->load->view('frontend/letters_and_memorandum');
+        $this->load->view('frontend/common/footer');
+    }
+    //============================important & memorandum ===============================\\
+    public function important_acts_and_rules()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_important_acts_rules');
+        $this->db->where('is_active', 1);
+        $data['important_data']= $this->db->get();
+        $this->load->view('frontend/common/header', $data);
+        $this->load->view('frontend/important_acts_rules');
+        $this->load->view('frontend/common/footer');
+    }
+    //============================ important website ===============================\\
+
+    public function important_website()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_important_website');
+        $this->db->where('is_active', 1);
+        $data['important_website_data']= $this->db->get();
+        $this->load->view('frontend/common/header', $data);
+        $this->load->view('frontend/important_website');
+        $this->load->view('frontend/common/footer');
+    }
+
+    //==============  Gallery ==============================
+
+    public function gallery()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_gallery');
+        $this->db->where('is_active', 1);
+        $data['gallery_data']= $this->db->get();
+        $this->load->view('frontend/common/header', $data);
+        $this->load->view('frontend/gallery');
+        $this->load->view('frontend/common/footer');
+    }
 
     public function error404()
     {
         $this->load->view('errors/error404');
     }
-
-
-
-    // public function blog()
-    // {
-    //
-    //
-    // 											$this->db->select('*');
-    // 											$this->db->from('tbl_blog');
-    // 											$this->db->where('is_active',1);
-    // 											$this->db->order_by('blog_id', 'DESC');
-    // 											$data['blog_data']= $this->db->get();
-    //
-    //
-    //
-    //
-    // 		$this->load->view('blog/header',$data);
-    // 		$this->load->view('blog/blog');
-    // 		$this->load->view('blog/footer');
-    //     // }
-    // }
-
-
-        // public function single()
-        // {
-        //
-        // 		$this->load->view('blog/single-header');
-        // 		$this->load->view('blog/blogsingle');
-        // 		$this->load->view('blog/footer');
-        //
-        // }
 }

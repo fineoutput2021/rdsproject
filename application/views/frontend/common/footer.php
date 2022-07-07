@@ -57,9 +57,9 @@
 
                             </div>
                             <ul class="useful-links">
-                                <li><a href="letters_and_memoradum.html">Letters & Memorandum</a></li>
-                                    <li><a href="important.html">Important Acts & Rules</a></li>
-                                    <li><a href="impportant_website.html">Important Websites</a></li>
+                                <li><a href="<?=base_url()?>Home/letters_memorandum">Letters & Memorandum</a></li>
+                                    <li><a href="<?=base_url()?>Home/important_acts_and_rules">Important Acts & Rules</a></li>
+                                    <li><a href="<?=base_url()?>Home/important_website">Important Websites</a></li>
                               </ul>
 
 

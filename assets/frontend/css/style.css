@@ -88,6 +88,17 @@
   }
 
 
+
+  @media (max-width:400px) {
+    .lokt{
+      width:100%!important;
+    }
+
+  }
+
+
+
+
 @media (max-width:600px) {
     .top-bar-style1 {
         display:none !important;
@@ -1681,7 +1692,7 @@ select:focus {
 
 
 .mainmenu-right {
-    position: relative;
+    position: absolute;
     display: inline-block;
     float: right;
 }
@@ -1772,7 +1783,27 @@ select:focus {
     background: #000;
 }
 .mainmenu-right .quote-button-box {
-    margin: 14px 0;
+    margin: 14px 0px 14px 20px;
+}
+
+/* @media(max-width:530px){
+    .userx{
+        padding: 10px 1px  !important;
+    }
+} */
+
+@media(max-width:530px){
+    .mainmenu-right .quote-button-box {
+        margin-left: 30px !important;
+    }
+}
+
+@media(max-width:530px){
+    .mlogo{
+        margin-top: -40px !important;
+        margin-right: 20px !important;
+        margin-left: 20px !important;
+    }
 }
 
 

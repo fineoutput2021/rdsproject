@@ -22,7 +22,7 @@
             <!--Start single item member-->
             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
                 <div class="single-team-member">
-                   <a href="<?=base_url()?>Home/executive_council"><div class="img-holder">
+                   <a href="<?=base_url()?>Home/officer_details/<?=base64_encode($officers->id)?>"><div class="img-holder">
                         <img src="<?=base_url().$officers->image?>" alt="Awesome Image">
                     </div>
                     <div class="name text-center">
