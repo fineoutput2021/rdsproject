@@ -47,12 +47,28 @@ Update Letters&Memorandum
 								<input type="text" name="title"  class="form-control" placeholder="" required value="<?=$letters_memorandum->title?>" />
                                     </td>
 							</tr>
-						<tr>
-                                      <td> <strong>Link</strong>  <span style="color:red;">*</span></strong> </td>
-                                      <td>
-								<input type="url" name="link"  class="form-control" placeholder="" required value="<?=$letters_memorandum->link?>" />
-                                    </td>
-							</tr>
+              <tr>
+                <td> <strong>Type</strong> <span style="color:red;">*</span></strong> </td>
+                <td>
+                    <input type="radio" id="pdf" name="type" value="1" <?if($letters_memorandum->type==1){ echo "Checked";}?> onclick="change(1)">
+                  <label for="pdf">PDF</label>
+                    <input type="radio" id="link" name="type" value="2" <?if($letters_memorandum->type==2){ echo "Checked";}?> onclick="change(2)">
+                  <label for="link">Link</label>
+                </td>
+              </tr>
+              <tr id="change">
+                <?if($letters_memorandum->type==1){?>
+                <td> <strong>File</strong> <span style="color:red;">*</span></strong> </td>
+                <td>
+                  <input type="file" name="pdf_link" class="form-control" placeholder="" />
+                </td>
+              <?}else{?>
+                <td> <strong>Link</strong> <span style="color:red;">*</span></strong> </td>
+                <td>
+                  <input type="url" name="pdf_link" class="form-control" placeholder="" required value="<?=$letters_memorandum->pdf_link?>" />
+                </td>
+                <?}?>
+              </tr>
               	<tr>
 									<td colspan="2" >
 										<input type="submit" class="btn btn-success" value="save">
@@ -75,7 +91,16 @@ Update Letters&Memorandum
               </div>
   </section>
 </div>
+<script>
 
+function change(x){
+if(x==1){
+$('#change').html('<td><strong>File</strong><span style="color:red;">*</span></strong></td><td><input type="file" name="pdf_link" class="form-control" placeholder="" /></td>');
+}else{
+$('#change').html('<td><strong>Link</strong><span style="color:red;">*</span></strong></td><td><input type="url" name="pdf_link" class="form-control" placeholder="" required  value="<?=$letters_memorandum->pdf_link?>" /></td>');
+}
+}
+</script>
 
 <script type="text/javascript" src="<?php echo base_url() ?>assets/slider/ajaxupload.3.5.js"></script>
 <link href="<? echo base_url() ?>assets/cowadmin/css/jqvmap.css" rel='stylesheet' type='text/css' />

@@ -42,7 +42,8 @@
                                       <tr>
                                           <th>#</th>
                                           <th>Title</th>
-                                          <th>Link</th>
+                                          <th>Type</th>
+                                          <th>File</th>
                                           <th>Status</th>
                                           <th>Action</th>
                                             </tr>
@@ -52,7 +53,13 @@
                 <tr>
                     <td><?php echo $i ?> </td>
                     <td><?php echo $data->title ?></td>
-                    <td><?php echo $data->link ?></td>
+                    <td><?php if($data->type==1){
+                      echo "PDF";
+                    }else{
+                      echo "Link";
+                    } ?></td>
+                    <td><a href="<?php echo $data->pdf_link ?>"><?echo $data->pdf_link?></a></td>
+
 
                       <td><?php if($data->is_active==1){ ?>
 <p class="label bg-green" >Active</p>

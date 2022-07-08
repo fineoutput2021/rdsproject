@@ -65,37 +65,64 @@ if (!empty($this->session->userdata('admin_data'))) {
               // print_r($this->input->post());
               // exit;
               $this->form_validation->set_rules('title', 'title', 'required|xss_clean|trim');
-              $this->form_validation->set_rules('link', 'link', 'required|xss_clean|trim');
-
-            // if(empty($iw)){
-            //     $this->form_validation->set_rules('name', 'Minor Name', 'required|xss_clean|is_unique[tbl_minor_category.name]');
-            // }
-            // else{
-            //      $this->form_validation->set_rules('name', 'Minor Name', 'required|xss_clean');
-            // }
-              if($this->form_validation->run()== TRUE)
-              {
+  $this->form_validation->set_rules('type', 'type', 'required|xss_clean|trim');
+$type=$this->input->post('type');
+  if ($type==2) {
+      $this->form_validation->set_rules('pdf_link', 'pdf_link', 'required|xss_clean|trim');
+      $nnnn1=$this->input->post('pdf_link');
+  }
+              if($this->form_validation->run()== TRUE){
                 $title=$this->input->post('title');
-                $link=$this->input->post('link');
 
-                  $ip = $this->input->ip_address();
-          date_default_timezone_set("Asia/Calcutta");
-                  $cur_date=date("Y-m-d H:i:s");
+                if ($type==1) {
+                    $img1='pdf_link';
+                    $file_check=($_FILES['pdf_link']['error']);
+                    if ($file_check!=4) {
+                        $image_upload_folder = FCPATH . "assets/uploads/letters_memorandum/";
+                        if (!file_exists($image_upload_folder)) {
+                            mkdir($image_upload_folder, DIR_WRITE_MODE, true);
+                        }
+                        $new_file_name="letters_memorandum".date("Ymdhms");
+                        $this->upload_config = array(
+                                           'upload_path'   => $image_upload_folder,
+                                           'file_name' => $new_file_name,
+                                           'allowed_types' =>'pdf',
+                                           'max_size'      => 25000
+                                   );
+                        $this->upload->initialize($this->upload_config);
+                        if (!$this->upload->do_upload($img1)) {
+                            $upload_error = $this->upload->display_errors();
+                            // echo json_encode($upload_error);
 
-                  $addedby=$this->session->userdata('admin_id');
+                            $this->session->set_flashdata('emessage', $upload_error);
+                            redirect($_SERVER['HTTP_REFERER']);
+                        } else {
+                            $file_info = $this->upload->data();
 
-          $typ=base64_decode($t);
-          if($typ==1){
+                            $videoNAmePath = "assets/uploads/letters_memorandum/".$new_file_name.$file_info['file_ext'];
+                            $nnnn1=base_url().$videoNAmePath;
+                            // echo json_encode($file_info);
+                        }
+                    }
+                }
 
-          $data_insert = array('title'=>$title,
-                    'link'=>$link,
-                    'ip' =>$ip,
-                    'added_by' =>$addedby,
-                    'is_active' =>1,
-                    'date'=>$cur_date
+                $ip = $this->input->ip_address();
+                date_default_timezone_set("Asia/Calcutta");
+                $cur_date=date("Y-m-d H:i:s");
 
-                    );
+                $addedby=$this->session->userdata('admin_id');
 
+                $typ=base64_decode($t);
+                if ($typ==1) {
+                    $data_insert = array('title'=>$title,
+              'type'=>$type,
+                'pdf_link'=>$nnnn1,
+                'ip' =>$ip,
+                'added_by' =>$addedby,
+                'is_active' =>1,
+                'date'=>$cur_date
+
+                );
 
 
 
@@ -106,32 +133,22 @@ if (!empty($this->session->userdata('admin_data'))) {
           redirect("dcadmin/Letters_Memorandum/view_letters_memorandum","refresh");
                   }
           }
-          if($typ==2){
+          if ($typ==2) {
+              $idw=base64_decode($iw);
 
-   $idw=base64_decode($iw);
+                          $this->db->select('*');
+              $this->db->from('tbl_letters_memorandum');
+              $this->db->where('id',$idw);
+              $act_data= $this->db->get()->row();
 
-// $this->db->select('*');
-//     $this->db->from('tbl_minor_category');
-//    $this->db->where('name',$name);
-//     $damm= $this->db->get();
-//    foreach($damm->result() as $da) {
-//      $uid=$da->id;
-// if($uid==$idw)
-// {
-//
-//  }
-// else{
-//    echo "Multiple Entry of Same Name";
-//       exit;
-//  }
-//     }
+              if(empty($nnnn1)){
+                $nnnn1=$act_data->pdf_link;
+              }
 
-          $data_insert = array('title'=>$title,
-                    'link'=>$link,
-                  );
-
-
-
+              $data_insert = array('title'=>$title,
+  'type'=>$type,
+          'pdf_link'=>$nnnn1,
+        );
             $this->db->where('id', $idw);
             $last_id=$this->db->update('tbl_letters_memorandum', $data_insert);
 
