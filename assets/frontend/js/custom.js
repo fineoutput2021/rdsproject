@@ -422,7 +422,7 @@ function latestProjectCarousel () {
     if ($('.latest-project-carousel').length) {
         $('.latest-project-carousel').owlCarousel({
             dots: false,
-            loop:false,
+            loop:true,
             margin:10,
             nav:true,
             navText: [

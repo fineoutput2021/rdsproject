@@ -114,7 +114,7 @@
         <div class=" input-box text-right align-self-end" style="width: 100%; margin-left:0px; background-color:#39345a;"><a href="<?=base_url()?>Home/all_news"><button style="background-color:#ed6f36; padding:0px 10px;"
               class="text-white align-self-end bts">View
               All</button></a></div>
-        <marquee onMouseOver="this.stop()" onMouseOut="this.start()" direction="up" scrollamount="5" diraction="up" style="width:100%;height:350px;">
+        <marquee onMouseOver="this.stop()" onMouseOut="this.start()" direction="up" scrollamount="3" diraction="up" style="width:100%;height:350px;">
           <?php $i=1; foreach ($news_data->result() as $news) { ?>
           <h5 style="text-align:center;" class="mt-3"><a href="<?=base_url().$news->file?>" target="_blank" rel="noreferrer" style="color:black;"><?=$news->news_heading?></a>
           </h5>
