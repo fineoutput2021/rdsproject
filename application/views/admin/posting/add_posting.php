@@ -47,15 +47,15 @@
                       </td>
                     </tr>
                     <tr>
-                      <td> <strong>Date From</strong> <span style="color:red;">*</span></strong> </td>
+                      <td> <strong>Date From</strong> <span style="color:red;"></span></strong> </td>
                       <td>
-                        <input type="date" name="date_from" class="form-control" placeholder="" required value="" />
+                        <input type="date" name="date_from" class="form-control" placeholder="" value="" />
                       </td>
                     </tr>
                     <tr>
-                      <td> <strong>Date To</strong> <span style="color:red;">*</span></strong> </td>
+                      <td> <strong>Date To</strong> <span style="color:red;"></span></strong> </td>
                       <td>
-                        <input type="date" name="date_to" class="form-control" placeholder="" required value="" />
+                        <input type="date" name="date_to" class="form-control" placeholder="" value="" />
                       </td>
                     </tr>
                     <tr>

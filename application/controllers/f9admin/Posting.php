@@ -70,8 +70,8 @@
                                   // exit;
                                   $this->form_validation->set_rules('member_id', 'member_id', 'required|xss_clean|trim');
                                   $this->form_validation->set_rules('name', 'name', 'required|xss_clean|trim');
-                                  $this->form_validation->set_rules('date_from', 'date_from', 'required|xss_clean|trim');
-                                  $this->form_validation->set_rules('date_to', 'date_to', 'required|xss_clean|trim');
+                                  $this->form_validation->set_rules('date_from', 'date_from', 'xss_clean|trim');
+                                  $this->form_validation->set_rules('date_to', 'date_to', 'xss_clean|trim');
 
                                   if($this->form_validation->run()== TRUE)
                                   {
