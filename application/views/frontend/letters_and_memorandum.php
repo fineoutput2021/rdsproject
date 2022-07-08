@@ -32,7 +32,7 @@
             </div>
             <div class="title-holder">
               <h3><?=$letters_and_memorandum->title?></h3>
-              <a class="btn-other" href="<?=$letters_and_memorandum->link?>" target="_blank" rel="noreferrer">Download<span class="icon-thin-right-arrow"></span></a>
+              <a class="btn-other" href="<?=$letters_and_memorandum->pdf_link?>" target="_blank" rel="noreferrer">Download<span class="icon-thin-right-arrow"></span></a>
             </div>
           </li>
         </div>
