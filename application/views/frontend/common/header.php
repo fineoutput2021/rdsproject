@@ -109,7 +109,7 @@
                     <li class="dropdown" style="color:whute;"><a href="#">MEMBERS</a>
                       <ul>
                         <li><a href="<?=base_url()?>Home/members">List of Officers</a></li>
-                        <li><a href="<?=base_url()?>Home/search_members">Search Member</a></li>
+                        <!-- <li><a href="<?=base_url()?>Home/search_members">Search Member</a></li> -->
                       </ul>
                     </li>
                     <li class="dropdown"><a href="#">QUICK LINKS </a>
