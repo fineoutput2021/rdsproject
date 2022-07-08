@@ -209,8 +209,8 @@ class Important_Acts_Rules extends CI_finecontrol
 
                 $zapak=$this->db->delete('tbl_important_acts_rules', array('id' => $id));
                 if ($zapak!=0) {
-                    $this->session->set_flashdata('smessage', 'Important Acts&Rules deleted successfully');
-                    redirect("dcadmin/important_acts_rules/view_important_acts_rules", "refresh");
+                    $this->session->set_flashdata('smessage', 'Important Acts & Rules deleted successfully');
+                      redirect($_SERVER['HTTP_REFERER']);
                 } else {
                     echo "Error";
                     exit;
@@ -247,7 +247,7 @@ class Important_Acts_Rules extends CI_finecontrol
 
                 if ($zapak!=0) {
                     $this->session->set_flashdata('smessage', 'Status updated successfully');
-                    redirect("dcadmin/Important_Acts_Rules/view_important_acts_rules", "refresh");
+                    redirect($_SERVER['HTTP_REFERER']);
                 } else {
                     echo "Error";
                     exit;
@@ -264,7 +264,7 @@ class Important_Acts_Rules extends CI_finecontrol
 
                 if ($zapak!=0) {
                     $this->session->set_flashdata('smessage', 'Status updated successfully');
-                    redirect("dcadmin/Important_Acts_Rules/view_important_acts_rules", "refresh");
+                      redirect($_SERVER['HTTP_REFERER']);
                 } else {
                     $data['e']="Error Occured";
                     // exit;
