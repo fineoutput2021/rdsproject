@@ -135,6 +135,7 @@ class Home extends CI_Controller
         $this->db->select('*');
         $this->db->from('tbl_posting');
         $this->db->where('member_id', $id);
+        $this->db->order_by('id', 'desc');
         $this->db->where('is_active', 1);
         $data['posting_data']= $this->db->get();
 

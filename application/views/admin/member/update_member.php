@@ -148,7 +148,7 @@ Update Member
     <script>
     function change(x){
     if(x==1){
-    $('#post').html('<td><strong>Designation</strong><span style="color:red;"></span></strong></td><td><input type="text" name="officers_designation" class="form-control" placeholder="" value="<?=$member->post?>" /></td>');
+    $('#post').html('<td><strong>Officers Designation</strong><span style="color:red;"></span></strong></td><td><input type="text" name="officers_designation" class="form-control" placeholder="" value="<?=$member->post?>" /></td>');
     $('#start').html('<td><strong>start Date</strong><span style="color:red;"></span></strong></td><td><input type="date" name="start" class="form-control" placeholder="" value="" /></td>');
     }else{
     $('#post').html('');
