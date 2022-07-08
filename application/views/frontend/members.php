@@ -7,7 +7,7 @@
             <div class="col-xl-12">
                 <div class="inner-content clearfix">
                     <div class="title text-center">
-                       <h1>CIVIL LIST OF RAS OFFICERS</h1>
+                       <h1>CIVIL LIST OF RDS OFFICERS</h1>
                     </div>
                 </div>
             </div>
