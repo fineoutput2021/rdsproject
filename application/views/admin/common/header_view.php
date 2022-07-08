@@ -9,6 +9,7 @@
     <link href="<?php echo base_url() ?>assets/admin/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="https://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" href="<?=base_url()?>assets/frontend/images/favicon/rds_favicon.png" sizes="32x32">
     <link href="<?php echo base_url() ?>assets/admin/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url() ?>assets/admin/dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url() ?>assets/admin/plugins/iCheck/flat/blue.css" rel="stylesheet" type="text/css" />
@@ -28,31 +29,96 @@
   /* ==============================Custom theme=========================================== */
   .custom_btn{
     color: white;
-    background-color: hsl(353deg 91% 53%);
+    background-color:  #39345a;
   }
   .custom_btn:hover{
     color: white;
-    background-color: black;
+    background-color: #f36727;
+  }
+  .custom_btn>a:hover{
+    color:#39345a;
   }
   .custom_header{
-    color: white;
-    background-color: black !important;
+    color: black;
+    background-color: #39345a;
   }
   .custom_header>a:hover{
-    color: #fff;
-    background: hsl(353deg 91% 53%) !important;
-    border-left-color: hsl(353deg 91% 53%);
+    background: #39345a;
+    border-left-color: #39345a;
   }
   .custom_header>li>a:hover{
     color: #fff;
-    background: #262626;
-    border-left-color: hsl(353deg 91% 53%);
+    background: #39345a;
+    border-left-color: black;
   }
   .active>a{
     color: #fff;
-    background: hsl(353deg 91% 53%) !important;
-    border-color: hsl(353deg 91% 53%) !important;
+    background:  #39345a;
+    border-color: #39345a;
   }
+  .skin-blue .main-header .navbar {
+     background-color: #39345a;
+}
+.skin-blue .main-header .logo{
+   background-color: #39345a;
+  color: #f36727;
+}
+.skin-blue .main-header .logo:hover{
+  color: #39345a;
+   background:#f36727;
+}
+.skin-blue .sidebar a{
+  color: white;
+}
+.skin-blue .sidebar-menu>li>a:hover{
+  color: white;
+  background-color: #f36727;
+}
+.skin-blue .main-header .navbar .sidebar-toggle{
+color: #f36727;
+}
+.skin-blue .main-header .navbar .sidebar-toggle:hover{
+  color: #39345a;
+background:#f36727;
+}
+.skin-blue .main-header li.user-header {
+    background-color: #39345a;
+}
+.navbar-nav>.user-menu>.dropdown-menu>li.user-header>p{
+  color: #f36727;
+}
+.skin-blue .main-header .navbar .nav>li>a{
+  color: #f36727;
+}
+.skin-blue .main-header .navbar .nav>li>a:hover{
+  color: #f36727;
+}
+.sidebar-menu .treeview-menu>li>a{
+  color: #39345a;
+  background-color: #f36727;
+}
+.skin-blue .sidebar-menu>li.header{
+  background: #f36727;
+  color: white;
+}
+.skin-blue .wrapper, .skin-blue .main-sidebar{
+  background: #39345a;
+}
+.skin-blue .sidebar-menu>li.active>a{
+  background: #f36727;
+}
+.pagination>.active>a{
+  /* color: orange; */
+    background-color: #39345a;
+    border-color: #39345a;
+}
+.pagination>.active>a:hover{
+    background: #f36727;
+      border-color: #f36727;
+}
+.navbar-nav>.user-menu>.dropdown-menu>.user-footer .btn-default{
+  color: #f36727;
+}
   /* ==========================================Theme end================================================ */
   label{
   	margin:5px;
@@ -185,6 +251,11 @@
   .popup-close:hover:before {
     background: #fff;
   }
+  @media(max-width:780px){
+    .change{
+    width: 40% !important;
+    }
+  }
   </style>
   </head>
   <body class="skin-blue">
@@ -192,7 +263,7 @@
 
       <header class="main-header custom_header">
         <!-- Logo -->
-        <a href="<?=base_url().ADMIN_URL ?>/home" class="logo custom_header"><b><?php echo SITE_NAME; ?></b></a>
+        <a href="<?=base_url().ADMIN_URL ?>/home" class="logo custom_header"><img src="<?=base_url()?>assets/frontend/images/logo.png" width="100%" height="auto" class='change'></a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top custom_header" role="navigation">
           <!-- Sidebar toggle button-->
@@ -204,7 +275,7 @@
             <ul class="nav navbar-nav">
 
               <li class="dropdown user user-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <a href="#" class="dropdown-toggle custom_header" data-toggle="dropdown">
 
 <?php
                   if (!empty($imgr)) {
