@@ -62,9 +62,9 @@
                             <div class="footer-social-links">
 
                                 <ul class="sociallinks-style-two fix">
-                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                    <!-- <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> -->
+                                    <li><a href="https://twitter.com/RajasthanRds?t=7Qjh2vF8uuNrglVYvJNk7Q&s=09" target="_blank" rel="noreferrer"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="https://youtube.com/channel/UCmmTEtCp-aX9gJzm9rzA2vw" target="_blank" rel="noreferrer"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
                                 </ul>
                             </div>
                         </div>
