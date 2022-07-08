@@ -1341,7 +1341,7 @@
 .mainmenu-right {
     position: absolute;
     top: 0;
-    right: 20px;
+    right: 2px;
     float: none;
     z-index: 99;
 }

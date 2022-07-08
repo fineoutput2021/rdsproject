@@ -55,13 +55,32 @@ position: absolute;
  .card .inner_part {
    display: flex;
    flex-direction: column !important;
-   padding: 0 15px 0 15px !important;
+   padding:15px 15px 0 15px !important;
    align-items: center !important;
 justify-content: center !important;
 position:absolute!important;
 width: 100% !important;
+height:400px !important;
 
 
+}
+}
+
+@media (max-width:530px) {
+  .card {
+height: 500px !important;
+}
+}
+
+@media (max-width:530px) {
+  .birthday {
+padding:0px 40px !important;
+}
+}
+
+@media (max-width:412px) {
+  .birthday {
+padding:0px 70px !important;
 }
 }
 
@@ -289,6 +308,12 @@ display: none;
  }
 }
 
+@media (max-width: 530px) {
+ .shr {
+   margin-top: 0px !important;
+ }
+}
+
 /*  @media (max-width: 530px) {
  .slidex {
    display:none !important;
@@ -303,14 +328,15 @@ display: none;
 
 @media (max-width: 530px){
  .img {
-   width:100px !important;
-   height: 100px !important;
+   width:160px !important;
+   height: 160px !important;
  }
 }
 
 @media (max-width: 530px){
 .x{
  font-size: 30px !important;
+ margin-top:25px;
  }
 }
 
@@ -601,7 +627,7 @@ display: none;
            <!-- <div class="title">
                <h1 class="x">Happy Birthday!</h1>
            </div> -->
-           <div class="mt-5">
+           <div class="shr mt-5">
                 <h2 class="x">Suresh Sharma</h2>
                 <p class="z">We hope you have a wonderful birthday</p>
            </div>

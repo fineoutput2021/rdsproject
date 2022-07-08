@@ -1801,8 +1801,8 @@ select:focus {
 @media(max-width:530px){
     .mlogo{
         margin-top: -40px !important;
-        margin-right: 20px !important;
-        margin-left: 20px !important;
+        /* margin-right: 15px !important;
+        margin-left: 15px !important; */
     }
 }
 
@@ -2497,7 +2497,7 @@ select:focus {
 .latest-project .owl-theme .owl-nav {
     position: absolute;
     right: -330px;
-    top: -105px;
+    top: -101px;
     margin: 0;
 }
 .latest-project .owl-theme .owl-nav [class*="owl-"] {
@@ -7331,7 +7331,7 @@ select:focus {
 }
  @media(max-width:400px){
     .margin{
-        margin-left:-20px;
+        margin-left:-2px;
     }
  }
 
