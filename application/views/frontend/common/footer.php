@@ -6,7 +6,7 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                         <div class="single-footer-widget marbtm50">
                             <div class="title">
-                              <img src="<?=base_url()?>assets/frontend/images/logo.png" style="width:70%" class="img-fluid">
+                              <img src="<?=base_url()?>assets/frontend/images/logo.png" style="width:80%" class="img-fluid">
                             </div>
                             <div class="company-info-text">
                                 <div class="text-box">
@@ -14,11 +14,10 @@
                                 </div>
                                 <div class="newsletter-box">
                                     <div class="text">
-                                        <p>2, Institutional Area
-                                            Near Danik Bhaskar, JLN Marg, Jaipur</p>
+                                        <p>VRH5+8X8, Jawahar Lal Nehru Marg, Opposite Commerce College, Gandhi Nagar, Jaipur, Rajasthan 302004</p>
                                     </div>
                                     <p>Phone: +91-9636327342 </p>
-                                    <p>Email: info@rdsassociation.com
+                                    <p>Email: rdsrajasthan@gmail.com
                                         Web: http://rdsassociation.com</p>
 
                                 </div>

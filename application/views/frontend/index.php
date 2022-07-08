@@ -1,13 +1,13 @@
 <!--Main Slider-->
 <style>
-.hideContent {
+  .hideContent {
     overflow: hidden;
-    height: 27.7rem;
-}
+    height: 34rem;
+  }
 
-.showContent {
+  .showContent {
     height: auto;
-}
+  }
 </style>
 <section class="main-slider">
   <div class="container-fluid p-0">
@@ -55,27 +55,36 @@
     </div>
     <div class="col-lg-6">
       <div class="content hideContent">
-      <p class="" style="text-align: justify;" >प्रिय सम्मानित साथियों<br />
-        नमस्कार सर्वप्रथम मुझे राजस्थान ग्रामीण विकास सेवा परिषद का अध्यक्ष चुनने के लिए मैं आप सभी का हृदयतल से आभार व्यक्त करता हूँ। हार्दिक आभार इसलिए भी क्योंकि आप सभी ने भरपूर स्नेह देकर पूरे विश्वास के साथ बिना किसी विरोध के परस्पर सहमति के साथ
-        निर्विरोध व सर्वसम्मति से मुझे प्रदेश के ग्रामीण विकास में महती योगदान देने वाली सेवा के संगठन , राजस्थान ग्रामीण विकास सेवा परिषद का अध्यक्ष चयनित कर मुझमें अपना विश्वास दिखाया है।<br />
-        जैसा कि आप सभी को विदित है कि हमारी सेवा अन्य सेवाओं की तुलना में अभी नई है। किंतु इतने छोटे से अंतराल में ही हम सभी ने प्रदेश में अपनी सेवा की और अपनी सेवा से पहचान बनाई है।नई नई सेवा होने के कारण हमारी सेवा में अभी कई विसंगतियां हैं जिन्हें
-        मैं अपनी कार्यकारिणी के साथ निश्चित रूप से दूर करने का सार्थक प्रयास करूंगा । हमारा ये भी प्रयास रहेगा कि आपको अपने कार्यक्षेत्र में सेवा से समन्धित कोई समस्याएं आएं तो उनका यथाशीघ्र एवं तत्समय निराकरण किया जाए । समय समय पर कार्यकारिणी द्वारा
-        अधिवेशनों - कार्यक्रमों का आयोजन किया जाएगा जिसमें आप सभी साथी अधिकारियों की शत - प्रतिशत उपस्थिति प्रार्थनीय रहेगी ताकि हम आपस में संवाद के माध्यम से जुड़े रहें। हमारा सर्वथा प्रयास रहेगा कि प्रत्येक साथी अधिकारी परिषद के पटल पर निःसंकोच अपनी
-        बात, व्यथा अथवा पीड़ा रख सके ताकि यथासंभव अधिकारियों के साथ सार्थक संवाद कर उस समस्या का हल निकाला जाकर साथी अधिकारी को परितोष दिलवाया जा सके ।<br />
-        हम सभी की परिषद का अध्यक्ष होने के नाते आप सब से मेरी ये गुज़ारिश रहेगी कि आप सब परिषद द्वारा आयोजित कार्यक्रमों, अधिवेशनों में बढ़ चढ़ कर भाग लें तथा हमें अपने नित नवीन विचारों से अवगत कराते हुए मार्गदर्शित भी करें। संगठन के सदस्यों का परस्पर
-        एक दूसरे में विश्वास रखते हुए परिषद के विकास के लिए संगठित रहना अतिआवश्यक है। यही इस समय की महती आवश्यकता भी है। हम अपने संगठन को नई ऊंचाइयों पर ले जाने के लिए हमेशा प्रयासरत रहेंगे । आप सभी से संगठन के लिए बुलाये जाने पर हमेशा की तरह संगठन
-        के साथ बने रहने, खड़े रहने की अपेक्षा रहेगी। हम ये भी प्रयास करेंगे कि योग्य अधिवक्ताओं का एक पैनल हमारे परिषद के बैनर तले तैयार किया जाए ताकि कानूनी मुद्दों पर विधिक राय ली जा सके।<br />
-        परिषद के लेखा/ खातों की निष्पक्षता व पारदर्शिता बनाये रखने के लिए ऑडिटिंग के लिए रायशुमारी करवाई जा सकती है। नए चुनावों के साथ ही ग्रामीण विकास सेवा परिषद की नई वेबसाइट को सर्वथा नए कलेवर के साथ आप सबके समक्ष प्रस्तुत करते हुए मुझे बहुत हर्ष
-        हो रहा है। आशा है इस वेबसाइट के माध्यम से हम महत्वपूर्ण मुद्दों पर अपनी राय बेहतर तरीके से रख पाएंगे।<br />
-        अध्यक्ष होने के नाते मैं पुनः आप सभी साथी अधिकारियों को विश्वास दिलाता हूँ कि अपनी कार्यकारिणी के साथ आपके विश्वास पर पूरी तरह खरा उतरने का प्रयास करूंगा और इस संगठन रूपी परिवार को संगठन का मुखिया होने के नाते नवीन ऊंचाइयों पर ले जाने के सपने
-        को नए पंख देने की दिशा में भरपूर प्रयास करूंगा ।<br />
-        कहता है कौन लक्ष्य यूँ हासिल नहीं होता। दिल से अगर चाहो तो कुछ मुश्किल नहीं होता। बढ़ते रहो हर पल किनारों की तलाश में,गंगा का कोई एक ही साहिल नहीं होता।
-        इसी आशा और विश्वास को अपने हृदय में संजोए .....<br />
-        सद्भावी</p>
+        <p class="" style="text-align: justify;color:black">प्रिय सम्मानित साथियों<br />
+          नमस्कार सर्वप्रथम मुझे राजस्थान ग्रामीण विकास सेवा परिषद का अध्यक्ष चुनने के लिए मैं आप सभी का हृदयतल से आभार व्यक्त करता हूँ। हार्दिक आभार इसलिए भी क्योंकि आप सभी ने भरपूर स्नेह देकर पूरे विश्वास के साथ बिना किसी विरोध के परस्पर सहमति के
+          साथ
+          निर्विरोध व सर्वसम्मति से मुझे प्रदेश के ग्रामीण विकास में महती योगदान देने वाली सेवा के संगठन , राजस्थान ग्रामीण विकास सेवा परिषद का अध्यक्ष चयनित कर मुझमें अपना विश्वास दिखाया है।<br />
+          जैसा कि आप सभी को विदित है कि हमारी सेवा अन्य सेवाओं की तुलना में अभी नई है। किंतु इतने छोटे से अंतराल में ही हम सभी ने प्रदेश में अपनी सेवा की और अपनी सेवा से पहचान बनाई है।नई नई सेवा होने के कारण हमारी सेवा में अभी कई विसंगतियां हैं
+          जिन्हें
+          मैं अपनी कार्यकारिणी के साथ निश्चित रूप से दूर करने का सार्थक प्रयास करूंगा । हमारा ये भी प्रयास रहेगा कि आपको अपने कार्यक्षेत्र में सेवा से समन्धित कोई समस्याएं आएं तो उनका यथाशीघ्र एवं तत्समय निराकरण किया जाए । समय समय पर कार्यकारिणी
+          द्वारा
+          अधिवेशनों - कार्यक्रमों का आयोजन किया जाएगा जिसमें आप सभी साथी अधिकारियों की शत - प्रतिशत उपस्थिति प्रार्थनीय रहेगी ताकि हम आपस में संवाद के माध्यम से जुड़े रहें। हमारा सर्वथा प्रयास रहेगा कि प्रत्येक साथी अधिकारी परिषद के पटल पर निःसंकोच
+          अपनी
+          बात, व्यथा अथवा पीड़ा रख सके ताकि यथासंभव अधिकारियों के साथ सार्थक संवाद कर उस समस्या का हल निकाला जाकर साथी अधिकारी को परितोष दिलवाया जा सके ।<br />
+          हम सभी की परिषद का अध्यक्ष होने के नाते आप सब से मेरी ये गुज़ारिश रहेगी कि आप सब परिषद द्वारा आयोजित कार्यक्रमों, अधिवेशनों में बढ़ चढ़ कर भाग लें तथा हमें अपने नित नवीन विचारों से अवगत कराते हुए मार्गदर्शित भी करें। संगठन के सदस्यों का परस्पर
+          एक दूसरे में विश्वास रखते हुए परिषद के विकास के लिए संगठित रहना अतिआवश्यक है। यही इस समय की महती आवश्यकता भी है। हम अपने संगठन को नई ऊंचाइयों पर ले जाने के लिए हमेशा प्रयासरत रहेंगे । आप सभी से संगठन के लिए बुलाये जाने पर हमेशा की तरह संगठन
+          के साथ बने रहने, खड़े रहने की अपेक्षा रहेगी। हम ये भी प्रयास करेंगे कि योग्य अधिवक्ताओं का एक पैनल हमारे परिषद के बैनर तले तैयार किया जाए ताकि कानूनी मुद्दों पर विधिक राय ली जा सके।<br />
+          परिषद के लेखा/ खातों की निष्पक्षता व पारदर्शिता बनाये रखने के लिए ऑडिटिंग के लिए रायशुमारी करवाई जा सकती है। नए चुनावों के साथ ही ग्रामीण विकास सेवा परिषद की नई वेबसाइट को सर्वथा नए कलेवर के साथ आप सबके समक्ष प्रस्तुत करते हुए मुझे बहुत
+          हर्ष
+          हो रहा है। आशा है इस वेबसाइट के माध्यम से हम महत्वपूर्ण मुद्दों पर अपनी राय बेहतर तरीके से रख पाएंगे।<br />
+          अध्यक्ष होने के नाते मैं पुनः आप सभी साथी अधिकारियों को विश्वास दिलाता हूँ कि अपनी कार्यकारिणी के साथ आपके विश्वास पर पूरी तरह खरा उतरने का प्रयास करूंगा और इस संगठन रूपी परिवार को संगठन का मुखिया होने के नाते नवीन ऊंचाइयों पर ले जाने के
+          सपने
+          को नए पंख देने की दिशा में भरपूर प्रयास करूंगा ।<br />
+          <p style="color:black">
+            कहता है कौन लक्ष्य यूँ हासिल नहीं होता।<br /> दिल से अगर चाहो तो कुछ मुश्किल नहीं होता।<br /> बढ़ते रहो हर पल किनारों की तलाश में,गंगा का कोई एक ही साहिल नहीं होता।<br />
+            इसी आशा और विश्वास को अपने हृदय में संजोए .....<br />
+            सद्भाव<br />
+            तारा चंद
+          </p></p>
       </div>
-        <div class="show-more">
-       <a href="javascript:void(0);" style="color:#f36727">Show more</a>
-   </div>
+      <div class="show-more">
+        <a href="javascript:void(0);" style="color:#f36727">Show more</a>
+      </div>
     </div>
   </div>
 </div>
@@ -107,10 +116,11 @@
               All</button></a></div>
         <marquee onMouseOver="this.stop()" onMouseOut="this.start()" direction="up" scrollamount="5" diraction="up" style="width:100%;height:350px;">
           <?php $i=1; foreach ($news_data->result() as $news) { ?>
-          <h5 style="text-align:center;" class="mt-1"><a href="<?=base_url().$news->file?>" target="_blank" rel="noreferrer" style="color:black;"><?=$news->news_heading?></a>
+          <h5 style="text-align:center;" class="mt-3"><a href="<?=base_url().$news->file?>" target="_blank" rel="noreferrer" style="color:black;"><?=$news->news_heading?></a>
           </h5>
           <?php $i++; } ?>
         </marquee>
+        <div class=" input-box text-right align-self-end" style="width: 100%; margin-left:0px; background-color:#39345a;">&nbsp;</div>
       </div>
     </div>
   </div>
@@ -124,7 +134,12 @@
           <div class="sec-title">
             <div class="title text-center"><span>RDS ASSOCIATION</span></div>
           </div>
-          <p style="text-align: justify; font-size:13px;">RDS association members are dedicatedly working since last 12 years in rural areas of all over Rajasthan. RDS officers are working as block development officers for the holistic development of villages in the state , implementing all government schemes at the grassroot level. Officers have sincerely tried to transform the rural scenario by educating the Panchayat Samiti members to take the right decision with regard to the programmes to be pursued and managing the execution of all the initiatives related to the construction and planning of the blocks. RDS officers have presented a COMPLETE SOLUTION model as block development officers. Apart from being BDOs in blocks, RDS officers have performed well and proved their excellence in desk job also in various Headoffices .Contributing their best in welfare activities,  RDS officers have played a pivotal role in overall development strategy of the state . The vision and mission of the RDS service is sustainable and inclusive growth of Rural Rajasthan through a multipronged strategy for eradicating poverty, increasing livelihood opportunities, social safety net , and promoting disadvantaged sections of society.
+          <p style="text-align: justify; color:black">RDS association members are dedicatedly working since last 12 years in rural areas of all over Rajasthan. RDS officers are working as block development officers for the holistic development of
+            villages in the state , implementing all government schemes at the grassroot level. Officers have sincerely tried to transform the rural scenario by educating the Panchayat Samiti members to take the right decision with regard to the
+            programmes to be pursued and managing the execution of all the initiatives related to the construction and planning of the blocks. RDS officers have presented a COMPLETE SOLUTION model as block development officers. Apart from being BDOs
+            in blocks, RDS officers have performed well and proved their excellence in desk job also in various Headoffices .Contributing their best in welfare activities, RDS officers have played a pivotal role in overall development strategy of the
+            state . The vision and mission of the RDS service is sustainable and inclusive growth of Rural Rajasthan through a multipronged strategy for eradicating poverty, increasing livelihood opportunities, social safety net , and promoting
+            disadvantaged sections of society.
           </p>
         </div>
       </div>
@@ -132,7 +147,6 @@
       <div class="col-xl-6 pb-2" style="padding-top:80px;">
         <img src="<?=base_url()?>assets/frontend/images\about_us.jpg" alt="About Us" class="img-fluid">
       </div>
-
     </div>
   </div>
 
@@ -161,8 +175,7 @@
             <?php $i=1; foreach ($video_data->result() as $video) { ?>
             <div class="single-project-style1">
               <div class="video-holder-box wow slideInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                <iframe width="100%" height="315" src="<?=$video->link?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
+                <iframe width="100%" height="315" src="<?=$video->link?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
             </div>
             <?php $i++; } ?>
@@ -208,28 +221,18 @@
               </div>
               <div class="title">
                 <h3>Send us an e-mail.</h3>
-                <span>info@rdsassociation.com</span>
-              </div>
-            </li>
-            <li>
-              <div class="icon">
-                <span class="icon-time-and-date"></span>
-              </div>
-              <div class="title">
-                <h3>Working Hours</h3>
-                <span>Mon - Sat: 9:00 - 19:00</span>
+                <span>rdsrajasthan@gmail.com</span>
               </div>
             </li>
           </ul>
-          <!-- <div class="find-map-box">
-                                <div class="icon">
-                                    <span class="icon-location"></span>
-                                </div>
-                                <div class="text">
-                                    <a class="btn-two" href="#">Find Us on Map<span
-                                            class="icon-thin-right-arrow"></span></a>
-                                </div>
-                            </div> -->
+          <div class="find-map-box">
+            <div class="icon">
+              <span class="icon-location"></span>
+            </div>
+            <div class="text">
+              <a class="btn-two" href="<?=base_url()?>Home/about_us">Find Us on Map<span class="icon-thin-right-arrow"></span></a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="col-xl-8 col-lg-7">
@@ -297,19 +300,19 @@
 </section>
 <!--End Call Us area-->
 <script>
-$(".show-more a").on("click", function() {
-  var $this = $(this);
-  var $content = $this.parent().prev("div.content");
-  var linkText = $this.text().toUpperCase();
+  $(".show-more a").on("click", function() {
+    var $this = $(this);
+    var $content = $this.parent().prev("div.content");
+    var linkText = $this.text().toUpperCase();
 
-  if(linkText === "SHOW MORE"){
+    if (linkText === "SHOW MORE") {
       linkText = "Show less";
       $content.switchClass("hideContent", "showContent", 400);
-  } else {
+    } else {
       linkText = "Show more";
       $content.switchClass("showContent", "hideContent", 400);
-  };
+    };
 
-  $this.text(linkText);
-});
+    $this.text(linkText);
+  });
 </script>

@@ -19,31 +19,24 @@
 <section class="mt-5">
   <div class="container">
     <div class="">
-      <div class="row">
+      <div class="row rto">
         <div class="col-xl-6">
           <div class="about-title">
             <div class="sec-title">
               <div class="title text-center"><span>RDS ASSOCIATION</span></div>
             </div>
-            <p style="text-align: justify; font-size:13px;">RDS Association is an organization of
-              serving members of Rajasthan Administrative Service. An officer becomes member of the
-              association as soon as he joins the service. The association has played a very vital and
-              positive role in betterment of service conditions.</p>
-            <p style="text-align: justify; font-size:13px;">The Objectives of the association are to
-              work for the benefit, welfare and development of the members for their social, cultural
-              and professional development. It also carry on activities for the extension of knowledge
-              in the field of administration, finance, management and other allied subjects.
-
-              Since the members of the association are serving at senior levels in their respective
-              places of postings, they interact with people from different walks of life, it is the
-              endeavor of this association to make the views of eminent persons known to its members.
-              The Association is also sensitive to public aspirations about development activities in
-              the State. Activities of the association are therefore aimed at achieving the larger
-              objective of providing excellence in Governance.</p>
+            <p style="text-align: justify; color:black">RDS association members are dedicatedly working since last 12 years in rural areas of all over Rajasthan. RDS officers are working as block development officers for the holistic development of
+              villages in the state , implementing all government schemes at the grassroot level. Officers have sincerely tried to transform the rural scenario by educating the Panchayat Samiti members to take the right decision with regard to the
+              programmes to be pursued and managing the execution of all the initiatives related to the construction and planning of the blocks. RDS officers have presented a COMPLETE SOLUTION model as block development officers. Apart from being BDOs
+              in blocks, RDS officers have performed well and proved their excellence in desk job also in various Headoffices .Contributing their best in welfare activities, RDS officers have played a pivotal role in overall development strategy of the
+              state . The vision and mission of the RDS service is sustainable and inclusive growth of Rural Rajasthan through a multipronged strategy for eradicating poverty, increasing livelihood opportunities, social safety net , and promoting
+              disadvantaged sections of society.
+            </p>
           </div>
         </div>
-        <div class="col-xl-6" style="padding-top:80px;">
-          <img src="<?=base_url()?>assets/frontend/images\slides\gandiji.jpg" class="img-fluid">
+
+        <div class="col-xl-6 pb-2" style="padding-top:80px;">
+          <img src="<?=base_url()?>assets/frontend/images\about_us.jpg" alt="About Us" class="img-fluid">
         </div>
       </div>
     </div>
