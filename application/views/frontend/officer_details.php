@@ -20,14 +20,14 @@
   <table border="1" style="border-color:#000;">
     <tbody class="right">
       <tr class="photo">
-        <td class="text-center" colspan="3"><img src="<?=$member_data->image?>" width="85px" class="center"></td>
+        <td class="text-center" colspan="3"><img src="<?=base_url().$member_data->image?>" width="85px" class="center"></td>
       </tr>
       <tr class="changecolor ">
         <th width="15%">&nbsp;&nbsp;Name</th>
         <td width="65%">&nbsp;&nbsp;<?=$member_data->name?></td>
         <td rowspan="3" class="text-center photo1">
           <?if(!empty($member_data->image)){?>
-          <img src="<?=$member_data->image?>" class="img-fluid" style="width:80%;" alt="Member Image">
+          <img src="<?=base_url().$member_data->image?>" class="img-fluid" style="width:80%;" alt="Member Image">
           <?}else{?>
           <img src="<?=base_url()?>assets/frontend/images/user.png" style="width:80%;" alt="Member Image">
           <?}?>
