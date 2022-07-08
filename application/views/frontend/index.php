@@ -1,14 +1,4 @@
 <!--Main Slider-->
-<style>
-  .hideContent {
-    overflow: hidden;
-    height: 34rem;
-  }
-
-  .showContent {
-    height: auto;
-  }
-</style>
 <section class="main-slider">
   <div class="container-fluid p-0">
 
@@ -128,7 +118,7 @@
 <!-- news end -->
 <div class="container">
   <div class="mt-5">
-    <div class="row rto">
+    <div class="row">
       <div class="col-xl-6">
         <div class="about-title">
           <div class="sec-title">

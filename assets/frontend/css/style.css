@@ -185,7 +185,14 @@ li {
 .secpd3{
     padding: 100px 0 70px;
 }
+.hideContent {
+  overflow: hidden;
+  height: 34rem;
+}
 
+.showContent {
+  height: auto;
+}
 
 .btn-one {
     position: relative;

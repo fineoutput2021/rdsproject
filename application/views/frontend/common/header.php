@@ -78,29 +78,27 @@
           <div class="col-xl-12">
             <div class="inner-content clearfix">
               <nav class="main-menu clearfix">
-
+<!-- //=============== mobile navbar ================== -->
                 <div class="navbar-header clearfix mobi1">
                   <div class="row">
-                    <div class="col-3 pb-2">
+                    <div class="col-2 pb-2">
                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="margin-top:-47px; margin-left:13px;">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                       </button>
                     </div>
-                    <div class="col-5 pb-3 margin">
-                      <a href="index.html">
-                        <h3 class="text-white text-center mlogo" style="margin-top:-50px;"> <img src="<?=base_url()?>assets/frontend/images/logo.png" class="img-fluid"></h3>
+                    <div class="col-10 pb-3 margin">
+                      <a href="<?=base_url()?>">
+                        <h3 class="text-white text-center" style="margin-top:-50px;"> <img src="<?=base_url()?>assets/frontend/images/logo.png" class="img-fluid"></h3>
                       </a>
                     </div>
 
-                    <div class="mainmenu-right col-3 pb-5">
-
+                    <!-- <div class="mainmenu-right col-3 pb-5">
                       <div class="quote-button-box float-right btn" style="margin-top:2px">
                         <a class="btn-two userx" href="#myModal" data-toggle="modal" data-target="#myModal">&nbsp;<i class="fa fa-user" aria-hidden="true" style="font-size:30px;"></i></a>
                       </div>
-
-                    </div>
+                    </div> -->
                   </div>
                 </div>
                 <div class="navbar-collapse collapse clearfix">
