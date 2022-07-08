@@ -107,7 +107,7 @@
               All</button></a></div>
         <marquee onMouseOver="this.stop()" onMouseOut="this.start()" direction="up" scrollamount="5" diraction="up" style="width:100%;height:350px;">
           <?php $i=1; foreach ($news_data->result() as $news) { ?>
-          <h5 style="text-align:center;"><a href="<?=base_url().$news->file?>" target="_blank" rel="noreferrer" style="color:black;"><?=$news->news_heading?></a>
+          <h5 style="text-align:center;" class="mt-1"><a href="<?=base_url().$news->file?>" target="_blank" rel="noreferrer" style="color:black;"><?=$news->news_heading?></a>
           </h5>
           <?php $i++; } ?>
         </marquee>
