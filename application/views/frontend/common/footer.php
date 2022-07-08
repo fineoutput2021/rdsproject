@@ -17,7 +17,7 @@
                                         <p>2, Institutional Area
                                             Near Danik Bhaskar, JLN Marg, Jaipur</p>
                                     </div>
-                                    <p>Phone: +91-141-2703692 </p>
+                                    <p>Phone: +91-9636327342 </p>
                                     <p>Email: info@rdsassociation.com
                                         Web: http://rdsassociation.com</p>
 
