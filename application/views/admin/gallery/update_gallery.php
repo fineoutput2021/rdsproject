@@ -85,7 +85,7 @@
                         <input type="file" name="image6" class="form-control" placeholder=""/>
                         <img id="slide_img_path" height=50 width=100 src="<?php echo base_url().$gallery_data->image6 ?>">
                       </td>
-                    </tr>          
+                    </tr>
                     <tr>
                       <td colspan="2">
                         <input type="submit" class="btn custom_btn" value="save">

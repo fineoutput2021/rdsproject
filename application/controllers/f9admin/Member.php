@@ -63,17 +63,17 @@ if (!empty($this->session->userdata('admin_data'))) {
      // print_r($this->input->post());
      // exit;
      $this->form_validation->set_rules('name', 'name', 'required');
-     $this->form_validation->set_rules('dob', 'dob', 'required');
-     $this->form_validation->set_rules('home_town', 'home_town', 'required');
-     $this->form_validation->set_rules('qualification', 'qualification', 'required');
-     $this->form_validation->set_rules('district', 'district', 'required');
-     $this->form_validation->set_rules('post', 'post', 'required');
-     $this->form_validation->set_rules('email', 'email', 'required');
-     $this->form_validation->set_rules('password', 'password', 'required');
-     $this->form_validation->set_rules('phone', 'phone', 'required');
-     $this->form_validation->set_rules('exe', 'exe', 'required');
-     $this->form_validation->set_rules('officers_designation', 'officers_designation', 'required');
-     $this->form_validation->set_rules('join_date', 'join_date', 'required');
+     $this->form_validation->set_rules('dob', 'dob', '');
+     $this->form_validation->set_rules('home_town', 'home_town', '');
+     $this->form_validation->set_rules('qualification', 'qualification', '');
+     $this->form_validation->set_rules('district', 'district', '');
+     $this->form_validation->set_rules('post', 'post', '');
+     $this->form_validation->set_rules('email', 'email', '');
+     $this->form_validation->set_rules('password', 'password', '');
+     $this->form_validation->set_rules('phone', 'phone', '');
+     $this->form_validation->set_rules('exe', 'exe', '');
+     $this->form_validation->set_rules('officers_designation', 'officers_designation', '');
+     $this->form_validation->set_rules('join_date', 'join_date', '');
 
 
 
@@ -101,7 +101,7 @@ if (!empty($this->session->userdata('admin_data'))) {
          $last_id = 0;
          if ($typ==1) {
              $img1='image';
-
+$nnnn1="";
              $file_check=($_FILES['image']['error']);
              if ($file_check!=4) {
                  $image_upload_folder = FCPATH . "assets/uploads/member/";
@@ -173,7 +173,7 @@ if (!empty($this->session->userdata('admin_data'))) {
 
 
              $img1='image';
-
+$nnnn1="";
 
              $file_check=($_FILES['image']['error']);
              if ($file_check!=4) {

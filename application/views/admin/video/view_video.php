@@ -41,8 +41,8 @@ Video
                       <thead>
                           <tr>
                               <th>#</th>
+                              <th>Image</th>
                               <th>Link</th>
-                              <!-- <th>Email</th> -->
                               <th>Status</th>
                               <th>Action</th>
                                 </tr>
@@ -51,6 +51,14 @@ Video
                             	<?php $i=1; foreach($video_data->result() as $data) { ?>
     <tr>
         <td><?php echo $i ?> </td>
+        <td>
+          <?php if ($data->image!="") {  ?>
+          <img id="slide_img_path" height=50 width=100 src="<?php echo base_url().$data->image ?>">
+          <?php } else {  ?>
+          Sorry No image Found
+          <?php } ?>
+        </td>
+
         <td><?php echo $data->link ?></td>
 
           <td><?php if($data->is_active==1){ ?>

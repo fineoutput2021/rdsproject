@@ -39,7 +39,12 @@ Add New Video
                      <form action="<?php echo base_url() ?>dcadmin/Video/add_video_data/<? echo base64_encode(1); ?>" method="POST" id="slide_frm" enctype="multipart/form-data">
                   <div class="table-responsive">
                       <table class="table table-hover">
-
+                        <tr>
+                          <td> <strong>Image</strong> <span style="color:red;">*</span></strong> </td>
+                          <td>
+                            <input type="file" name="image" class="form-control" placeholder=" "required value="" />
+                          </td>
+                        </tr>
 				<tr>
                                   <td> <strong>Link</strong>  <span style="color:red;">*</span></strong> </td>
                                   <td>

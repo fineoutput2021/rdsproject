@@ -47,69 +47,68 @@ Add New Member
           </td>
         </tr>
         <tr>
-          <td> <strong>Image</strong> <span style="color:red;">*</span></strong> </td>
+          <td> <strong>Image</strong> <span style="color:red;"></span></strong> </td>
           <td>
-            <input type="file" name="image" class="form-control" placeholder="" required value="" />
+            <input type="file" name="image" class="form-control" placeholder="" value="" />
           </td>
         </tr>
         <tr>
-          <td> <strong>DOB</strong> <span style="color:red;">*</span></strong> </td>
+          <td> <strong>DOB</strong> <span style="color:red;"></span></strong> </td>
           <td>
-            <input type="date" name="dob" class="form-control" placeholder="" required value="" />
+            <input type="date" name="dob" class="form-control" placeholder="" value="" />
           </td>
         </tr>
         <tr>
-          <td> <strong>Home Town</strong> <span style="color:red;">*</span></strong> </td>
+          <td> <strong>Home Town</strong> <span style="color:red;"></span></strong> </td>
           <td>
-            <input type="text" name="home_town" class="form-control" placeholder="" required value="" />
+            <input type="text" name="home_town" class="form-control" placeholder="" value="" />
           </td>
         </tr>
         <tr>
-          <td> <strong>Qualification</strong> <span style="color:red;">*</span></strong> </td>
+          <td> <strong>Qualification</strong> <span style="color:red;"></span></strong> </td>
           <td>
-            <input type="text" name="qualification" class="form-control" placeholder="" required value="" />
+            <input type="text" name="qualification" class="form-control" placeholder="" value="" />
           </td>
         </tr>
         <tr>
-          <td> <strong>District</strong> <span style="color:red;">*</span></strong> </td>
+          <td> <strong>District</strong> <span style="color:red;"></span></strong> </td>
           <td>
-            <input type="text" name="district" class="form-control" placeholder="" required value="" />
+            <input type="text" name="district" class="form-control" placeholder="" value="" />
           </td>
         </tr>
         <tr>
-          <td> <strong>Post</strong> <span style="color:red;">*</span></strong> </td>
+          <td> <strong>Post</strong> <span style="color:red;"></span></strong> </td>
           <td>
-            <input type="text" name="post" class="form-control" placeholder="" required value="" />
+            <input type="text" name="post" class="form-control" placeholder="" value="" />
           </td>
         </tr>
         <tr>
-          <td> <strong>Email</strong> <span style="color:red;">*</span></strong> </td>
+          <td> <strong>Email</strong> <span style="color:red;"></span></strong> </td>
           <td>
-            <input type="text" name="email" class="form-control" placeholder="" required value="" />
+            <input type="text" name="email" class="form-control" placeholder="" value="" />
           </td>
         </tr>
         <tr>
-          <td> <strong>Passsword</strong> <span style="color:red;">*</span></strong> </td>
+          <td> <strong>Passsword</strong> <span style="color:red;"></span></strong> </td>
           <td>
-            <input type="text" name="password" class="form-control" placeholder="" required value="" />
+            <input type="text" name="password" class="form-control" placeholder="" value="" />
           </td>
         </tr>
         <tr>
         <tr>
-          <td> <strong>Order Date/Join Date</strong> <span style="color:red;">*</span></strong> </td>
+          <td> <strong>Order Date/Join Date</strong> <span style="color:red;"></span></strong> </td>
           <td>
-            <input type="date" name="join_date" class="form-control" placeholder="" required value="" />
+            <input type="text" name="join_date" class="form-control" placeholder="" value="" />
           </td>
         </tr>
         <tr>
-          <td> <strong>phone</strong> <span style="color:red;">*</span></strong> </td>
+          <td> <strong>phone</strong> <span style="color:red;"></span></strong> </td>
           <td>
-            <input type="text" onkeydown="if(event.key==='.'){event.preventDefault();}" oninput="event.target.value = event.target.value.replace(/[^0-9]*/g,'');" maxlength="10" name="phone" class="form-control" placeholder=""
-              required value="" />
+            <input type="text" onkeydown="if(event.key==='.'){event.preventDefault();}" oninput="event.target.value = event.target.value.replace(/[^0-9]*/g,'');" maxlength="10" name="phone" class="form-control" placeholder="" value="" />
           </td>
         </tr>
         <tr>
-          <td> <strong>Member</strong> <span style="color:red;">*</span></strong> </td>
+          <td> <strong>Member</strong> <span style="color:red;"></span></strong> </td>
           <td>
             <input type="radio" id="Executive Council" name="exe" value="1" onclick="change(1)">
             <label for="executive council">Executive Council</label>
@@ -145,7 +144,7 @@ Add New Member
 <script>
 function change(x){
 if(x==1){
-$('#post').html('<td><strong>Designation</strong><span style="color:red;">*</span></strong></td><td><input type="text" name="officers_designation" class="form-control" placeholder="" required value="" /></td>');
+$('#post').html('<td><strong>Designation</strong><span style="color:red;">*</span></strong></td><td><input type="text" name="officers_designation" class="form-control" placeholder="" value="" /></td>');
 // $('#start').html('<td><strong>start Date</strong><span style="color:red;">*</span></strong></td><td><input type="date" name="start" class="form-control" placeholder="" required value="" /></td>');
 }else{
 $('#post').html('');

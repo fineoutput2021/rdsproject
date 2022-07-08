@@ -45,37 +45,37 @@
                       </td>
                     </tr>
                     <tr>
-                      <td> <strong>Image</strong> <span style="color:red;">*</span></strong> </td>
+                      <td> <strong>Image</strong> <span style="color:red;"></span></strong> </td>
                       <td>
                         <input type="file" name="image" class="form-control" placeholder="" value="" />
                       </td>
                     </tr>
                     <tr>
-                      <td> <strong>Image2</strong> <span style="color:red;">*</span></strong> </td>
+                      <td> <strong>Image2</strong> <span style="color:red;"></span></strong> </td>
                       <td>
                         <input type="file" name="image2" class="form-control" placeholder="" value="" />
                       </td>
                     </tr>
                     <tr>
-                      <td> <strong>Image3</strong> <span style="color:red;">*</span></strong> </td>
+                      <td> <strong>Image3</strong> <span style="color:red;"></span></strong> </td>
                       <td>
                         <input type="file" name="image3" class="form-control" placeholder="" value="" />
                       </td>
                     </tr>
                     <tr>
-                      <td> <strong>Image4</strong> <span style="color:red;">*</span></strong> </td>
+                      <td> <strong>Image4</strong> <span style="color:red;"></span></strong> </td>
                       <td>
                         <input type="file" name="image4" class="form-control" placeholder="" value="" />
                       </td>
                     </tr>
                     <tr>
-                      <td> <strong>Image5</strong> <span style="color:red;">*</span></strong> </td>
+                      <td> <strong>Image5</strong> <span style="color:red;"></span></strong> </td>
                       <td>
                         <input type="file" name="image5" class="form-control" placeholder="" value="" />
                       </td>
                     </tr>
                     <tr>
-                      <td> <strong>Image6</strong> <span style="color:red;">*</span></strong> </td>
+                      <td> <strong>Image6</strong> <span style="color:red;"></span></strong> </td>
                       <td>
                         <input type="file" name="image6" class="form-control" placeholder="" value="" />
                       </td>
