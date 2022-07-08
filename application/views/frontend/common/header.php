@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="<?=base_url()?>assets/frontend/css/responsive.css">
   <!-- Responsive stylesheet -->
   <link rel="stylesheet" href="<?=base_url()?>assets/frontend/fonts/flaticon/flaticon.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="<?=base_url()?>assets/frontend/images/favicon/rds_favicon.png" sizes="32x32">
 </head>

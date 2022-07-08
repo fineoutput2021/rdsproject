@@ -29,7 +29,7 @@
             <tbody class="align">
               <?php $i=1; foreach ($news_data->result() as $data) { ?>
               <tr>
-                <td> <a href="<?=$data->file?>" target="_blank" rel="noreferrer" style="color:#ed6f36;"><?=$data->news_heading?></a> </td>
+                <td> <a href="<?=base_url().$data->file?>" target="_blank" rel="noreferrer" style="color:#ed6f36;"><?=$data->news_heading?></a> </td>
                 <td class="tfx">
                   <?php
                                   $newdate = new DateTime($data->date);

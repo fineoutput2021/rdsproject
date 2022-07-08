@@ -78,42 +78,42 @@
 
                   $addedby=$this->session->userdata('admin_id');
                   //========================image_1 upload========================\\
-                              $img1='image';
-                              $nnnn = '';
-
-                              $file_check=($_FILES['image']['error']);
-                              if ($file_check!=4) {
-                                  $image_upload_folder = FCPATH . "assets/uploads/video/";
-                                  if (!file_exists($image_upload_folder)) {
-                                      mkdir($image_upload_folder, DIR_WRITE_MODE, true);
-                                  }
-                                  $new_file_name="video_image".date("Ymdhms");
-                                  $this->upload_config = array(
-                                          'upload_path'   => $image_upload_folder,
-                                          'file_name' => $new_file_name,
-                                          'allowed_types' =>'jpg|jpeg|png',
-                                          'max_size'      => 25000
-                                  );
-                                  $this->upload->initialize($this->upload_config);
-                                  if (!$this->upload->do_upload($img1)) {
-                                      $upload_error = $this->upload->display_errors();
-                                      // echo json_encode($upload_error);
-                                      // echo $upload_error;
-                                      $this->session->set_flashdata('emessage', $upload_error);
-                                      redirect($_SERVER['HTTP_REFERER']);
-                                  } else {
-                                      $file_info = $this->upload->data();
-
-                                      $videoNAmePath = "assets/uploads/video/".$new_file_name.$file_info['file_ext'];
-                                      $nnnn=$videoNAmePath;
-                                  }
-                              }
+                              // $img1='image';
+                              // $nnnn = '';
+                              //
+                              // $file_check=($_FILES['image']['error']);
+                              // if ($file_check!=4) {
+                              //     $image_upload_folder = FCPATH . "assets/uploads/video/";
+                              //     if (!file_exists($image_upload_folder)) {
+                              //         mkdir($image_upload_folder, DIR_WRITE_MODE, true);
+                              //     }
+                              //     $new_file_name="video_image".date("Ymdhms");
+                              //     $this->upload_config = array(
+                              //             'upload_path'   => $image_upload_folder,
+                              //             'file_name' => $new_file_name,
+                              //             'allowed_types' =>'jpg|jpeg|png',
+                              //             'max_size'      => 25000
+                              //     );
+                              //     $this->upload->initialize($this->upload_config);
+                              //     if (!$this->upload->do_upload($img1)) {
+                              //         $upload_error = $this->upload->display_errors();
+                              //         // echo json_encode($upload_error);
+                              //         // echo $upload_error;
+                              //         $this->session->set_flashdata('emessage', $upload_error);
+                              //         redirect($_SERVER['HTTP_REFERER']);
+                              //     } else {
+                              //         $file_info = $this->upload->data();
+                              //
+                              //         $videoNAmePath = "assets/uploads/video/".$new_file_name.$file_info['file_ext'];
+                              //         $nnnn=$videoNAmePath;
+                              //     }
+                              // }
 
           $typ=base64_decode($t);
           if($typ==1){
 
           $data_insert = array('link'=>$link,
-          'image'=>$nnnn,
+          // 'image'=>$nnnn,
                     'ip' =>$ip,
                     'added_by' =>$addedby,
                     'is_active' =>1,
@@ -138,19 +138,20 @@
                 $this->db->from('tbl_video');
                 $this->db->where('id', $idw);
                 $pro_data= $this->db->get()->row();
-                if (empty($nnnn)) {
-                    $nnnn=$pro_data->image;
-                }
+                // if (empty($nnnn)) {
+                //     $nnnn=$pro_data->image;
+                // }
           $data_insert = array('link'=>$link,
-'image'=>$nnnn,
+// 'image'=>$nnnn,
                     );
 
             $this->db->where('id', $idw);
             $last_id=$this->db->update('tbl_video', $data_insert);
-          } else {
-            $data_insert = array('link'=>$link,
-                          );
           }
+          //  else {
+          //   $data_insert = array('link'=>$link,
+          //                 );
+          // }
                               if($last_id!=0){
                               $this->session->set_flashdata('smessage','Data updated successfully');
                               redirect("dcadmin/Video/view_video","refresh");

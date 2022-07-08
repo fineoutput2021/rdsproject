@@ -39,13 +39,13 @@ Update Video
                      <form action="<?php echo base_url() ?>dcadmin/Video/add_video_data/<? echo base64_encode(2); ?>/<?=$id?>" method="POST" id="slide_frm" enctype="multipart/form-data">
                   <div class="table-responsive">
                       <table class="table table-hover">
-                        <tr>
+                        <!-- <tr>
                           <td> <strong>Image</strong> <span style="color:red;"></span></strong> </td>
                           <td>
                             <input type="file" name="image" class="form-control" placeholder=""/>
                             <img id="slide_img_path" height=50 width=100 src="<?php echo base_url().$video->image ?>">
                           </td>
-                        </tr>
+                        </tr> -->
 				<tr>
                                   <td> <strong>Link</strong>  <span style="color:red;"></span></strong> </td>
                                   <td>

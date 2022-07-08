@@ -21,19 +21,9 @@
         <!--Start Single Choose Item-->
         <?php $i=1; foreach ($video_data->result() as $video) { ?>
         <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-          <div class="video-holder-box wow" data-wow-delay="0ms" data-wow-duration="1500ms">
-            <div class="img-holder">
-              <img src="<?=base_url()?>assets/frontend/images/resources/video-gallery.jpg" alt="Awesome Image">
-              <div class="icon-holder">
-                <div class="icon">
-                  <div class="inner">
-                    <a class="html5lightbox" title="Screwer Video Gallery" href="<?=$video->link?>">
-                      <span class="flaticon-music-player-play"></span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="video-holder-box wow slideInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+            <iframe width="100%" height="315" src="<?=$video->link?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
           </div>
         </div>
         <?php $i++; } ?>
