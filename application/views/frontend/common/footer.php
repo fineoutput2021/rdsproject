@@ -117,25 +117,25 @@
     <!-- bx slider -->
     <script src="<?=base_url()?>assets/frontend/js/jquery.bxslider.min.js"></script>
     <!-- Fancybox Script -->
-    <script src="<?=base_url()?>assets/frontend/js/jquery.fancybox.js"></script>
+    <!-- <script src="<?=base_url()?>assets/frontend/js/jquery.fancybox.js"></script> -->
     <!-- count to -->
-    <script src="<?=base_url()?>assets/frontend/js/jquery.countTo.js"></script>
-    <script src="<?=base_url()?>assets/frontend/js/appear.js"></script>
+    <!-- <script src="<?=base_url()?>assets/frontend/js/jquery.countTo.js"></script> -->
+    <!-- <script src="<?=base_url()?>assets/frontend/js/appear.js"></script> -->
     <!-- owl carousel -->
     <script src="<?=base_url()?>assets/frontend/js/owl.js"></script>
     <!-- validate -->
-    <script src="<?=base_url()?>assets/frontend/js/validation.js"></script>
+    <!-- <script src="<?=base_url()?>assets/frontend/js/validation.js"></script> -->
     <!-- mixit up -->
-    <script src="<?=base_url()?>assets/frontend/js/jquery.mixitup.min.js"></script>
+    <!-- <script src="<?=base_url()?>assets/frontend/js/jquery.mixitup.min.js"></script> -->
     <!-- isotope script-->
-    <script src="<?=base_url()?>assets/frontend/js/isotope.js"></script>
+    <!-- <script src="<?=base_url()?>assets/frontend/js/isotope.js"></script> -->
     <!-- Easing -->
-    <script src="<?=base_url()?>assets/frontend/js/jquery.easing.min.js"></script>
+    <!-- <script src="<?=base_url()?>assets/frontend/js/jquery.easing.min.js"></script> -->
     <!-- Gmap helper -->
-    <script src="http://maps.google.com/maps/api/js?key=AIzaSyB2uu6KHbLc_y7fyAVA4dpqSVM4w9ZnnUw"></script>
+    <!-- <script src="http://maps.google.com/maps/api/js?key=AIzaSyB2uu6KHbLc_y7fyAVA4dpqSVM4w9ZnnUw"></script> -->
     <!--Gmap script-->
-    <script src="<?=base_url()?>assets/frontend/js/gmaps.js"></script>
-    <script src="<?=base_url()?>assets/frontend/js/map-helper.js"></script>
+    <!-- <script src="<?=base_url()?>assets/frontend/js/gmaps.js"></script> -->
+    <!-- <script src="<?=base_url()?>assets/frontend/js/map-helper.js"></script> -->
     <!-- jQuery ui js -->
     <script src="<?=base_url()?>assets/frontend/assets/jquery-ui-1.11.4/jquery-ui.js"></script>
     <!-- Language Switche  -->

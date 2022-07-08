@@ -28,7 +28,7 @@ body {
 }
 .video-w3l {
     padding: 0;
-    background: rgba(0, 0, 0, 0.28);
+    /* background: rgba(0, 0, 0, 0.28); */
     min-height:1200px;
     display: grid;
 }

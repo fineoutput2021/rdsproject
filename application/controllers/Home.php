@@ -26,6 +26,13 @@ class Home extends CI_Controller
         $this->db->order_by('id', 'desc');
         $data['news_data']= $this->db->get();
 
+        date_default_timezone_set("Asia/Calcutta");
+        $this->db->select('*');
+        $this->db->from('tbl_member');
+        $this->db->where("date(dob)", date("m-d"));
+        $data['birthday_data']= $this->db->get();
+
+// print_r($data['birthday_data']);die();
 
         $this->db->select('*');
         $this->db->from('tbl_video');
@@ -207,7 +214,7 @@ class Home extends CI_Controller
         $this->db->select('*');
         $this->db->from('tbl_important_website');
         $this->db->where('is_active', 1);
-        // $this->db->order_by('id', 'desc');
+        $this->db->order_by('id', 'desc');
         $data['important_website_data']= $this->db->get();
         $this->load->view('frontend/common/header', $data);
         $this->load->view('frontend/important_website');
@@ -244,18 +251,18 @@ class Home extends CI_Controller
     }
     //====================================================== ALL NEWS ===========================
 
-        public function all_news()
-        {
-            $this->db->select('*');
-            $this->db->from('tbl_news');
-            $this->db->where('is_active', 1);
-            $this->db->order_by('id', 'desc');
-            $data['news_data']= $this->db->get();
-            $this->load->view('frontend/common/header', $data);
-            $this->load->view('frontend/all_news');
-            $this->load->view('frontend/common/footer');
-        }
-//====================================================== 404 ===========================
+    public function all_news()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_news');
+        $this->db->where('is_active', 1);
+        $this->db->order_by('id', 'desc');
+        $data['news_data']= $this->db->get();
+        $this->load->view('frontend/common/header', $data);
+        $this->load->view('frontend/all_news');
+        $this->load->view('frontend/common/footer');
+    }
+    //====================================================== 404 ===========================
     public function error404()
     {
         $this->load->view('errors/error404');

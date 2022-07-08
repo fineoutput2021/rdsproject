@@ -30,96 +30,97 @@
 
 <!-- birthday -->
 <style>
-   .card {
-/* position: absolute; */
-height: 420px;
-width: 100%;
-max-width: 850px;
-margin: auto;
-background-color: #ffffff;
-border-radius: 25px;
-box-shadow: 10px 0 50px rgba(0, 0, 0, 0.5);
-
-}
-
-.card .inner_part {
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 0 0 0 30px;
-height: 350px;
-position: absolute;
-}
-
-@media (max-width: 530px) {
- .card .inner_part {
-   display: flex;
-   flex-direction: column !important;
-   padding:15px 15px 0 15px !important;
-   align-items: center !important;
-justify-content: center !important;
-position:absolute!important;
-width: 100% !important;
-height:400px !important;
-
-
-}
-}
-
-@media (max-width:530px) {
   .card {
-height: 500px !important;
-}
-}
+    /* position: absolute; */
+    height: 420px;
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 10px 0 50px rgba(0, 0, 0, 0.5);
 
-@media (max-width:530px) {
-  .birthday {
-padding:0px 40px !important;
-}
-}
+  }
 
-@media (max-width:412px) {
-  .birthday {
-padding:0px 70px !important;
-}
-}
+  .card .inner_part {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 0 30px;
+    height: 350px;
+    position: absolute;
+  }
 
-#slideImg:checked ~ .inner_part {
-padding: 0;
-transition: .1s ease-in;
-}
+  @media (max-width: 530px) {
+    .card .inner_part {
+      display: flex;
+      flex-direction: column !important;
+      padding: 15px 15px 0 15px !important;
+      align-items: center !important;
+      justify-content: center !important;
+      position: absolute !important;
+      width: 100% !important;
+      height: 400px !important;
 
-.inner_part .img {
-height: 260px;
-width: 260px;
-overflow: hidden;
-flex-shrink: 0;
-border-radius: 20px;
-box-shadow: 0 10px 50px rgba(0,0,0,0.2);
-}
 
-#slideImg:checked ~ .inner_part .img {
-height: 350px;
-width: 850px;
-z-index: 99;
-transition: .3s .2s ease-in;
-}
+    }
+  }
 
-.img img {
-height: 100%;
-width: 100%;
-cursor: pointer;
-opacity: 0;
-transition: .6s;
-}
+  @media (max-width:530px) {
+    .card {
+      height: 500px !important;
+    }
+  }
 
-#slide_1:checked ~ .inner_part .img_1,
-#slide_2:checked ~ .inner_part .img_2,
-#slide_3:checked ~ .inner_part .img_3 {
-opacity: 1;
-transition-delay: .2s;
-}
-/* @media(max-width:530px){
+  @media (max-width:530px) {
+    .birthday {
+      padding: 0px 40px !important;
+    }
+  }
+
+  @media (max-width:412px) {
+    .birthday {
+      padding: 0px 70px !important;
+    }
+  }
+
+  #slideImg:checked~.inner_part {
+    padding: 0;
+    transition: .1s ease-in;
+  }
+
+  .inner_part .img {
+    height: 260px;
+    width: 260px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 20px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+  }
+
+  #slideImg:checked~.inner_part .img {
+    height: 350px;
+    width: 850px;
+    z-index: 99;
+    transition: .3s .2s ease-in;
+  }
+
+  .img img {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+    transition: .6s;
+  }
+
+  #slide_1:checked~.inner_part .img_1,
+  #slide_2:checked~.inner_part .img_2,
+  #slide_3:checked~.inner_part .img_3 {
+    opacity: 1;
+    transition-delay: .2s;
+  }
+
+  /* @media(max-width:530px){
 .inner_part .slideImg .img_22
 {
  opacity: 0.5 !important;
@@ -127,194 +128,201 @@ transition-delay: .2s;
 }
 } */
 
-.contents {
-padding: 0 20px 0 35px;
-width: 530px;
-margin-left: 50px;
-opacity: 0;
-transition: .6s;
-overflow: hidden;
-}
+  .contents {
+    padding: 0 20px 0 35px;
+    width: 530px;
+    margin-left: 50px;
+    opacity: 0;
+    transition: .6s;
+    overflow: hidden;
+  }
 
-#slideImg:checked ~ .inner_part .contents {
-display: none;
-}
+  #slideImg:checked~.inner_part .contents {
+    display: none;
+  }
 
-#slide_1:checked ~ .inner_part .content_1,
-#slide_2:checked ~ .inner_part .content_2,
-#slide_3:checked ~ .inner_part .content_3 {
-opacity: 1;
-margin-left: 0;
-z-index: 100;
-transition-delay: .3s;
-}
+  #slide_1:checked~.inner_part .content_1,
+  #slide_2:checked~.inner_part .content_2,
+  #slide_3:checked~.inner_part .content_3 {
+    opacity: 1;
+    margin-left: 0;
+    z-index: 100;
+    transition-delay: .3s;
+  }
 
-.contents .title {
-font-size: 30px;
-font-weight: 700;
-color: #0d0925;
-margin: 0 0 20px 0;
-overflow: hidden;
-}
+  .contents .title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #0d0925;
+    margin: 0 0 20px 0;
+    overflow: hidden;
+  }
 
-.contents .text {
-font-size: 19px;
-color: #4e4a67;
-margin: 0 auto 30px auto;
-line-height: 1.5em;
-text-align: justify;
-overflow: hidden;
-}
+  .contents .text {
+    font-size: 19px;
+    color: #4e4a67;
+    margin: 0 auto 30px auto;
+    line-height: 1.5em;
+    text-align: justify;
+    overflow: hidden;
+  }
 
-.contents button {
-padding: 15px 20px;
-border: none;
-font-size: 16px;
-color: #fff0e6;
-font-weight: 600;
-letter-spacing: 1px;
-border-radius: 50px;
-cursor: pointer;
-outline: none;
-background: #000000;
-float: right;
-}
+  .contents button {
+    padding: 15px 20px;
+    border: none;
+    font-size: 16px;
+    color: #fff0e6;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    background: #000000;
+    float: right;
+  }
 
-.contents button:hover {
-background: #cecece;
-color: #000000;
-}
+  .contents button:hover {
+    background: #cecece;
+    color: #000000;
+  }
 
-.slider {
-position: absolute;
-bottom: 25px;
-left: 55%;
-transform: translateX(-50%);
-z-index: 1;
-}
+  .slider {
+    position: absolute;
+    bottom: 25px;
+    left: 55%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
 
-#slideImg:checked ~ .slider {
-display: none;
-}
+  #slideImg:checked~.slider {
+    display: none;
+  }
 
-.slider .slide {
-position: relative;
-height: 10px;
-width: 50px;
-background: #d9d9d9;
-border-radius: 5px;
-display: inline-flex;
-margin: 0 3px;
-cursor: pointer;
-}
-
-
-.slider .slide:before {
-position: absolute;
-content: '';
-top: 0;
-left: 0;
-height: 100%;
-width: -100%;
-background: #000000;;
-border-radius: 10px;
-transform: scaleX(0);
-transition: transform .6s;
-transform-origin: left;
-}
-
-#slide_1:checked ~ .slider .slide_1:before,
-#slide_2:checked ~ .slider .slide_2:before,
-#slide_3:checked ~ .slider .slide_3:before {
-transform: scaleX(1);
-width: 100%;
-}
-
-input {
-display: none;
-}
+  .slider .slide {
+    position: relative;
+    height: 10px;
+    width: 50px;
+    background: #d9d9d9;
+    border-radius: 5px;
+    display: inline-flex;
+    margin: 0 3px;
+    cursor: pointer;
+  }
 
 
-.site-logo {
-  width: 218.33px !important;
-  margin-right: 50px;
-}
-.btn {
-  border-radius: 5px;
-  font-weight: normal;
-  font-size: 15px;
-  letter-spacing: 0.02em;
-  line-height: 12px;
-  text-align: center;
-  font-weight: 600;
-  font-size: 14px;
-  padding: 14px 30px;
-  cursor: pointer;
-}
-.btn-theme {
-  background: var(--theme-color1);
-  color: #212121;
-}
+  .slider .slide:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: -100%;
+    background: #000000;
+    ;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transition: transform .6s;
+    transform-origin: left;
+  }
 
-.c-container {
-   margin: auto;
-   width: 93%;
-   position: relative;
-   z-index: 1;
-}
+  #slide_1:checked~.slider .slide_1:before,
+  #slide_2:checked~.slider .slide_2:before,
+  #slide_3:checked~.slider .slide_3:before {
+    transform: scaleX(1);
+    width: 100%;
+  }
 
-.btn-outline-white {
-   color: #fff;
-   background-color: rgba(255, 255, 255, 0.1);
-   background-image: none;
-   border-width: 2px;
-   border-color: #fff;
-   font-weight: 500;
-   -webkit-transition: all .2s;
-   transition: all .2s;
-}
-.btn {
-   border-radius: 5px;
-   font-weight: normal;
-   font-size: 15px;
-   letter-spacing: 0.02em;
-   line-height: 12px;
-   text-align: center;
-   font-weight: 600;
-   font-size: 14px;
-   padding: 14px 30px;
-   cursor: pointer;
-}
-.btn-outline-white:hover {
-   background-color: #fff;
-   color: var(--text-dark);
-}
-@media (max-width: 991px) {
- .contents {
-   width:394px !important;
- }
-}
-@media (max-width: 767px) {
- .contents {
-   width:294px !important;
-   padding: 0px 0px !important;
- }
-}
+  input {
+    display: none;
+  }
 
-@media (max-width: 530px) {
- .contents {
-   width:430px !important;
-   padding: 0px 0px !important;
- }
-}
 
-@media (max-width: 530px) {
- .shr {
-   margin-top: 0px !important;
- }
-}
+  .site-logo {
+    width: 218.33px !important;
+    margin-right: 50px;
+  }
 
-/*  @media (max-width: 530px) {
+  .btn {
+    border-radius: 5px;
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    line-height: 12px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 14px 30px;
+    cursor: pointer;
+  }
+
+  .btn-theme {
+    background: var(--theme-color1);
+    color: #212121;
+  }
+
+  .c-container {
+    margin: auto;
+    width: 93%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn-outline-white {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-image: none;
+    border-width: 2px;
+    border-color: #fff;
+    font-weight: 500;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+  }
+
+  .btn {
+    border-radius: 5px;
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    line-height: 12px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 14px 30px;
+    cursor: pointer;
+  }
+
+  .btn-outline-white:hover {
+    background-color: #fff;
+    color: var(--text-dark);
+  }
+
+  @media (max-width: 991px) {
+    .contents {
+      width: 394px !important;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .contents {
+      width: 294px !important;
+      padding: 0px 0px !important;
+    }
+  }
+
+  @media (max-width: 530px) {
+    .contents {
+      width: 430px !important;
+      padding: 0px 0px !important;
+    }
+  }
+
+  @media (max-width: 530px) {
+    .shr {
+      margin-top: 0px !important;
+    }
+  }
+
+  /*  @media (max-width: 530px) {
  .slidex {
    display:none !important;
 }
@@ -326,388 +334,422 @@ display: none;
 }
 } */
 
-@media (max-width: 530px){
- .img {
-   width:160px !important;
-   height: 160px !important;
- }
-}
-
-@media (max-width: 530px){
-.x{
- font-size: 30px !important;
- margin-top:25px;
- }
-}
-
-@media (max-width: 530px){
-.z{
- font-size: 15px !important;
- }
-}
-
-
-
-
-
-
-@media (min-width: 530px) and (max-width: 767px) {
- .img {
-   width:180px !important;
- }
-}
-
-
-
-
-:root {
-  --balloon1-bg-color: #eaeaeae6;
-  --balloon2-bg-color: #e8dab2e6;
-  --balloon3-bg-color: #dd6e42e3;
-  --balloon4-bg-color: #4f6d7ad6;
-  --balloon5-bg-color: #eaeaeae6;
-  --bg-color: #c0d6df;
-
-  --balloon-anim-1: balloon1 15s ease infinite;
-  --balloon-anim-2: balloon2 5s ease infinite;
-  --balloon-anim-3: balloon3 10s ease infinite;
-  --balloon-anim-4: balloon4 5s ease infinite;
-  --balloon-anim-5: balloon5 15s ease infinite;
-  --balloon-anim-6: balloon7 5s ease infinite;
-}
-
-.happy,
-.birthday {
-  flex-direction: row;
-  display: flex;
-  justify-content: center;
-}
-.name {
-  display: flex;
-  justify-content: center;
-  padding: 50px;
-  font-size: 80px;
-  color: #4f6d7a;
-  font-family: "Comic Sans MS", Arial, Helvetica, sans-serif;
-}
-
-.balloon {
-  width: 40px;
-  height: 50px;
-  margin: 5px;
-  border-radius: 80%;
-  position: relative;
-}
-
-.balloon::after {
-  position: absolute;
-  bottom: -16px;
-  left: 15px;
-  content: "\2713";
-  transform: rotate(180deg);
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.happy .balloon::before,
-.birthday .balloon::before {
-  position: absolute;
-  top: calc(50% - 15px);
-  left: calc(50% - 10px);
-  font-size: 22px;
-  color: #4f6d7a;
-  font-family: "Comic Sans MS", Arial, Helvetica, sans-serif;
-}
-
-.happy .balloon:nth-child(1)::before {
-  content: "H";
-}
-.happy .balloon:nth-child(2)::before {
-  content: "A";
-}
-.happy .balloon:nth-child(3)::before {
-  content: "P";
-}
-.happy .balloon:nth-child(4)::before {
-  content: "P";
-}
-.happy .balloon:nth-child(5)::before {
-  content: "Y";
-}
-.birthday .balloon:nth-child(1)::before {
-  content: "B";
-}
-.birthday .balloon:nth-child(2)::before {
-  content: "I";
-}
-.birthday .balloon:nth-child(3)::before {
-  content: "R";
-}
-.birthday .balloon:nth-child(4)::before {
-  content: "T";
-}
-.birthday .balloon:nth-child(5)::before {
-  content: "H";
-}
-.birthday .balloon:nth-child(6)::before {
-  content: "D";
-}
-.birthday .balloon:nth-child(7)::before {
-  content: "A";
-}
-.birthday .balloon:nth-child(8)::before {
-  content: "Y";
-}
-@keyframes balloon1 {
-  0%,
-  100% {
-    transform: translate(0, 0) rotate(-10deg);
+  @media (max-width: 530px) {
+    .img {
+      width: 160px !important;
+      height: 160px !important;
+    }
   }
-  50% {
-    transform: translate(0, 30px) rotate(10deg);
-  }
-}
 
-@keyframes balloon2 {
-  0%,
-  100% {
-    transform: translate(0, 0) rotate(-10deg);
+  @media (max-width: 530px) {
+    .x {
+      font-size: 30px !important;
+      margin-top: 25px;
+    }
   }
-  50% {
-    transform: translate(0, 30px) rotate(10deg);
-  }
-}
 
-@keyframes balloon3 {
-  0%,
-  100% {
-    transform: translate(0, 0) rotate(-10deg);
+  @media (max-width: 530px) {
+    .z {
+      font-size: 15px !important;
+    }
   }
-  50% {
-    transform: translate(0, 30px) rotate(10deg);
-  }
-}
-
-@keyframes balloon4 {
-  0%,
-  100% {
-    transform: translate(0, 0) rotate(-10deg);
-  }
-  50% {
-    transform: translate(0, 30px) rotate(10deg);
-  }
-}
-
-@keyframes balloon5 {
-  0%,
-  100% {
-    transform: translate(0, 0) rotate(-10deg);
-  }
-  50% {
-    transform: translate(0, 30px) rotate(10deg);
-  }
-}
-@keyframes balloon6 {
-  0%,
-  100% {
-    transform: translate(-10px, 0) rotate(0deg);
-  }
-  50% {
-    transform: translate(0, 20px) rotate(30deg);
-  }
-}
-
-@keyframes balloon7 {
-  0%,
-  100% {
-    transform: translate(-10px, 0) rotate(0deg);
-  }
-  50% {
-    transform: translate(0, 20px) rotate(30deg);
-  }
-}
-.balloon1 {
-  background: var(--balloon1-bg-color);
-  box-shadow: inset 10px 10px 10px #c7c3c3e6;
-}
-.balloon1::after {
-  color: var(--balloon1-bg-color);
-}
-
-.balloon2 {
-  background: var(--balloon2-bg-color);
-  box-shadow: inset 10px 10px 10px #d5c7a1;
-}
-.balloon2::after {
-  color: var(--balloon2-bg-color);
-}
-
-.balloon3 {
-  background: var(--balloon3-bg-color);
-  box-shadow: inset 10px 10px 10px #cf6840;
-}
-.balloon3::after {
-  color: var(--balloon3-bg-color);
-}
-
-.balloon4 {
-  background: var(--balloon4-bg-color);
-  box-shadow: inset 10px 10px 10px #4f6d7a;
-}
-.balloon4::after {
-  color: var(--balloon4-bg-color);
-}
-.balloon5 {
-  background: var(--balloon5-bg-color);
-  box-shadow: inset 10px 10px 10px #cbc8c8;
-}
-.balloon5::after {
-  color: var(--balloon5-bg-color);
-}
-
-.balloon-anim1 {
-  animation: var(--balloon-anim-1);
-}
-.balloon-anim2 {
-  animation: var(--balloon-anim-2);
-}
-.balloon-anim3 {
-  animation: var(--balloon-anim-3);
-}
-.balloon-anim4 {
-  animation: var(--balloon-anim-4);
-}
-.balloon-anim5 {
-  animation: var(--balloon-anim-5);
-}
-.balloon-anim6 {
-  animation: var(--balloon-anim-6);
-}
 
 
 
+
+
+
+  @media (min-width: 530px) and (max-width: 767px) {
+    .img {
+      width: 180px !important;
+    }
+  }
+
+
+
+
+  :root {
+    --balloon1-bg-color: #eaeaeae6;
+    --balloon2-bg-color: #e8dab2e6;
+    --balloon3-bg-color: #dd6e42e3;
+    --balloon4-bg-color: #4f6d7ad6;
+    --balloon5-bg-color: #eaeaeae6;
+    --bg-color: #c0d6df;
+
+    --balloon-anim-1: balloon1 15s ease infinite;
+    --balloon-anim-2: balloon2 5s ease infinite;
+    --balloon-anim-3: balloon3 10s ease infinite;
+    --balloon-anim-4: balloon4 5s ease infinite;
+    --balloon-anim-5: balloon5 15s ease infinite;
+    --balloon-anim-6: balloon7 5s ease infinite;
+  }
+
+  .happy,
+  .birthday {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+  }
+
+  .name {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    font-size: 80px;
+    color: #4f6d7a;
+    font-family: "Comic Sans MS", Arial, Helvetica, sans-serif;
+  }
+
+  .balloon {
+    width: 40px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 80%;
+    position: relative;
+  }
+
+  .balloon::after {
+    position: absolute;
+    bottom: -16px;
+    left: 15px;
+    content: "\2713";
+    transform: rotate(180deg);
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .happy .balloon::before,
+  .birthday .balloon::before {
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 10px);
+    font-size: 22px;
+    color: #4f6d7a;
+    font-family: "Comic Sans MS", Arial, Helvetica, sans-serif;
+  }
+
+  .happy .balloon:nth-child(1)::before {
+    content: "H";
+  }
+
+  .happy .balloon:nth-child(2)::before {
+    content: "A";
+  }
+
+  .happy .balloon:nth-child(3)::before {
+    content: "P";
+  }
+
+  .happy .balloon:nth-child(4)::before {
+    content: "P";
+  }
+
+  .happy .balloon:nth-child(5)::before {
+    content: "Y";
+  }
+
+  .birthday .balloon:nth-child(1)::before {
+    content: "B";
+  }
+
+  .birthday .balloon:nth-child(2)::before {
+    content: "I";
+  }
+
+  .birthday .balloon:nth-child(3)::before {
+    content: "R";
+  }
+
+  .birthday .balloon:nth-child(4)::before {
+    content: "T";
+  }
+
+  .birthday .balloon:nth-child(5)::before {
+    content: "H";
+  }
+
+  .birthday .balloon:nth-child(6)::before {
+    content: "D";
+  }
+
+  .birthday .balloon:nth-child(7)::before {
+    content: "A";
+  }
+
+  .birthday .balloon:nth-child(8)::before {
+    content: "Y";
+  }
+
+  @keyframes balloon1 {
+
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(-10deg);
+    }
+
+    50% {
+      transform: translate(0, 30px) rotate(10deg);
+    }
+  }
+
+  @keyframes balloon2 {
+
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(-10deg);
+    }
+
+    50% {
+      transform: translate(0, 30px) rotate(10deg);
+    }
+  }
+
+  @keyframes balloon3 {
+
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(-10deg);
+    }
+
+    50% {
+      transform: translate(0, 30px) rotate(10deg);
+    }
+  }
+
+  @keyframes balloon4 {
+
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(-10deg);
+    }
+
+    50% {
+      transform: translate(0, 30px) rotate(10deg);
+    }
+  }
+
+  @keyframes balloon5 {
+
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(-10deg);
+    }
+
+    50% {
+      transform: translate(0, 30px) rotate(10deg);
+    }
+  }
+
+  @keyframes balloon6 {
+
+    0%,
+    100% {
+      transform: translate(-10px, 0) rotate(0deg);
+    }
+
+    50% {
+      transform: translate(0, 20px) rotate(30deg);
+    }
+  }
+
+  @keyframes balloon7 {
+
+    0%,
+    100% {
+      transform: translate(-10px, 0) rotate(0deg);
+    }
+
+    50% {
+      transform: translate(0, 20px) rotate(30deg);
+    }
+  }
+
+  .balloon1 {
+    background: var(--balloon1-bg-color);
+    box-shadow: inset 10px 10px 10px #c7c3c3e6;
+  }
+
+  .balloon1::after {
+    color: var(--balloon1-bg-color);
+  }
+
+  .balloon2 {
+    background: var(--balloon2-bg-color);
+    box-shadow: inset 10px 10px 10px #d5c7a1;
+  }
+
+  .balloon2::after {
+    color: var(--balloon2-bg-color);
+  }
+
+  .balloon3 {
+    background: var(--balloon3-bg-color);
+    box-shadow: inset 10px 10px 10px #cf6840;
+  }
+
+  .balloon3::after {
+    color: var(--balloon3-bg-color);
+  }
+
+  .balloon4 {
+    background: var(--balloon4-bg-color);
+    box-shadow: inset 10px 10px 10px #4f6d7a;
+  }
+
+  .balloon4::after {
+    color: var(--balloon4-bg-color);
+  }
+
+  .balloon5 {
+    background: var(--balloon5-bg-color);
+    box-shadow: inset 10px 10px 10px #cbc8c8;
+  }
+
+  .balloon5::after {
+    color: var(--balloon5-bg-color);
+  }
+
+  .balloon-anim1 {
+    animation: var(--balloon-anim-1);
+  }
+
+  .balloon-anim2 {
+    animation: var(--balloon-anim-2);
+  }
+
+  .balloon-anim3 {
+    animation: var(--balloon-anim-3);
+  }
+
+  .balloon-anim4 {
+    animation: var(--balloon-anim-4);
+  }
+
+  .balloon-anim5 {
+    animation: var(--balloon-anim-5);
+  }
+
+  .balloon-anim6 {
+    animation: var(--balloon-anim-6);
+  }
 </style>
 
 
 
 <div class="container mt-5 slidex">
-   <div class="card ">
-       <input type="radio" name="select"  id="slide_1" checked='true'>
-       <input type="radio" name="select"  id="slide_2" >
-       <input type="radio" name="select"  id="slide_3">
-       <input type="checkbox" id="slideImg">
-       <div class="slider">
-         <label for="slide_1" class="slide slide_1"></label>
-         <label for="slide_2" class="slide slide_2"></label>
-         <label for="slide_3" class="slide slide_3"></label>
-       </div>
+  <div class="card ">
+    <input type="checkbox" id="slideImg">
+    <?php $i=1; foreach($birthday_data->result() as $birthday) { ?>
+    <input type="radio" name="select" id="slide_<?=$i?>" checked='<?if($i==1){echo "true";}else{echo "false";}?>'>
+    <!-- <input type="radio" name="select" id="slide_2">
+    <input type="radio" name="select" id="slide_3"> -->
 
-       <div class="inner_part">
-         <label for="slideImg" class="img ">
-           <img class="img_1 " src="<?=base_url()?>assets/frontend/images\slides\dummy-image.jpg">
-         </label>
-         <div class="contents content_1  text-center mySlides2">
-           <div class="happy">
-       <div class="balloon balloon1 balloon-anim1"></div>
-       <div class="balloon balloon2 balloon-anim6"></div>
-       <div class="balloon balloon3 balloon-anim3"></div>
-       <div class="balloon balloon4 balloon-anim4"></div>
-       <div class="balloon balloon5 balloon-anim5"></div>
-     </div>
-     <div class="birthday mt-3">
-       <div class="balloon balloon3 balloon-anim6"></div>
-       <div class="balloon balloon1 balloon-anim2"></div>
-       <div class="balloon balloon4 balloon-anim1"></div>
-       <div class="balloon balloon2 balloon-anim6"></div>
-       <div class="balloon balloon1 balloon-anim4"></div>
-       <div class="balloon balloon3 balloon-anim5"></div>
-       <div class="balloon balloon2 balloon-anim1"></div>
-       <div class="balloon balloon4 balloon-anim6"></div>
-     </div>
-           <!-- <div class="title">
-               <h1 class="x">Happy Birthday!</h1>
-           </div> -->
-           <div class="shr mt-5">
-                <h2 class="x">Suresh Sharma</h2>
-                <p class="z">We hope you have a wonderful birthday</p>
-           </div>
-         </div>
-       </div>
+    <div class="slider">
+      <label for="slide_1" class="slide slide_1"></label>
+      <label for="slide_2" class="slide slide_2"></label>
+      <label for="slide_3" class="slide slide_3"></label>
+    </div>
 
-       <div class="inner_part">
-         <label for="slideImg" class="img  ">
-           <img class="img_2 mySlides1" src="<?=base_url()?>assets/frontend/images\slides\dummy-image.jpg">
-         </label>
-         <div class="contents content_2  text-center mySlides2">
-           <div class="happy">
-       <div class="balloon balloon1 balloon-anim1"></div>
-       <div class="balloon balloon2 balloon-anim6"></div>
-       <div class="balloon balloon3 balloon-anim3"></div>
-       <div class="balloon balloon4 balloon-anim4"></div>
-       <div class="balloon balloon5 balloon-anim5"></div>
-     </div>
-     <div class="birthday mt-3">
-       <div class="balloon balloon3 balloon-anim6"></div>
-       <div class="balloon balloon1 balloon-anim2"></div>
-       <div class="balloon balloon4 balloon-anim1"></div>
-       <div class="balloon balloon2 balloon-anim6"></div>
-       <div class="balloon balloon1 balloon-anim4"></div>
-       <div class="balloon balloon3 balloon-anim5"></div>
-       <div class="balloon balloon2 balloon-anim1"></div>
-       <div class="balloon balloon4 balloon-anim6"></div>
-     </div>
-           <!-- <div class="title">
-               <h1 class="x">Happy Birthday!</h1>
-           </div> -->
-           <div class="mt-5">
-                <h2 class="x">Ramesh Sharma</h2>
-                <p class="z">We hope you have a wonderful birthday</p>
-           </div>
-         </div>
-       </div>
-       <div class="inner_part">
-         <label for="slideImg" class="img  ">
-           <img class="img_3 mySlides1" src="<?=base_url()?>assets/frontend/images\slides\dummy-image.jpg">
-         </label>
-         <div class="contents content_3  text-center mySlides2">
-           <div class="happy">
-       <div class="balloon balloon1 balloon-anim1"></div>
-       <div class="balloon balloon2 balloon-anim6"></div>
-       <div class="balloon balloon3 balloon-anim3"></div>
-       <div class="balloon balloon4 balloon-anim4"></div>
-       <div class="balloon balloon5 balloon-anim5"></div>
-     </div>
-     <div class="birthday mt-3">
-       <div class="balloon balloon3 balloon-anim6"></div>
-       <div class="balloon balloon1 balloon-anim2"></div>
-       <div class="balloon balloon4 balloon-anim1"></div>
-       <div class="balloon balloon2 balloon-anim6"></div>
-       <div class="balloon balloon1 balloon-anim4"></div>
-       <div class="balloon balloon3 balloon-anim5"></div>
-       <div class="balloon balloon2 balloon-anim1"></div>
-       <div class="balloon balloon4 balloon-anim6"></div>
-     </div>
-           <!-- <div class="title">
-               <h1 class="x">Happy Birthday!</h1>
-           </div> -->
-           <div class="mt-5">
-                <h2 class="x">Kamlesh Sharma</h2>
-                <p class="z">We hope you have a wonderful birthday</p>
-           </div>
-         </div>
-       </div>
-
-     </div>
-     </div>
+    <div class="inner_part">
+      <label for="slideImg" class="img ">
+        <?if(!empty($birthday->image)){?>
+          <img class="img_<?=$i?> " src="<?=base_url().$birthday->image?>" alt="Member Image">
+        <?}else{?>
+          <img class="img_<?=$i?> " src="<?=base_url()?>assets/frontend/images/user.png" alt="Member Image">
+        <?}?>
+      </label>
+      <div class="contents content_<?=$i?>  text-center mySlides2">
+        <div class="happy">
+          <div class="balloon balloon1 balloon-anim1"></div>
+          <div class="balloon balloon2 balloon-anim6"></div>
+          <div class="balloon balloon3 balloon-anim3"></div>
+          <div class="balloon balloon4 balloon-anim4"></div>
+          <div class="balloon balloon5 balloon-anim5"></div>
+        </div>
+        <div class="birthday mt-3">
+          <div class="balloon balloon3 balloon-anim6"></div>
+          <div class="balloon balloon1 balloon-anim2"></div>
+          <div class="balloon balloon4 balloon-anim1"></div>
+          <div class="balloon balloon2 balloon-anim6"></div>
+          <div class="balloon balloon1 balloon-anim4"></div>
+          <div class="balloon balloon3 balloon-anim5"></div>
+          <div class="balloon balloon2 balloon-anim1"></div>
+          <div class="balloon balloon4 balloon-anim6"></div>
+        </div>
+        <div class="shr mt-5">
+          <h2 class="x"><?=$birthday->name?></h2>
+          <p class="z">We hope you have a wonderful birthday !</p>
+        </div>
+      </div>
+    </div>
 
 
+    <!-- <div class="inner_part">
+      <label for="slideImg" class="img  ">
+        <img class="img_2 mySlides1" src="<?=base_url()?>assets/frontend/images\slides\dummy-image.jpg">
+      </label>
+      <div class="contents content_2  text-center mySlides2">
+        <div class="happy">
+          <div class="balloon balloon1 balloon-anim1"></div>
+          <div class="balloon balloon2 balloon-anim6"></div>
+          <div class="balloon balloon3 balloon-anim3"></div>
+          <div class="balloon balloon4 balloon-anim4"></div>
+          <div class="balloon balloon5 balloon-anim5"></div>
+        </div>
+        <div class="birthday mt-3">
+          <div class="balloon balloon3 balloon-anim6"></div>
+          <div class="balloon balloon1 balloon-anim2"></div>
+          <div class="balloon balloon4 balloon-anim1"></div>
+          <div class="balloon balloon2 balloon-anim6"></div>
+          <div class="balloon balloon1 balloon-anim4"></div>
+          <div class="balloon balloon3 balloon-anim5"></div>
+          <div class="balloon balloon2 balloon-anim1"></div>
+          <div class="balloon balloon4 balloon-anim6"></div>
+        </div>
+        <div class="mt-5">
+          <h2 class="x">Ramesh Sharma</h2>
+          <p class="z">We hope you have a wonderful birthday</p>
+        </div>
+      </div>
+    </div>
+    <div class="inner_part">
+      <label for="slideImg" class="img  ">
+        <img class="img_3 mySlides1" src="<?=base_url()?>assets/frontend/images\slides\dummy-image.jpg">
+      </label>
+      <div class="contents content_3  text-center mySlides2">
+        <div class="happy">
+          <div class="balloon balloon1 balloon-anim1"></div>
+          <div class="balloon balloon2 balloon-anim6"></div>
+          <div class="balloon balloon3 balloon-anim3"></div>
+          <div class="balloon balloon4 balloon-anim4"></div>
+          <div class="balloon balloon5 balloon-anim5"></div>
+        </div>
+        <div class="birthday mt-3">
+          <div class="balloon balloon3 balloon-anim6"></div>
+          <div class="balloon balloon1 balloon-anim2"></div>
+          <div class="balloon balloon4 balloon-anim1"></div>
+          <div class="balloon balloon2 balloon-anim6"></div>
+          <div class="balloon balloon1 balloon-anim4"></div>
+          <div class="balloon balloon3 balloon-anim5"></div>
+          <div class="balloon balloon2 balloon-anim1"></div>
+          <div class="balloon balloon4 balloon-anim6"></div>
+        </div>
+        <div class="mt-5">
+          <h2 class="x">Kamlesh Sharma</h2>
+          <p class="z">We hope you have a wonderful birthday</p>
+        </div>
+      </div>
+    </div> -->
+<?php $i++; } ?>
+  </div>
+</div>
 
 
-
-
-     <style>
-       .inner_part {display:none;}
-       </style>
+<style>
+  .inner_part {
+    display: none;
+  }
+</style>
 
 <!--
        <script>
@@ -745,7 +787,10 @@ display: none;
 <!--========================================kalam====================================-->
 
 <div class="sec-title mt-4 pl-3">
-  <div class="title text-center"><span>अध्यक्ष की कलम से</span></div>
+  <div class="title text-center">
+    <img src="<?=base_url()?>assets/frontend/images/feathers.png" class="mb-1" />
+    <span>अध्यक्ष की कलम से</span>
+  </div>
 </div>
 <div class="container">
   <div class="row">
@@ -774,12 +819,13 @@ display: none;
           अध्यक्ष होने के नाते मैं पुनः आप सभी साथी अधिकारियों को विश्वास दिलाता हूँ कि अपनी कार्यकारिणी के साथ आपके विश्वास पर पूरी तरह खरा उतरने का प्रयास करूंगा और इस संगठन रूपी परिवार को संगठन का मुखिया होने के नाते नवीन ऊंचाइयों पर ले जाने के
           सपने
           को नए पंख देने की दिशा में भरपूर प्रयास करूंगा ।<br />
-          <p style="color:black">
-            कहता है कौन लक्ष्य यूँ हासिल नहीं होता।<br /> दिल से अगर चाहो तो कुछ मुश्किल नहीं होता।<br /> बढ़ते रहो हर पल किनारों की तलाश में,गंगा का कोई एक ही साहिल नहीं होता।<br />
-            इसी आशा और विश्वास को अपने हृदय में संजोए .....<br />
-            सद्भावी<br />
-            तारा चंद
-          </p></p>
+        <p style="color:black">
+          कहता है कौन लक्ष्य यूँ हासिल नहीं होता।<br /> दिल से अगर चाहो तो कुछ मुश्किल नहीं होता।<br /> बढ़ते रहो हर पल किनारों की तलाश में,गंगा का कोई एक ही साहिल नहीं होता।<br />
+          इसी आशा और विश्वास को अपने हृदय में संजोए .....<br />
+          सद्भावी<br />
+          तारा चंद
+        </p>
+        </p>
       </div>
       <div class="show-more">
         <a href="javascript:void(0);" style="color:#f36727">Show more</a>

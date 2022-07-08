@@ -17,7 +17,7 @@
   <!-- Responsive stylesheet -->
   <link rel="stylesheet" href="<?=base_url()?>assets/frontend/fonts/flaticon/flaticon.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="<?=base_url()?>assets/frontend/images/favicon/rds_favicon.png" sizes="32x32">
 </head>
@@ -42,7 +42,7 @@
 <body>
   <div class="boxed_wrapper">
 
-    <div class="preloader"></div>
+    <!-- <div class="preloader"></div> -->
     <!--Start header style1 area-->
     <header class="header-style1-area logof">
       <div class="container">
@@ -212,12 +212,12 @@
       </div>
     </div>
     <? if(!empty($this->session->flashdata('smessage'))){ ?>
-    <div class="alert alert-success alert-dismissible fade in mt-5" style="z-index:9999">
+    <div class="alert alert-success alert-dismissible  in mt-5">
       <strong><? echo $this->session->flashdata('smessage'); ?></strong>
     </div>
     <? }
    if(!empty($this->session->flashdata('emessage'))){ ?>
-    <div class="alert alert-danger alert-dismissible fade in mt-5"  style="z-index:9999">
+    <div class="alert alert-danger alert-dismissible  in mt-5">
       <strong><? echo $this->session->flashdata('emessage'); ?></strong>
     </div>
     <? } ?>

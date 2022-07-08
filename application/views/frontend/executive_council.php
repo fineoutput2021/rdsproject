@@ -22,7 +22,7 @@
             <!--Start single item member-->
             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
                 <div class="single-team-member">
-                   <a href="<?=base_url()?>Home/officer_details/<?=base64_encode($officers->id)?>"><div class="img-holder">
+                   <a href="<?=base_url()?>Home/officer_details/<?=base64_encode($officers->id)?>"><div class="img-holder" style="max-height:294px">
                      <?if(!empty($officers->image)){?>
                         <img src="<?=base_url().$officers->image?>" alt="Member Image">
                         <?}else{?>

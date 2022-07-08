@@ -46,7 +46,7 @@
                                   <?=$member->dob?>
                                 </td>
                                 <td colspan="2">
-                                    <?=$member->post?>, <?=$member->district?>
+                                    <?=$member->post?><?if(!empty($member->district)){echo ", ".$member->district;}?>
                                 </td>
                                 <td>
                                     <?=$member->join_date?>

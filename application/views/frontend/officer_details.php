@@ -47,7 +47,7 @@
       </tr>
       <tr class="changecolor">
         <th width="15%">&nbsp;&nbsp;Present Posting</th>
-        <td width="65%" colspan="3">&nbsp;&nbsp; <?=$member_data->district?></td>
+        <td width="65%" colspan="3">&nbsp;&nbsp; <?=$member_data->post?>, <?=$member_data->district?></td>
 
       </tr>
       <tr class="changecolor">
