@@ -60,7 +60,7 @@
       justify-content: center !important;
       position: absolute !important;
       width: 100% !important;
-      height: 400px !important;
+      height: 422px !important;
 
 
     }
@@ -369,11 +369,11 @@ transition-delay: .2s;
 
 
   :root {
-    --balloon1-bg-color: #eaeaeae6;
-    --balloon2-bg-color: #e8dab2e6;
-    --balloon3-bg-color: #dd6e42e3;
-    --balloon4-bg-color: #4f6d7ad6;
-    --balloon5-bg-color: #eaeaeae6;
+    --balloon1-bg-color: #45e760e6;
+    --balloon2-bg-color: #56c5e7e6;
+    --balloon3-bg-color: #df8232e3;
+    --balloon4-bg-color: #f3c441d6;
+    --balloon5-bg-color: #45e760e6;
     --bg-color: #c0d6df;
 
     --balloon-anim-1: balloon1 15s ease infinite;
@@ -566,7 +566,7 @@ transition-delay: .2s;
 
   .balloon1 {
     background: var(--balloon1-bg-color);
-    box-shadow: inset 10px 10px 10px #c7c3c3e6;
+    box-shadow: inset 10px 10px 10px #45e760e6;
   }
 
   .balloon1::after {
@@ -575,7 +575,7 @@ transition-delay: .2s;
 
   .balloon2 {
     background: var(--balloon2-bg-color);
-    box-shadow: inset 10px 10px 10px #d5c7a1;
+    box-shadow: inset 10px 10px 10px #56c5e7e6;
   }
 
   .balloon2::after {
@@ -584,7 +584,7 @@ transition-delay: .2s;
 
   .balloon3 {
     background: var(--balloon3-bg-color);
-    box-shadow: inset 10px 10px 10px #cf6840;
+    box-shadow: inset 10px 10px 10px #df8232e3;
   }
 
   .balloon3::after {
@@ -593,7 +593,7 @@ transition-delay: .2s;
 
   .balloon4 {
     background: var(--balloon4-bg-color);
-    box-shadow: inset 10px 10px 10px #4f6d7a;
+    box-shadow: inset 10px 10px 10px #f3c441d6;
   }
 
   .balloon4::after {
@@ -602,7 +602,7 @@ transition-delay: .2s;
 
   .balloon5 {
     background: var(--balloon5-bg-color);
-    box-shadow: inset 10px 10px 10px #cbc8c8;
+    box-shadow: inset 10px 10px 10px #45e760e6;
   }
 
   .balloon5::after {
@@ -632,15 +632,18 @@ transition-delay: .2s;
   .balloon-anim6 {
     animation: var(--balloon-anim-6);
   }
+  .inner_part {
+    display: none;
+  }
 </style>
 
 
-
-<div class="container mt-5 slidex">
+<?if($birthday_count){?>
+<div class="container mt-5 mb-5 slidex">
   <div class="card ">
     <input type="checkbox" id="slideImg">
     <?php $i=1; foreach($birthday_data as $birthday) { ?>
-    <input type="radio" name="select" id="slide_<?=$i?>" checked='<?if($i==1){echo "true";}else{echo "false";}?>'>
+    <input type="radio" name="select" id="slide_<?=$i?>" <?if($i==1){echo "checked";}?>>
     <div class="inner_part">
       <label for="slideImg" class="img ">
         <?if(!empty($birthday['image'])){?>
@@ -668,8 +671,11 @@ transition-delay: .2s;
           <div class="balloon balloon4 balloon-anim6"></div>
         </div>
         <div class="shr mt-5">
-          <h2 class="x"><?=$birthday['name']?></h2>
-          <p class="z">We hope you have a wonderful birthday !</p>
+          <h2 class="x" style="    font-size: 45px;
+    background: -webkit-linear-gradient(90deg, #eb946c 0%, #f36727 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;"><?=$birthday['name']?></h2>
+          <p class="z mt-2" style="font-family: 'Dancing Script', cursive;">We Hope You Have A Wonderful Birthday ! <span>🎉</span></p>
         </div>
       </div>
     </div>
@@ -682,13 +688,7 @@ transition-delay: .2s;
 </div>
   </div>
 </div>
-
-
-<style>
-  .inner_part {
-    display: none;
-  }
-</style>
+<?}?>
 
 <!--
        <script>
@@ -725,7 +725,7 @@ transition-delay: .2s;
 
 <!--========================================kalam====================================-->
 
-<div class="sec-title mt-4 pl-3">
+<div class="sec-title mt-5 pl-3 ">
   <div class="title text-center">
     <img src="<?=base_url()?>assets/frontend/images/feathers.png" class="mb-1" />
     <span>अध्यक्ष की कलम से</span>
