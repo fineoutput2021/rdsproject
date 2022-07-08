@@ -26,14 +26,17 @@ class Home extends CI_Controller
         $this->db->order_by('id', 'desc');
         $data['news_data']= $this->db->get();
 
-        date_default_timezone_set("Asia/Calcutta");
+        // date_default_timezone_set("Asia/Calcutta");
         $this->db->select('*');
         $this->db->from('tbl_member');
-        $this->db->where("date(dob)", date("m-d"));
-        $data['birthday_data']= $this->db->get();
+          $this->db->where('is_active', 1);
+        $member_data= $this->db->get();
 
-// print_r($data['birthday_data']);die();
+$i=1; foreach($member_data->result() as $member) {
+  print_r (explode("-",$member->dob));
+  die();
 
+}
         $this->db->select('*');
         $this->db->from('tbl_video');
         $this->db->where('is_active', 1);
@@ -228,7 +231,7 @@ class Home extends CI_Controller
         $this->db->select('*');
         $this->db->from('tbl_gallery');
         $this->db->where('is_active', 1);
-        $this->db->order_by('id', 'desc');
+        // $this->db->order_by('id', 'desc');
         $data['gallery_data']= $this->db->get();
         $this->load->view('frontend/common/header', $data);
         $this->load->view('frontend/gallery');

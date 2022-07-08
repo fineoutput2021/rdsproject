@@ -13,7 +13,11 @@
 	</div>
 </section>
 <!--End breadcrumb area-->
-
+<style>
+.fixed{
+  max-height:372px;
+}
+</style>
 
 <!--===========================slider ========================-->
 <div class="container main-project-area style3 mt-3">
@@ -24,31 +28,31 @@
             <div id="carouselExampleIndicators<?=$i?>" class="carousel slide" data-ride="carousel">
 
                 <a href="<?=base_url()?>Home/gallery_slider/<?=base64_encode($data->id)?>"><div class="carousel-inner">
-                    <div class="carousel-item active">
+                    <div class="carousel-item active fixed">
                       <img class="d-block w-100" src="<?=base_url().$data->image?>" alt="First slide">
                     </div>
                     <?if(!empty($data->image2)){?>
-                    <div class="carousel-item">
+                    <div class="carousel-item fixed">
                       <img class="d-block w-100" src="<?=base_url().$data->image2?>" alt="Second slide">
                     </div>
                     <?}?>
                       <?if(!empty($data->image3)){?>
-                    <div class="carousel-item">
+                    <div class="carousel-item fixed">
                       <img class="d-block w-100" src="<?=base_url().$data->image3?>" alt="Third slide">
                     </div>
                     <?}?>
                       <?if(!empty($data->image4)){?>
-                    <div class="carousel-item">
+                    <div class="carousel-item fixed">
                       <img class="d-block w-100" src="<?=base_url().$data->image4?>" alt="Fourth slide">
                     </div>
                     <?}?>
                       <?if(!empty($data->image5)){?>
-                    <div class="carousel-item">
+                    <div class="carousel-item fixed">
                       <img class="d-block w-100" src="<?=base_url().$data->image5?>" alt="Fifth slide">
                     </div>
                     <?}?>
                       <?if(!empty($data->image6)){?>
-                    <div class="carousel-item">
+                    <div class="carousel-item fixed">
                       <img class="d-block w-100" src="<?=base_url().$data->image6?>" alt="Sixth slide">
                     </div>
                     <?}?>

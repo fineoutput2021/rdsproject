@@ -45,9 +45,9 @@
                       </td>
                     </tr>
                     <tr>
-                      <td> <strong>Image</strong> <span style="color:red;"></span></strong> </td>
+                      <td> <strong>Image</strong> <span style="color:red;">*</span></strong> </td>
                       <td>
-                        <input type="file" name="image" class="form-control" placeholder="" value="" />
+                        <input type="file" name="image" class="form-control" required placeholder="" value="" />
                       </td>
                     </tr>
                     <tr>
