@@ -16,7 +16,7 @@
 
 <div class="container mb-2">
 
-  <h3 style="color: black;text-transform: uppercase;background: #ed6f36;color: #fff;" class="pt-3 pb-3 text-center">&nbsp;&nbsp;&nbsp;&nbsp;Service History of RDS Office</h3>
+  <h3 style="color: black;text-transform: uppercase;background: #ed6f36;color: #fff;" class="pt-3 pb-3 text-center">&nbsp;&nbsp;&nbsp;&nbsp;Service History of RDS Officer</h3>
   <table border="1" style="border-color:#000;">
     <tbody class="right">
       <tr class="photo">
@@ -75,7 +75,7 @@
             <thead class="cart-header">
               <tr class="">
                 <th>SR. No.</th>
-                <th colspan="4">Name Of Post Officer</th>
+                <th colspan="4">Name Of Post Held By Officer</th>
                 <th>Date(From)</th>
                 <th>Date(to)</th>
               </tr>
