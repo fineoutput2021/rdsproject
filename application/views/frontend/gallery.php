@@ -27,7 +27,7 @@
             <!--Main Slider-->
             <div id="carouselExampleIndicators<?=$i?>" class="carousel slide" data-ride="carousel">
 
-                <a href="<?=base_url()?>Home/gallery_slider/<?=base64_encode($data->id)?>"><div class="carousel-inner">
+                <a href="<?=base_url()?>Home/gallery_slider/<?=base64_encode($data->id)?>" target="_blank" rel="noreferrer"><div class="carousel-inner">
                     <div class="carousel-item active fixed">
                       <img class="d-block w-100" src="<?=base_url().$data->image?>" alt="First slide">
                     </div>

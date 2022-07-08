@@ -639,21 +639,12 @@ transition-delay: .2s;
 <div class="container mt-5 slidex">
   <div class="card ">
     <input type="checkbox" id="slideImg">
-    <?php $i=1; foreach($birthday_data->result() as $birthday) { ?>
+    <?php $i=1; foreach($birthday_data as $birthday) { ?>
     <input type="radio" name="select" id="slide_<?=$i?>" checked='<?if($i==1){echo "true";}else{echo "false";}?>'>
-    <!-- <input type="radio" name="select" id="slide_2">
-    <input type="radio" name="select" id="slide_3"> -->
-
-    <div class="slider">
-      <label for="slide_1" class="slide slide_1"></label>
-      <label for="slide_2" class="slide slide_2"></label>
-      <label for="slide_3" class="slide slide_3"></label>
-    </div>
-
     <div class="inner_part">
       <label for="slideImg" class="img ">
-        <?if(!empty($birthday->image)){?>
-          <img class="img_<?=$i?> " src="<?=base_url().$birthday->image?>" alt="Member Image">
+        <?if(!empty($birthday['image'])){?>
+          <img class="img_<?=$i?> " src="<?=base_url().$birthday['image']?>" alt="Member Image">
         <?}else{?>
           <img class="img_<?=$i?> " src="<?=base_url()?>assets/frontend/images/user.png" alt="Member Image">
         <?}?>
@@ -677,70 +668,18 @@ transition-delay: .2s;
           <div class="balloon balloon4 balloon-anim6"></div>
         </div>
         <div class="shr mt-5">
-          <h2 class="x"><?=$birthday->name?></h2>
+          <h2 class="x"><?=$birthday['name']?></h2>
           <p class="z">We hope you have a wonderful birthday !</p>
         </div>
       </div>
     </div>
 
-
-    <!-- <div class="inner_part">
-      <label for="slideImg" class="img  ">
-        <img class="img_2 mySlides1" src="<?=base_url()?>assets/frontend/images\slides\dummy-image.jpg">
-      </label>
-      <div class="contents content_2  text-center mySlides2">
-        <div class="happy">
-          <div class="balloon balloon1 balloon-anim1"></div>
-          <div class="balloon balloon2 balloon-anim6"></div>
-          <div class="balloon balloon3 balloon-anim3"></div>
-          <div class="balloon balloon4 balloon-anim4"></div>
-          <div class="balloon balloon5 balloon-anim5"></div>
-        </div>
-        <div class="birthday mt-3">
-          <div class="balloon balloon3 balloon-anim6"></div>
-          <div class="balloon balloon1 balloon-anim2"></div>
-          <div class="balloon balloon4 balloon-anim1"></div>
-          <div class="balloon balloon2 balloon-anim6"></div>
-          <div class="balloon balloon1 balloon-anim4"></div>
-          <div class="balloon balloon3 balloon-anim5"></div>
-          <div class="balloon balloon2 balloon-anim1"></div>
-          <div class="balloon balloon4 balloon-anim6"></div>
-        </div>
-        <div class="mt-5">
-          <h2 class="x">Ramesh Sharma</h2>
-          <p class="z">We hope you have a wonderful birthday</p>
-        </div>
-      </div>
-    </div>
-    <div class="inner_part">
-      <label for="slideImg" class="img  ">
-        <img class="img_3 mySlides1" src="<?=base_url()?>assets/frontend/images\slides\dummy-image.jpg">
-      </label>
-      <div class="contents content_3  text-center mySlides2">
-        <div class="happy">
-          <div class="balloon balloon1 balloon-anim1"></div>
-          <div class="balloon balloon2 balloon-anim6"></div>
-          <div class="balloon balloon3 balloon-anim3"></div>
-          <div class="balloon balloon4 balloon-anim4"></div>
-          <div class="balloon balloon5 balloon-anim5"></div>
-        </div>
-        <div class="birthday mt-3">
-          <div class="balloon balloon3 balloon-anim6"></div>
-          <div class="balloon balloon1 balloon-anim2"></div>
-          <div class="balloon balloon4 balloon-anim1"></div>
-          <div class="balloon balloon2 balloon-anim6"></div>
-          <div class="balloon balloon1 balloon-anim4"></div>
-          <div class="balloon balloon3 balloon-anim5"></div>
-          <div class="balloon balloon2 balloon-anim1"></div>
-          <div class="balloon balloon4 balloon-anim6"></div>
-        </div>
-        <div class="mt-5">
-          <h2 class="x">Kamlesh Sharma</h2>
-          <p class="z">We hope you have a wonderful birthday</p>
-        </div>
-      </div>
-    </div> -->
 <?php $i++; } ?>
+<div class="slider">
+    <?php $a=1; foreach($birthday_data as $birthday) { ?>
+  <label for="slide_<?=$a?>" class="slide slide_<?=$a?>"></label>
+  <?$a++;}?>
+</div>
   </div>
 </div>
 
