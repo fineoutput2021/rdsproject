@@ -30,13 +30,22 @@ class Home extends CI_Controller
         $this->db->select('*');
         $this->db->from('tbl_member');
           $this->db->where('is_active', 1);
+        // $data['birthday_data']= $this->db->get();
         $member_data= $this->db->get();
-
+        $birth_data=[];
 $i=1; foreach($member_data->result() as $member) {
-  print_r (explode("-",$member->dob));
-  die();
-
+  $dob=(explode("-",$member->dob));
+  // print_r($dob);die();
+  if($dob[1]==date("m") && $dob[2]==date("d")){
+    $birth_data[] = array(
+      'name'=>$member->name,
+      'image'=>$member->image,
+    );
+  }
 }
+// print_r($birth_data);die();
+$data['birthday_data'] = $birth_data;
+$data['birthday_count'] = count($birth_data);
         $this->db->select('*');
         $this->db->from('tbl_video');
         $this->db->where('is_active', 1);
@@ -161,6 +170,7 @@ $i=1; foreach($member_data->result() as $member) {
         $this->db->from('tbl_member');
         $this->db->where('is_active', 1);
         $this->db->where('exe', 2);
+        $this->db->order_by('id', 'desc');
         $data['members_data']= $this->db->get();
 
         $this->load->view('frontend/common/header', $data);
