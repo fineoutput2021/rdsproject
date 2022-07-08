@@ -1,11 +1,7 @@
 <!--Main Slider-->
 <section class="main-slider">
   <div class="container-fluid p-0">
-
-    <!--Main Slider-->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-
-      <!-- <a href="gallery_slider.html"> -->
       <div class="carousel-inner">
         <?php $i=1; foreach ($slider_data->result() as $slider) { ?>
         <div class="carousel-item <?if ($i==1) {
