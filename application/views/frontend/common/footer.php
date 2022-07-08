@@ -14,7 +14,7 @@
                                 </div>
                                 <div class="newsletter-box">
                                     <div class="text">
-                                        <p>VRH5+8X8, Jawahar Lal Nehru Marg, Opposite Commerce College, Gandhi Nagar, Jaipur, Rajasthan 302004</p>
+                                        <p>IGPRS, Jawahar Lal Nehru Marg, Opposite Commerce College, Gandhi Nagar, Jaipur, Rajasthan 302004</p>
                                     </div>
                                     <p>Phone: +91-9636327342 </p>
                                     <p>Email: rdsrajasthan@gmail.com
