@@ -29,11 +29,12 @@ class Home extends CI_Controller
         // date_default_timezone_set("Asia/Calcutta");
         $this->db->select('*');
         $this->db->from('tbl_member');
-          $this->db->where('is_active', 1);
+        $this->db->where('is_active', 1);
         // $data['birthday_data']= $this->db->get();
         $member_data= $this->db->get();
         $birth_data=[];
 $i=1; foreach($member_data->result() as $member) {
+  if(!empty($member->dob)){
   $dob=(explode("-",$member->dob));
   // print_r($dob);die();
   if($dob[1]==date("m") && $dob[2]==date("d")){
@@ -42,6 +43,7 @@ $i=1; foreach($member_data->result() as $member) {
       'image'=>$member->image,
     );
   }
+}
 }
 // print_r($birth_data);die();
 $data['birthday_data'] = $birth_data;
