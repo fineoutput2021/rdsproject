@@ -21,7 +21,9 @@
         <div class="single-sidebar">
 
             <ul class="our-brochures"><div class="row">
-              <?php $i=1; foreach($important_data->result() as $important_acts_and_rules) { ?>
+              <?php
+                if(!empty($important_data->row())){
+               $i=1; foreach($important_data->result() as $important_acts_and_rules) { ?>
                 <div class="col-md-6">
                 <li>
                     <div class="icon-holder">
@@ -33,7 +35,12 @@
                     </div>
                 </li>
               </div>
-<?php $i++; } ?>
+<?php $i++; }
+}else{?>
+      <div class="text-center w-100">
+        <h3>No Data Found</h3>
+      </div>
+      <?} ?>
                 </div>
 
         </div>

@@ -22,7 +22,9 @@
 
     <ul class="our-brochures">
       <div class="row">
-        <?php $i=1; foreach($letters_data->result() as $letters_and_memorandum) { ?>
+        <?php
+          if(!empty($letters_data->row())){
+        $i=1; foreach($letters_data->result() as $letters_and_memorandum) { ?>
         <div class="col-md-6">
           <li>
             <div class="icon-holder">
@@ -34,7 +36,12 @@
             </div>
           </li>
         </div>
-        <?php $i++; } ?>
+        <?php $i++; }
+      }else{?>
+            <div class="text-center w-100">
+              <h3>No Data Found</h3>
+            </div>
+            <?} ?>
       </div>
 
 

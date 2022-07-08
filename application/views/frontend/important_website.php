@@ -18,7 +18,9 @@
   <div class="container">
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-        <div class="table-outer">
+          <?php
+            if(!empty($important_website_data->row())){?>
+              <div class="table-outer">
           <table class="cart-table">
             <thead class="cart-header">
               <tr class="">
@@ -46,7 +48,13 @@
 
             </tbody>
           </table>
+
         </div>
+      <?  }else{?>
+              <div class="text-center w-100 p-5">
+                <h3>No Data Found</h3>
+              </div>
+              <?} ?>
       </div>
     </div>
   </div>
