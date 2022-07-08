@@ -118,7 +118,7 @@ Update Member
       </tr>
       <tr id="post">
         <?if($member->exe==1){?>
-        <td><strong>Officer's Designation</strong><span style="color:red;"></span></strong></td><td><input type="text" name="officers_designation" class="form-control" placeholder="" value="<?=$member->post?>" /></td>
+        <td><strong>Officer's Designation</strong><span style="color:red;"></span></strong></td><td><input type="text" name="officers_designation" class="form-control" placeholder="" value="<?=$member->officers_designation?>" /></td>
         <?}?>
       </tr>
 
