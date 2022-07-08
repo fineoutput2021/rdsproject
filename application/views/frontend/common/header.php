@@ -17,10 +17,7 @@
   <!-- Responsive stylesheet -->
   <link rel="stylesheet" href="<?=base_url()?>assets/frontend/fonts/flaticon/flaticon.css">
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="<?=base_url()?>assets/frontend/images/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="<?=base_url()?>assets/frontend/images/favicon/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="<?=base_url()?>assets/frontend/images/favicon/favicon-16x16.png" sizes="16x16">
-
+  <link rel="icon" type="image/png" href="<?=base_url()?>assets/frontend/images/favicon/rds_favicon.png" sizes="32x32">
 </head>
 <style>
   .office-banner {
@@ -62,7 +59,7 @@
                   </div>
                   <div class="text">
                     <span>Contact Number</span>
-                    <h3 class="clr1">+91-141-2703692
+                    <h3 class="clr1">+91-9636327342
                     </h3>
                   </div>
                 </div>
