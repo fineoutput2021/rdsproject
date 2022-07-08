@@ -50,7 +50,7 @@
             <div class="header-style1 ">
               <div class="header-style1-logo float-left">
                 <a href="<?=base_url()?>">
-                  <img src="<?=base_url()?>assets/frontend/images/logo.png" width="30%">
+                  <img src="<?=base_url()?>assets/frontend/images/logo.png" width="40%">
                 </a>
               </div>
               <div class="headers1-header-right float-right logof">
