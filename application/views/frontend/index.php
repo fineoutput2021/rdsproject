@@ -64,7 +64,7 @@
 
   @media (max-width:530px) {
     .card {
-      height: 500px !important;
+      height: 540px !important;
     }
   }
 
