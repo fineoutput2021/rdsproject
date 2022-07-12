@@ -37,7 +37,7 @@
                                 <li><a href="<?=base_url()?>Home/executive_council">EXECUTIVE COUNCIL</a></li>
                                 <li><a href="<?=base_url()?>Home/magazines">RDS MAGZINE</a></li>
                                 <li><a href="<?=base_url()?>Home/gallery">GALLERY</a></li>
-                                <!-- <li><a href="myprofile.html">MY PROFILE</a></li> -->
+                                <li><a href="<?=base_url()?>Home/my_profile/<?=base64_encode($this->session->userdata('member_id'))?>">MY PROFILE</a></li>
 
                             </ul>
                         </div>

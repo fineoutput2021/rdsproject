@@ -49,7 +49,7 @@ Member
           <th>District</th>
           <th>Post</th>
           <th>Email</th>
-          <th>Password</th>
+          <!-- <th>Password</th> -->
           <th>Phone</th>
           <th>Order Date/Join Date</th>
           <th>Member</th>
@@ -78,7 +78,7 @@ Member
           <td><?php echo $data->district ?></td>
           <td><?php echo $data->post ?></td>
           <td><?php echo $data->email ?></td>
-          <td><?php echo $data->password?></td>
+          <!-- <td><?php echo $data->password?></td> -->
           <td><?php echo $data->phone?></td>
           <td><?php echo $data->join_date?></td>
           <td><?php if($data->exe==1){

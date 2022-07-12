@@ -278,6 +278,165 @@ class Home extends CI_Controller
         $this->load->view('frontend/all_news');
         $this->load->view('frontend/common/footer');
     }
+    //====================================================== MEMBER LOGIN ===========================
+
+    public function login()
+    {
+      if(!empty($this->session->userdata('member_data'))){
+
+          $this->load->helper(array('form', 'url'));
+        $this->load->library('form_validation');
+        $this->load->helper('security');
+        if($this->input->post())
+        {
+        $this->form_validation->set_rules('email', 'email', 'required|xss_clean|trim');
+        $this->form_validation->set_rules('password', 'password', 'required|xss_clean|trim');
+
+
+        	if($this->form_validation->run()== TRUE)
+        	{
+
+        			 $email=$this->input->post('email');
+        			 $password=$this->input->post('password');
+
+            $this->db->select('*');
+            $this->db->from('tbl_member');
+            $this->db->where('email',$email);
+            $member_data= $this->db->get()->row();
+            if(!empty($member_data)){
+              if($member_data->is_active==1){
+                if($member_data->password==md5($password)){
+                  $this->session->set_userdata('member_data',1);
+                  $this->session->set_userdata('member_id',$member_data->id);
+                  $this->session->set_userdata('member_name',$member_data->name);
+
+                  $this->session->set_flashdata('smessage', 'Successfully Login');
+                  redirect($_SERVER['HTTP_REFERER']);
+
+                }else{
+                  $this->session->set_flashdata('emessage','Wrong Password');
+                  redirect($_SERVER['HTTP_REFERER']);
+                }
+
+              }else{
+                $this->session->set_flashdata('emessage','Member is blocked! Please contact to admin');
+                redirect($_SERVER['HTTP_REFERER']);
+              }
+            }else{
+              $this->session->set_flashdata('emessage','Member Not Found');
+              redirect($_SERVER['HTTP_REFERER']);
+            }
+
+        }else{
+
+        $this->session->set_flashdata('emessage',validation_errors());
+        redirect($_SERVER['HTTP_REFERER']);
+
+        }
+
+        }
+        else{
+
+        $this->session->set_flashdata('emessage','Please insert some data, No data available');
+        redirect($_SERVER['HTTP_REFERER']);
+
+        }
+      }else{
+      redirect("/","refresh");
+      }
+
+    }
+
+//======================== MEMBER LOGOUT ============================
+public function logout(){
+if(!empty($this->session->userdata('member_data'))){
+  $this->session->unset_userdata('member_data');
+  $this->session->unset_userdata('member_id');
+  $this->session->unset_userdata('member_name');
+}else{
+redirect("/","refresh");
+}
+}
+
+//====================== MY PROFILE =======================================
+public function my_profile($idd){
+  if(!empty($this->session->userdata('member_data'))){
+     $id=base64_decode($idd);
+    $data['id']=$idd;
+    $this->db->select('*');
+    $this->db->from('tbl_member');
+    $this->db->where('id',$id);
+    $this->db->where('is_active',1);
+    $data['member_data']= $this->db->get()->row();
+
+    $this->db->select('*');
+    $this->db->from('tbl_pending_dues');
+    $this->db->where('member_id',$id);
+    $this->db->where('is_active',1);
+    $data['pending_data']= $this->db->get();
+    $total = 0;
+    foreach($data['pending_data']->result() as $pending) {
+      $total = $total + $pending->amount;
+    }
+    $data['total_pending']=$total;
+    $this->load->view('frontend/common/header', $data);
+    $this->load->view('frontend/my_profile');
+    $this->load->view('frontend/common/footer');
+  }else{
+  redirect("/","refresh");
+  }
+}
+//====================== View Paid Amount =======================================
+public function view_all_paid($idd){
+  if(!empty($this->session->userdata('member_data'))){
+     $id=base64_decode($idd);
+    $data['id']=$idd;
+    $this->db->select('*');
+    $this->db->from('tbl_pending_dues');
+    $this->db->where('member_id',$id);
+    $this->db->where('is_active',0);
+    $data['paid_data']= $this->db->get();
+
+    $this->load->view('frontend/common/header', $data);
+    $this->load->view('frontend/all_paid');
+    $this->load->view('frontend/common/footer');
+  }else{
+  redirect("/","refresh");
+  }
+}
+//====================== View dues Amount =======================================
+public function view_all_dues($idd){
+  if(!empty($this->session->userdata('member_data'))){
+     $id=base64_decode($idd);
+    $data['id']=$idd;
+    // echo $id;die();
+    $this->db->select('*');
+    $this->db->from('tbl_pending_dues');
+    $this->db->where('member_id',$id);
+    $this->db->where('is_active',1);
+    $data['pending_data']= $this->db->get();
+
+    $this->load->view('frontend/common/header', $data);
+    $this->load->view('frontend/all_due');
+    $this->load->view('frontend/common/footer');
+  }else{
+  redirect("/","refresh");
+  }
+}
+//====================== Search Member  =======================================
+public function search_member($string){
+
+    $data['string'] = $string;
+    $this->db->select('*');
+    $this->db->from('tbl_member');
+    $this->db->like('name',$string);
+    $data['seach_data']= $this->db->get();
+
+    $this->load->view('frontend/common/header', $data);
+    $this->load->view('frontend/search_member');
+    $this->load->view('frontend/common/footer');
+
+}
     //====================================================== 404 ===========================
     public function error404()
     {

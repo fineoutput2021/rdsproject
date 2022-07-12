@@ -122,23 +122,22 @@
                     </li>
                     <li><a href="<?=base_url()?>Home/magazines">RDS Magazine</a></li>
                     <li><a href="<?=base_url()?>Home/gallery">GALLERY</a></li>
+                    <li> <div class="quote-button-box float-right btn5">
+                        <a class="" href="#modeel"  data-toggle="modal" data-target="#myModal">&nbsp;<i class="fa fa-search" aria-hidden="true"></i></a></div></li>
                   </ul>
                 </div>
               </nav>
-              <!-- <div class="mainmenu-right">
+              <?if(!empty($this->session->userdata('user_data'))){?>
+              <div class="mainmenu-right">
                         <div class="quote-button-box float-right btn5">
                             <a class="btn-one" href="#myModal"  data-toggle="modal" data-target="#myModal">Member's Login &nbsp;<i class="fa fa-lock" aria-hidden="true"></i></a>
                         </div>
-                    </div>  -->
-              <!-- <div class="mainmenu-right">
-                <div class="quote-button-box float-right btn5">
-                  <a class="btn-one" href="#myModal" data-toggle="modal" data-target="#myModal">Member's Login &nbsp;<i class="fa fa-lock" aria-hidden="true"></i></a>
-                </div>
-
-              </div> -->
-              <div class="quote-button-box btn d-none">
-                <a class="btn-two" href="#myModal" data-toggle="modal" data-target="#myModal">&nbsp;<i class="fa fa-user" aria-hidden="true" style="font-size:30px;"></i></a>
+                    </div>
+                    <?}else{?>
+              <div class="quote-button-box btn">
+                <a class="btn-two" href="#myModal" data-toggle="modal" data-target="#myModal">&nbsp;<i class="fa fa-user" aria-hidden="true" style=""></i></a>
               </div>
+              <?}?>
             </div>
           </div>
         </div>
@@ -159,20 +158,20 @@
           <div class="modal-body ">
             <div class="contact-info-form1">
               <H4 class="text-center pt-2"> RDS ASSOCIATION</H4>
-              <form id="contact-info-form" name="contact_info_form" class="default-form" action="#" method="post">
+              <form id="contact-info-form" name="contact_info_form" class="default-form" action="<?=base_url()?>Home/login" method="post">
                 <div class="input-box1 text-center mt-5">
-                  <input type="text" name="form_name" value="" placeholder="Enter Email" required class="form-control">
+                  <input type="text" name="email" value="" placeholder="Enter Email" required class="form-control">
                 </div>
                 <div class="input-box1 text-center mt-5">
-                  <input type="text" name="form_name" value="" placeholder="Enter Password" required class="form-control">
+                  <input type="password" name="password" value="" placeholder="Enter Password" required class="form-control">
                 </div>
                 <div class="input-box1 text-center mt-3 mb-5">
                   <button class="btn-one" type="submit">Log in</button>
                 </div>
+              </form>
                 <div class="text-center"><span class="mt-3"><a href="#" data-target="#myModal1" data-toggle="modal" data-dismiss="modal" style="color:#ed6f36;">Forgot Password?</a></span>
                 </div>
 
-              </form>
             </div>
 
           </div>

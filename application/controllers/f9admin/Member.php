@@ -86,7 +86,7 @@ if (!empty($this->session->userdata('admin_data'))) {
          $district=$this->input->post('district');
          $post=$this->input->post('post');
          $email=$this->input->post('email');
-         $password=$this->input->post('password');
+         $password=md5($this->input->post('password'));
          $phone=$this->input->post('phone');
          $exe=$this->input->post('exe');
          $officers_designation=$this->input->post('officers_designation');

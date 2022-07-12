@@ -91,7 +91,7 @@ Update Member
       <tr>
         <td> <strong>Passsword</strong> <span style="color:red;"></span></strong> </td>
         <td>
-          <input type="text" name="password" class="form-control" placeholder="" value="<?= $member->password; ?>" />
+          <input type="password" name="password" class="form-control" placeholder="" value="<?= $member->password; ?>" />
         </td>
       </tr>
       <tr>
