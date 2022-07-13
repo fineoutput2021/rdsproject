@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="<?=base_url()?>assets/frontend/fonts/flaticon/flaticon.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="<?=base_url()?>assets/frontend/images/favicon/rds_favicon.png" sizes="32x32">
 </head>
@@ -36,6 +37,34 @@
     right: -5%;
     z-index: 100;
     margin-top: 0;
+  }
+ .btn-two:hover .a1 
+ {
+  display:block !important;
+ } 
+  
+  @media (max-width: 991px)
+  {
+    .hide 
+    {
+      display: none !important;
+    }
+    .btn-two
+    {
+      padding: 20px 20px 0px 0px;
+    }
+
+    .fa-lock {
+      display:block !important;
+    }
+
+    .lot {
+      display:none !important;
+    }
+    .box1
+    {
+        display: none !important;
+    }
   }
 </style>
 
@@ -77,7 +106,8 @@
       <div class="container  p-0">
         <div class="row">
           <div class="col-xl-12">
-            <div class="inner-content clearfix">
+            <div class="inner-content clearfix" style="    margin-left: -20px;
+    padding-left: 50px;">
               <nav class="main-menu clearfix">
 <!-- //=============== mobile navbar ================== -->
                 <div class="navbar-header clearfix mobi1">
@@ -89,30 +119,37 @@
                         <span class="icon-bar"></span>
                       </button>
                     </div>
-                    <div class="col-10 pb-3 margin">
+                    <div class="col-6 pb-3 margin">
                       <a href="<?=base_url()?>">
                         <h3 class="text-white text-center" style="margin-top:-50px;"> <img src="<?=base_url()?>assets/frontend/images/logo.png" class="img-fluid"></h3>
                       </a>
                     </div>
 
-                    <!-- <div class="mainmenu-right col-3 pb-5">
-                      <div class="quote-button-box float-right btn" style="margin-top:2px">
+                     <div class="mainmenu-right col-3 pb-5">
+                      <!-- <div class="quote-button-box float-right btn" style="margin-top:2px">
                         <a class="btn-two userx" href="#myModal" data-toggle="modal" data-target="#myModal">&nbsp;<i class="fa fa-user" aria-hidden="true" style="font-size:30px;"></i></a>
-                      </div>
-                    </div> -->
+                      </div> -->
+                      <li class="dropdown"><a href="#" class="btn-two" data-toggle="collapse">&nbsp;<i class="fa fa-user" aria-hidden="true" style="font-size:30px;"></i></a>
+                     <ul style="display:none;">
+                        <li><a href="#">My Profile</a></li>
+                        <li><a href="#">Log Out</a></li>
+                      </ul></li>
+                    </div>
+                    
+                    
                   </div>
                 </div>
                 <div class="navbar-collapse collapse clearfix">
-                  <ul class="navigation clearfix" style="margin-left:50px;">
+                  <ul class="navigation clearfix" style="margin-left:20px;">
                     <li><a href="<?=base_url()?>">Home</a></li>
                     <li><a href="<?=base_url()?>Home/executive_council">EXECUTIVE COUNCIL </a></li>
-                    <li><a href="<?=base_url()?>Home/members">MEMBERS </a></li>
-                    <!-- <li class="dropdown" style="color:whute;"><a href="#">MEMBERS</a>
+                    <li class="dropdown"><a href="<?=base_url()?>Home/members">MEMBERS </a>
+                    
                       <ul>
                         <li><a href="<?=base_url()?>Home/members">List of Officers</a></li>
                         <li><a href="<?=base_url()?>Home/search_members">Search Member</a></li>
                       </ul>
-                    </li> -->
+                    </li> 
                     <li class="dropdown"><a href="#">QUICK LINKS </a>
                       <ul>
                         <li><a href="<?=base_url()?>Home/letters_memorandum">Letters & Memorandum</a></li>
@@ -122,12 +159,69 @@
                     </li>
                     <li><a href="<?=base_url()?>Home/magazines">RDS Magazine</a></li>
                     <li><a href="<?=base_url()?>Home/gallery">GALLERY</a></li>
-                    <li> <div class="quote-button-box float-right btn5">
-                        <a class="" href="#modeel"  data-toggle="modal" data-target="#myModal">&nbsp;<i class="fa fa-search" aria-hidden="true"></i></a></div></li>
+                    <li><div class="outer-search-box" style="margin-right:0px;">
+                            <div class="seach-toggle"><i class="fa fa-search"></i></div>
+                            <ul class="search-box box1">
+                                <li>
+                                    <form method="get" action="<?=base_url()?>Home/search_member" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <input type="search" name="string" value="">
+                                            <button type="submit"><i class="fa fa-search"></i></button>
+                                        </div>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div></li>
+                     <li>
+                     <?if(!empty($this->session->userdata('user_data'))){?>
+              <div class="mainmenu-right">
+                        <div class="quote-button-box float-right btn5">
+                            <a class="btn-one" href="#myModal"  data-toggle="modal" data-target="#myModal">Member's Login &nbsp;<i class="fa fa-lock" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <?}else{?>
+              <div class="quote-button-box btn lot">
+                <a class="btn-one" href="#myModal" data-toggle="modal" data-target="#myModal" style="padding: 15px 18px 16px; margin-top:4px;">Login&nbsp;<i class="fa fa-lock" aria-hidden="true" style="display:none; color:white; font-size:25px;"></i></a>
+              </div>
+              <div class="quote-button-box btn  d-lg-none" style="margin-left:-40px;">
+                <a class="btn-one" href="#myModal" data-toggle="modal" data-target="#myModal" style="padding: 5px 10px 10px; margin-top:4px;">Login&nbsp;</a>
+
+                <!-- <i class="fa fa-lock" aria-hidden="true" style="display:none; color:white; font-size:25px; display:flex;"></i -->
+              </div>
+              <?}?>
+              <li class="search-box d-lg-none">
+                                    <form method="get" action="<?=base_url()?>Home/search_member" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                        <button type="submit" style="background:#ed6f36;margin-right:0px;"><i class="fa fa-search" style="color:white;"></i></button>
+                                            <input type="search" name="string" value="" style="width:94%;position:absolute;">
+                                            
+                                        </div>
+                                    </form>
+                                </li>
+                     </li>
+                     <li class="dropdown hide"><a href="#" class="btn-two "style="padding:25px 0px 0px 0px">&nbsp;<i class="fa fa-user" aria-hidden="true" style="font-size:30px;"></i></a>
+                     <ul style="margin-left: -80px;
+    width: 150px;">
+                      <li><a href="<?=base_url()?>Home/my_profile/<?=base64_encode($this->session->userdata('member_id'))?>">My Profile</a></li>
+                        <li><a href="#">Log Out</a></li>
+                        
+                      </ul></li>  
+
+                       <!-- <li class="search-box d-lg-none">
+                                    <form method="get" action="<?=base_url()?>Home/search_member" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                        <button type="submit" style="background:#ed6f36;margin-right:20px;"><i class="fa fa-search" style="color:white;"></i></button>
+                                            <input type="search" name="string" value="" style="width:80%;position:absolute;">
+                                            
+                                        </div>
+                                    </form>
+                                </li> -->
+                     
+                      
                   </ul>
                 </div>
               </nav>
-              <?if(!empty($this->session->userdata('user_data'))){?>
+               <!-- <?if(!empty($this->session->userdata('user_data'))){?>
               <div class="mainmenu-right">
                         <div class="quote-button-box float-right btn5">
                             <a class="btn-one" href="#myModal"  data-toggle="modal" data-target="#myModal">Member's Login &nbsp;<i class="fa fa-lock" aria-hidden="true"></i></a>
@@ -135,9 +229,12 @@
                     </div>
                     <?}else{?>
               <div class="quote-button-box btn">
-                <a class="btn-two" href="#myModal" data-toggle="modal" data-target="#myModal">&nbsp;<i class="fa fa-user" aria-hidden="true" style=""></i></a>
+                <a class="btn-one" href="#myModal" data-toggle="modal" data-target="#myModal">Login&nbsp;</a>
+                <a class="btn-two dropdown ">&nbsp;<i class="fa fa-user" aria-hidden="true"></i>   </a>
+       
               </div>
-              <?}?>
+              <?}?> -->
+              
             </div>
           </div>
         </div>

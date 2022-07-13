@@ -271,7 +271,7 @@ transition-delay: .2s;
     text-align: center;
     font-weight: 600;
     font-size: 14px;
-    padding: 14px 30px;
+    padding: 14px 0px;
     cursor: pointer;
   }
 
@@ -307,7 +307,7 @@ transition-delay: .2s;
     text-align: center;
     font-weight: 600;
     font-size: 14px;
-    padding: 14px 30px;
+    padding: 14px 0px;
     cursor: pointer;
   }
 
