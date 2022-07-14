@@ -282,7 +282,7 @@ class Home extends CI_Controller
 
     public function login()
     {
-      if(!empty($this->session->userdata('member_data'))){
+      if(empty($this->session->userdata('member_data'))){
 
           $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
@@ -296,16 +296,19 @@ class Home extends CI_Controller
         	if($this->form_validation->run()== TRUE)
         	{
 
-        			 $email=$this->input->post('email');
+            $email=$this->input->post('email');
         			 $password=$this->input->post('password');
 
             $this->db->select('*');
             $this->db->from('tbl_member');
             $this->db->where('email',$email);
             $member_data= $this->db->get()->row();
+            
+
             if(!empty($member_data)){
               if($member_data->is_active==1){
                 if($member_data->password==md5($password)){
+                    // echo "hi";die();
                   $this->session->set_userdata('member_data',1);
                   $this->session->set_userdata('member_id',$member_data->id);
                   $this->session->set_userdata('member_name',$member_data->name);
@@ -353,6 +356,9 @@ if(!empty($this->session->userdata('member_data'))){
   $this->session->unset_userdata('member_data');
   $this->session->unset_userdata('member_id');
   $this->session->unset_userdata('member_name');
+  $this->session->set_flashdata('smessage', 'Successfully Logout');
+  redirect($_SERVER['HTTP_REFERER']);
+
 }else{
 redirect("/","refresh");
 }
@@ -424,8 +430,9 @@ public function view_all_dues($idd){
   }
 }
 //====================== Search Member  =======================================
-public function search_member($string){
-
+public function search_member(){
+    
+    $string = $_GET['string'];
     $data['string'] = $string;
     $this->db->select('*');
     $this->db->from('tbl_member');

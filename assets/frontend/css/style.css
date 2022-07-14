@@ -1342,7 +1342,7 @@ select:focus {
     color: #f36727;
     font-size: 30px;
     position: absolute;
-    top: 15px;
+    top: 7px !important;
     right: 12px;
 }
 .headers1-button .icon span:before{
@@ -1790,7 +1790,7 @@ select:focus {
     background: #000;
 }
 .mainmenu-right .quote-button-box {
-    margin: 14px 0px 14px 20px;
+    margin: 14px 0px 0px 0px;
 }
 
 /* @media(max-width:530px){
