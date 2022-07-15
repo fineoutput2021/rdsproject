@@ -1,4 +1,25 @@
+<style>
+    .b-diw > ul{
+        background-color: #39345a;
 
+    }
+    .b-diw > ul>li
+    {
+        padding: 5px 20px;
+        color: white;
+    } 
+    .b-diw > ul>li.active
+    {
+        background-color: #f36727;
+        border-radius: 0px;
+    }
+    .b-diw > ul>li>a:hover 
+    {
+        color: white;
+    }
+ 
+
+</style>
 
 <!--Start breadcrumb area-->
 <section class="breadcrumb-area" style="background-image: url(<?=base_url()?>assets/frontend/images/slides/photo4.jpg);">
@@ -60,7 +81,7 @@
                 </div>
             </div>
         </div>
-        <div class="text-center">
+        <div class="text-center mt-5">
           <div class="b-diw" style="list-style-type:none;display: flex;justify-content: center;">
           <?php echo $links; ?>
           </div>
