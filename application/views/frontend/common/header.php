@@ -92,11 +92,11 @@
     }
   }
 
-  @media (min-width: 450px) and (max-width:550px)
+  @media (min-width: 411px) and (max-width:550px)
   {
     .scc 
     {
-      width:90% !important;
+      width:89% !important;
     }
   }
 
@@ -130,7 +130,7 @@
 
 @media (max-width:767px) {
  .w3-border  {
-    margin-left:-16px;
+    margin-left:-27px;
   }
 }
 
@@ -157,7 +157,7 @@
 </style>
 
 <body>
-  <div class="boxed_wrapper">
+  <div class="boxed_wrapper" style="overflow:none !important; min-height:none !important;">
 
     <!-- <div class="preloader"></div> -->
     <!--Start header style1 area-->
@@ -194,14 +194,13 @@
       <div class="container  p-0">
         <div class="row">
           <div class="col-xl-12">
-            <div class="inner-content clearfix" style="
-    padding-left: 50px;">
+            <div class="inner-content clearfix">
               <nav class="main-menu clearfix">
 <!-- //=============== mobile navbar ================== -->
                 <div class="navbar-header clearfix mobi1">
                   <div class="row">
                     <div class="col-2 pb-2">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="margin-top:-47px; margin-left:2px;">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="margin-top:-47px; margin-left:22px;">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -220,7 +219,7 @@
                       <?}else{?>
   <div class="w3-dropdown-click" id="user_btn" style="margin-top:15px">
     <button  class="w3-button w3-black" style="border-radius: 3px;"><i class="fa fa-user" aria-hidden="true" style="font-size:30px;"></i>&nbsp;<i class="fa fa-caret-down" style="font-size:20px;"></i></button>
-    <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border" style="min-width:108px; background-color:none;">
+    <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border" style="min-width:100px; background-color:none;">
       <a href="<?=base_url()?>Home/my_profile/<?=base64_encode($this->session->userdata('member_id'))?>" class="w3-bar-item w3-button">My Profile</a>
       <a href="<?=base_url()?>Home/logout" class="w3-bar-item w3-button">Log Out</a>
    
@@ -254,7 +253,7 @@ document.addEventListener('click', function(event) {
                 </div>
                 <div class="navbar-collapse collapse clearfix">
                   <ul class="navigation clearfix" style="margin-left:20px;">
-                  <li class="search-box d-lg-none">
+                  <li class="search-box d-lg-none" style="z-index:-1;">
                                     <form method="get" action="<?=base_url()?>Home/search_member" enctype="multipart/form-data">
                                         <div class="form-group">
                                         <button type="submit" style="background:#ed6f36;margin-right:0px;"><i class="fa fa-search" style="color:white;"></i></button>
@@ -265,12 +264,12 @@ document.addEventListener('click', function(event) {
                                 </li>
                     <li><a href="<?=base_url()?>">Home</a></li>
                     <li><a href="<?=base_url()?>Home/executive_council">EXECUTIVE COUNCIL </a></li>
-                    <li class="dropdown"><a href="<?=base_url()?>Home/members">MEMBERS </a>
+                    <li class=""><a href="<?=base_url()?>Home/members">MEMBERS </a>
                     
-                      <ul>
+                      <!-- <ul>
                         <li><a href="<?=base_url()?>Home/members">List of Officers</a></li>
                         <li><a href="<?=base_url()?>Home/search_members">Search Member</a></li>
-                      </ul>
+                      </ul> -->
                     </li> 
                     <li class="dropdown"><a href="#">QUICK LINKS </a>
                       <ul>
@@ -287,7 +286,7 @@ document.addEventListener('click', function(event) {
                                 <li>
                                     <form method="get" action="<?=base_url()?>Home/search_member" enctype="multipart/form-data">
                                         <div class="form-group">
-                                            <input type="search" name="string" value="">
+                                            <input type="search" name="string"  value=""  placeholder="Search Member">
                                             <button type="submit"><i class="fa fa-search"></i></button>
                                         </div>
                                     </form>
@@ -299,12 +298,12 @@ document.addEventListener('click', function(event) {
                      if(empty($this->session->userdata('member_data'))){?>
               <div class="mainmenu-right">
                         <div class="quote-button-box float-right btn5">
-                            <a class="btn-one" href="#myModal"  data-toggle="modal" data-target="#myModal" style="padding:10px 28px;">Member's Login &nbsp;<i class="fa fa-lock" aria-hidden="true"></i></a>
+                            <a class="btn-one d-flex" href="#myModal"  data-toggle="modal" data-target="#myModal" style="padding:10px 28px; margin-top:8px;">Login&nbsp;<i class="fa fa-lock" aria-hidden="true"></i></a>
                         </div>
                     </div>
                     <?}else{?>
               <div class="quote-button-box btn  d-lg-none" style="margin-left:-40px;">
-              <li class="dropdown hide"><a href="#" class="btn-two "style="padding:25px 0px 0px 0px">&nbsp;<i class="fa fa-user" aria-hidden="true" style="font-size:30px;"></i></a>
+              <li class="dropdown hide"><a href="#" class="btn-two "style="padding:31px 0px 0px 0px">&nbsp;<i class="fa fa-user" aria-hidden="true" style="font-size:20px;"></i>&nbsp;<i class="fa fa-caret-down" style="font-size:15px;"></i></a>
                      <ul style="margin-left: -80px;
     width: 150px;">
                       <li><a href="<?=base_url()?>Home/my_profile/<?=base64_encode($this->session->userdata('member_id'))?>">My Profile</a></li>

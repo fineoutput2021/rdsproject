@@ -68,7 +68,7 @@
             <tr class="changecolor">
                 <th width="60%" >&nbsp;&nbsp;Total Due Amount : ₹<?=$total_pending?></th>
                 <td></td>
-                <td width="40%"  class="text-center"><a href="<?=base_url()?>Home/view_all_paid/<?=base64_encode($member_data->id)?>"><input type="button" value="Paid Amount List" class="buttons mr-2"></a><a href="<?=base_url()?>Home/view_all_dues/<?=base64_encode($member_data->id)?>"><input type="button" value="Due Amount List" class="buttons"></a></td>
+                <td width="100%"  class="text-center d-flex ktr" rowspan="2"><a class="col-6" href="<?=base_url()?>Home/view_all_paid/<?=base64_encode($member_data->id)?>"><input type="button" value="Paid Amount List" class="buttons bts" style="margin:2px 4px" mr-2></a><a class="col-6" href="<?=base_url()?>Home/view_all_dues/<?=base64_encode($member_data->id)?>"><input type="button" value="Due Amount List" class="buttons bts" style="margin:2px 4px"></a></td>
             </tr>
         </tbody>
     </table>
