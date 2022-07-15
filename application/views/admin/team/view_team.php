@@ -92,7 +92,7 @@
 
                                                 <td>
                                                     <?php if($data->image!=""){  ?>
-                              <img id="slide_img_path" height=50 width=100  src="<?php echo base_url()."assets/admin/team/".$data->image ?>" >
+                              <img id="slide_img_path" height=50 width=100  src="<?php echo base_url().$data->image ?>" >
                                                 <?php }else {  ?>
                                                 Sorry No image Found
                                                 <?php } ?>
@@ -120,8 +120,11 @@
 														<?php } else { ?>
 														<li><a href="<?php echo base_url() ?>dcadmin/system/updateteamStatus/<?php echo base64_encode($data->id) ?>/active">Active</a></li>
 														<?php		}   ?>
+                            <?if ($this->load->get_var('position')=="Super Admin"){?>
+                                                      <li><a href="<?php echo base_url() ?>dcadmin/System/update_team/<?php echo base64_encode($data->id) ?>/active">Edit</a></li>
+                                                      <li><a href="javascript:;" class="dCnf" mydata="<?php echo $i ?>">Delete Team</a></li>
+                                                      <?}?>
 
-														<li><a href="javascript:;" class="dCnf" mydata="<?php echo $i ?>">Delete Team</a></li>
 													  </ul>
 													</div>
 												</div>

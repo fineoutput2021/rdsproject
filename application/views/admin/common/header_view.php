@@ -263,7 +263,7 @@ background:#f36727;
 
       <header class="main-header custom_header">
         <!-- Logo -->
-        <a href="<?=base_url().ADMIN_URL ?>/home" class="logo custom_header"><img src="<?=base_url()?>assets/frontend/images/logo.png" width="100%" height="auto" class='change'></a>
+      <a href="<?=base_url().ADMIN_URL ?>/home" class="logo custom_header"><b><? echo SITE_NAME; ?></b></a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top custom_header" role="navigation">
           <!-- Sidebar toggle button-->
@@ -277,72 +277,95 @@ background:#f36727;
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle custom_header" data-toggle="dropdown">
 
-<?php
-                  if (!empty($imgr)) {
-                      ?>
-<img src="<?php echo base_url() ?>assets/uploads/team/<?php echo $imgr; ?>" class="img-circle" style="width:30px;height:30px;" alt="User Image"/>
-<?php
-                  } else {
-                      ?>
-<img src="<?php echo base_url() ?>assets/admin/team/avatar.png" class="img-circle" style="width:20px;height:20px;" alt="User Image"/>
-<?php
-                  }
+                  <?
+                                    if(!empty($image)){
                   ?>
+                  <img src="<? echo base_url() ?><? echo $image; ?>" class="img-circle" style="width:30px;height:30px;" alt="User Image"/>
+                  <?
+                                    }
+                                    else{
+                  ?>
+                  <img src="<? echo base_url() ?>assets/admin/team/avatar.png" class="img-circle" style="width:20px;height:20px;" alt="User Image"/>
+                  <?
 
-                  <span class="hidden-xs">  <?php print_r($user_name); ?> </span>
-                </a>
-                <ul class="dropdown-menu">
-                  <!-- User image -->
-                  <li class="user-header custom_header">
-<?php
-                    if (!empty($imgr)) {
-                        ?>
-            <img src="<?php echo base_url() ?>assets/uploads/team/<?php echo $imgr; ?>" class="img-circle" style="width:70px;height:70px;" alt="User Image"/>
-<?php
-                    } else {
-                        ?>
-<img src="<?php echo base_url() ?>assets/admin/team/avatar.png" class="img-circle" style="width:70px;height:70px;" alt="User Image"/>
-<?php
-                    }
-                    ?>
 
-                    <p>
-                      <?php print_r($user_name); ?>
-                      <small> <?php print_r($position); ?> </small>
-                    </p>
-                  </li>
-                  <li class="user-footer">
-                    <div class="pull-left">
-                      <a href="<?php echo base_url().ADMIN_URL ?>/system/profile" class="btn btn-default btn-flat">Profile</a>
-                    </div>
-                    <div class="pull-right">
-                      <a href="<?php echo base_url() ?>login/logout" class="btn btn-default btn-flat">Sign out</a>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-      <!-- Left side column. contains the logo and sidebar -->
-      <aside class="main-sidebar custom_header">
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar custom_header">
-          <!-- Sidebar user panel -->
-          <div class="user-panel custom_header">
-            <div class="pull-left image">
-            <?php
-              if (!empty($imgr)) {
+                                    }
+                                    ?>
+
+
+                                    <span class="hidden-xs">  <? print_r($user_name); ?> </span>
+                                  </a>
+                                  <ul class="dropdown-menu">
+                                    <!-- User image -->
+                                    <li class="user-header custom_header">
+                                      <?
+                                                        if(!empty($image)){
+                                      ?>
+                                      <img src="<? echo base_url().$image; ?>" class="img-circle" style="width:30px;height:30px;" alt="User Image"/>
+                                      <?
+                                                        }
+                                                        else{
+                                      ?>
+                  <img src="<? echo base_url() ?>assets/admin/team/avatar.png" class="img-circle" style="width:70px;height:70px;" alt="User Image"/>
+                  <?
+
+
+                                      }
+                                      ?>
+
+                                      <p>
+                                        <? print_r($user_name); ?>
+                                        <small> <? print_r($position); ?> </small>
+                                      </p>
+                                    </li>
+                                    <!-- Menu Body -->
+                                    <!-- <li class="user-body"> -->
+                                      <!-- <div class="col-xs-4 text-center"> -->
+                                        <!-- <a href="#">Followers</a> -->
+                                      <!-- </div> -->
+                                      <!-- <div class="col-xs-4 text-center"> -->
+                                        <!-- <a href="#">Sales</a> -->
+                                      <!-- </div> -->
+                                      <!-- <div class="col-xs-4 text-center"> -->
+                                        <!-- <a href="#">Friends</a> -->
+                                      <!-- </div> -->
+                                    <!-- </li> -->
+                                    <!-- Menu Footer-->
+                                    <li class="user-footer">
+                                      <div class="pull-left">
+                                        <a href="<? echo base_url().ADMIN_URL ?>/system/profile" class="btn btn-default btn-flat">Profile</a>
+                                      </div>
+                                      <div class="pull-right">
+                                        <a href="<? echo base_url() ?>login/logout" class="btn btn-default btn-flat">Sign out</a>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </div>
+                          </nav>
+                        </header>
+                        <!-- Left side column. contains the logo and sidebar -->
+                        <aside class="main-sidebar custom_header">
+                          <!-- sidebar: style can be found in sidebar.less -->
+                          <section class="sidebar">
+                            <!-- Sidebar user panel -->
+                            <div class="user-panel">
+                              <div class="pull-left image">
+                              <?
+                                if(!empty($image)){
                   ?>
-      <img src="<?php echo base_url() ?>assets/uploads/team/<?php echo $imgr; ?>" class="img-circle" alt="User Image"/>
-<?php
-              } else {
+                        <img src="<? echo base_url() ?><? echo $image; ?>" class="img-circle" alt="User Image"/>
+                  <?
+                                }
+                                else{
                   ?>
-<img src="<?php echo base_url() ?>assets/admin/team/avatar.png" class="img-circle" alt="User Image"/>
-<?php
-              }
-              ?>
+                  <img src="<? echo base_url() ?>assets/admin/team/avatar.png" class="img-circle" alt="User Image"/>
+                  <?
+
+
+                                }
+                                ?>
 
             </div>
             <div class="pull-left info">

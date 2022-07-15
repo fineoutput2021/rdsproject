@@ -70,82 +70,82 @@
                         <tr>
                   <td> <strong>Permission Level</strong>  <span style="color:red;">*</span></strong> </td>
                   <td>
-            <div class="form-group">
+                    <div class="form-group">
 
-  <select class="form-control" name="power" required>
-      <option value=1">Please select Type</option>
-    <option value="1">Super Admin</option>
-    <option value="2">Admin</option>
-    <option value="3">Manager</option>
+                                    <select class="form-control" name="power" required>
+                                      <option value="1">Please select Type</option>
+                                      <option value="1">Super Admin</option>
+                                      <option value="2">Admin</option>
+                                      <option value="3">Manager</option>
 
-  </select>
-</div>
-</td>
-</tr>
+                                    </select>
+                                  </div>
+                                </td>
+                              </tr>
 
-<tr>
-<td> <strong>services</strong>  <span style="color:red;">*</span></strong> </td>
-<td>
-<div class="form-group">
-  <div class="checkbox">
-    <label><input type="checkbox" name="service" value="999">All</label>
-  </div>
-  <? foreach ($side->result() as $s) {
-    ?>
-    <div class="checkbox">
-      <label><input type="checkbox" name="services[]" value="<? echo $s->id; ?>"><? echo $s->name; ?></label>
-    </div>
-    <?
-  } ?>
+                              <tr>
+                                <td> <strong>services</strong> <span style="color:red;">*</span></strong> </td>
+                                <td>
+                                  <div class="form-group">
+                                    <div class="checkbox">
+                                      <label><input type="checkbox" name="service" value="999">All</label>
+                                    </div>
+                                    <?php foreach ($side->result() as $s) {
+                                     ?>
+                                    <div class="checkbox">
+                                      <label><input type="checkbox" name="services[]" value="<?php echo $s->id; ?>"><?php echo $s->name; ?></label>
+                                    </div>
+                                    <?php
+                                 } ?>
 
-</div>
-</td>
-</tr>
-
-
-											<tr>
-												<td> <strong>Image</strong> </td>
-												<td>
+                                  </div>
+                                </td>
+                              </tr>
 
 
-													<input type="file" name="fileToUpload1"></input>
-
-														</div>
-												</td>
-											</tr>
+                              <tr>
+                                <td> <strong>Image</strong> </td>
+                                <td>
 
 
-											<tr>
-												<td colspan="2" >
-													<input type="submit" class="btn btn-success" value="save">
-												</td>
-											</tr>
-                                    </table>
-                                </div>
+                                  <input type="file" name="fileToUpload1"></input>
 
-                             </form>
-
-                                </div>
+                          </div>
+                          </td>
+                          </tr>
 
 
+                          <tr>
+                            <td colspan="2">
+                              <input type="submit" class="btn custom_btn" value="save">
+                            </td>
+                          </tr>
+                          </table>
+                      </div>
 
-                            </div>
-
-                        </div>
+                      </form>
 
                     </div>
-                    </div>
-        </section>
-      </div>
-
-
-	  	<script type="text/javascript" src="<?php echo base_url() ?>assets/slider/ajaxupload.3.5.js"></script>
-				<link href="<? echo base_url() ?>assets/cowadmin/css/jqvmap.css" rel='stylesheet' type='text/css' />
 
 
 
-<style>
+                  </div>
 
-</style>
-<!-- <script type="text/javascript" src="<?php echo base_url() ?>assets/slider/ajaxupload.3.5.js"></script>
-<script type="text/javascript" src="<?php echo base_url() ?>assets/slider/rs.js"></script>	  -->
+                </div>
+
+              </div>
+          </div>
+          </section>
+          </div>
+
+
+          <script type="text/javascript" src="<?php echo base_url() ?>assets/slider/ajaxupload.3.5.js"></script>
+          <link href="<?php echo base_url() ?>assets/cowadmin/css/jqvmap.css" rel='stylesheet' type='text/css' />
+
+
+
+          <style>
+
+          </style>
+          <!-- <script type="text/javascript" src="<?php echo base_url() ?>assets/slider/ajaxupload.3.5.js"></script>
+          <script type="text/javascript" src="<?php echo base_url() ?>assets/slider/rs.js"></script>	  -->

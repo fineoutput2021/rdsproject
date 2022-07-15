@@ -178,139 +178,197 @@ class System extends CI_finecontrol
 
 
 
-    public function add_team_data()
+    public function add_team_data($t, $idw="")
+
     {
-        if (!empty($this->session->userdata('admin_data'))) {
-            $this->load->helper(array('form', 'url'));
+    if (!empty($this->session->userdata('admin_data'))) {
+        $this->load->helper(array('form', 'url'));
 
-            $this->load->library('form_validation');
+        $this->load->library('form_validation');
 
-            $this->load->helper('security');
-            $this->load->library('upload');
-            if ($this->input->post()) {
-                // print_r($this->input->post());
-                // exit;
-                $this->form_validation->set_rules('name', 'name', 'required|customAlpha|xss_clean');
-                $this->form_validation->set_rules('email', 'email', 'required|valid_email|xss_clean|trim|is_unique[tbl_team.email]');
-                $this->form_validation->set_rules('password', 'password Number', 'required|xss_clean');
-                $this->form_validation->set_rules('phone', 'Phone', 'xss_clean|min_length[10]|max_length[10]');
-                $this->form_validation->set_rules('address', 'address', 'xss_clean|trim');
+        $this->load->helper('security');
+        $this->load->library('upload');
+        if ($this->input->post()) {
+            // print_r($this->input->post());
+            // exit;
+            $this->form_validation->set_rules('name', 'name', 'required|customAlpha|xss_clean');
+            $this->form_validation->set_rules('email', 'email', 'required|valid_email|xss_clean|trim');
+            $this->form_validation->set_rules('password', 'password Number', 'xss_clean');
+            $this->form_validation->set_rules('phone', 'Phone', 'xss_clean|min_length[10]|max_length[10]');
+            $this->form_validation->set_rules('address', 'address', 'xss_clean|trim');
 
-                if ($this->form_validation->run()== true) {
-                    $name=$this->input->post('name');
-                    $phone=$this->input->post('phone');
-                    $address=$this->input->post('address');
-                    $email=$this->input->post('email');
-                    $position=$this->input->post('power');
-                    $service=$this->input->post('service');
-                    $services=$this->input->post('services');
-                    $password=$this->input->post('password');
-                    $img1='fileToUpload1';
-                    if(empty($service) && empty($services)){
-                      $this->session->set_flashdata('emessage','select services to proceed');
-                       redirect($_SERVER['HTTP_REFERER']);
+            if ($this->form_validation->run()== true) {
+                $name=$this->input->post('name');
+                $phone=$this->input->post('phone');
+                $address=$this->input->post('address');
+                $email=$this->input->post('email');
+                $position=$this->input->post('power');
+                $service=$this->input->post('service');
+                $services=$this->input->post('services');
+                $password=$this->input->post('password');
+
+                $ip = $this->input->ip_address();
+                date_default_timezone_set("Asia/Calcutta");
+                $cur_date=date("Y-m-d H:i:s");
+
+                $addedby=$this->session->userdata('admin_id');
+
+                $img1='fileToUpload1';
+                $nnnn = '';
+                $file_check=($_FILES['fileToUpload1']['error']);
+                if ($file_check!=4) {
+                    $image_upload_folder = FCPATH . "assets/uploads/team/";
+                    if (!file_exists($image_upload_folder)) {
+                        mkdir($image_upload_folder, DIR_WRITE_MODE, true);
                     }
+                    $new_file_name="team".date("Ymdhms");
+                    $this->upload_config = array(
+                            'upload_path'   => $image_upload_folder,
+                            'file_name' => $new_file_name,
+                            'allowed_types' =>'jpg|jpeg|png',
+                            'max_size'      => 25000
+                    );
+                    $this->upload->initialize($this->upload_config);
+                    if (!$this->upload->do_upload($img1)) {
+                        $upload_error = $this->upload->display_errors();
+                        // echo json_encode($upload_error);
 
-
-                    if ($service==999) {
-                        $ser='["999"]';
+                        $this->session->set_flashdata('emessage', $upload_error);
+                        redirect($_SERVER['HTTP_REFERER']);
                     } else {
-                        $ser=json_encode($services);
+                        $file_info = $this->upload->data();
+
+                        $videoNAmePath = "assets/uploads/team/".$new_file_name.$file_info['file_ext'];
+                        $nnnn=$videoNAmePath;
+                        // echo json_encode($file_info);
                     }
+                }
 
 
-                    // exit;
-                    $file_check=($_FILES['fileToUpload1']['error']);
-                    if ($file_check!=4) {
-                        $image_upload_folder = FCPATH . "assets/uploads/team/";
-                        if (!file_exists($image_upload_folder)) {
-                            mkdir($image_upload_folder, DIR_WRITE_MODE, true);
-                        }
-                        $new_file_name="team".date("Ymdhms");
-                        $this->upload_config = array(
-                                'upload_path'   => $image_upload_folder,
-                                'file_name' => $new_file_name,
-                                'allowed_types' =>'jpg|jpeg|png',
-                                'max_size'      => 25000
-                        );
-                        $this->upload->initialize($this->upload_config);
-                        if (!$this->upload->do_upload($img1)) {
-                            $upload_error = $this->upload->display_errors();
-                            // echo json_encode($upload_error);
+                if (empty($service) && empty($services)) {
+                    $this->session->set_flashdata('emessage', 'Select services to proceed');
+                    redirect($_SERVER['HTTP_REFERER']);
+                }
 
-                            $this->session->set_flashdata('emessage', $upload_error);
-                            redirect($_SERVER['HTTP_REFERER']);
-                        } else {
-                            $file_info = $this->upload->data();
+                if ($service==999) {
+                    $ser='["999"]';
+                } else {
+                    $ser=json_encode($services);
+                }
 
-                            $videoNAmePath = "assets/uploads/team/".$new_file_name.$file_info['file_ext'];
-                            $file_info['new_name']=$videoNAmePath;
-                            // $this->step6_model->updateappIconImage($imageNAmePath,$appInfoId);
-                            $nnnn=$file_info['file_name'];
-                            // echo json_encode($file_info);
-                        }
+                // $addedby=1;
+                $pass=md5($password);
+
+
+                $typ=base64_decode($t);
+                if ($typ==1) {
+                    $this->db->select('*');
+                    $this->db->from('tbl_team');
+                    $this->db->where('email', $email);
+                    $existing = $this->db->get()->row();
+                    if (!empty($existing)) {
+                        $this->session->set_flashdata('emessage', 'Team already exists with this email');
+                        redirect($_SERVER['HTTP_REFERER']);
+
                     }
-                    $ip = $this->input->ip_address();
-                    date_default_timezone_set("Asia/Calcutta");
-                    $cur_date=date("Y-m-d H:i:s");
-
-                    $addedby=$this->session->userdata('admin_id');
-
-                    // $addedby=1;
-                    $pass=md5($password);
-
-                    if (!empty($nnnn)) {
-                        $nnn=$nnnn;
-                    } else {
-                        $nnn="";
-                    }
-
-
                     $data_insert = array('name'=>$name,
-                                                    'phone'=>$phone,
-                                                    'address'=>$address,
-                                                    'email'=>$email,
-                                                    'password'=>$pass,
-                                                    'power'=>$position,
-                                                    'services'=>$ser,
-                                                    'image'=>$nnn,
-                                                    'ip' =>$ip,
-                                                    'added_by' =>$addedby,
-                                                    'is_active' =>1,
-                                                    'date'=>$cur_date
+                                                'phone'=>$phone,
+                                                'address'=>$address,
+                                                'email'=>$email,
+                                                'password'=>$pass,
+                                                'power'=>$position,
+                                                'services'=>$ser,
+                                                'image'=>$nnnn,
+                                                'ip' =>$ip,
+                                                'added_by' =>$addedby,
+                                                'is_active' =>1,
+                                                'date'=>$cur_date
 
-                                                    );
-
-
-
-
+                                                );
+                                                if (!empty($password)) {
+                                                    $pass= $pass;
+                                                } else {
+                                                    $pass = $teamda->password;
+                                                }
 
                     $last_id=$this->base_model->insert_table("tbl_team", $data_insert, 1) ;
 
 
                     if ($last_id!=0) {
-                        redirect("dcadmin/system/view_team", "refresh");
+                        $this->session->set_flashdata('smessage', 'Team inserted successfully');
+
+                        redirect("dcadmin/System/view_team", "refresh");
                     } else {
                         $this->session->set_flashdata('emessage', 'Error Occured in data insert, Please try again');
                         redirect($_SERVER['HTTP_REFERER']);
                     }
-                } // VALIDATION PART ENDS
-                else {
-                    $this->session->set_flashdata('emessage', validation_errors());
-                    redirect($_SERVER['HTTP_REFERER']);
                 }
-            } // POST DATA ENDS
+                  if ($typ==2) {
+                    $iwe=base64_decode($idw);
+                    $this->db->select('*');
+                    $this->db->from('tbl_team');
+                    $this->db->where('id', $iwe);
+                    $teamda = $this->db->get()->row();
+
+
+
+                    if (!empty($nnnn)) {
+                    $data_insert = array('name'=>$name,
+                                                'phone'=>$phone,
+                                                'address'=>$address,
+                                                'email'=>$email,
+                                                'password'=>$pass,
+                                                'power'=>$position,
+                                                'services'=>$ser,
+                                                'image'=>$nnnn,
+                                                'ip' =>$ip,
+                                                'added_by' =>$addedby,
+                                                'is_active' =>1,
+                                                'date'=>$cur_date
+                                                );
+                    $this->db->where('id', $iwe);
+                    $last_id=$this->db->update('tbl_team', $data_insert);
+                  }else{
+                    $data_insert = array('name'=>$name,
+                                                'phone'=>$phone,
+                                                'address'=>$address,
+                                                'email'=>$email,
+                                                'password'=>$pass,
+                                                'power'=>$position,
+                                                'services'=>$ser,
+                                                'ip' =>$ip,
+                                                'added_by' =>$addedby,
+                                                'is_active' =>1,
+                                                'date'=>$cur_date
+                                                );
+                    $this->db->where('id', $iwe);
+                    $last_id=$this->db->update('tbl_team', $data_insert);
+                  }
+
+                    if ($last_id!=0) {
+                        $this->session->set_flashdata('smessage', 'Team updated successfully');
+                        redirect("dcadmin/System/view_team", "refresh");
+                    } else {
+                        $this->session->set_flashdata('emessage', 'Error Occured in data insert, Please try again');
+                        redirect($_SERVER['HTTP_REFERER']);
+                    }
+                }
+            } // VALIDATION PART ENDS
             else {
-                $this->session->set_flashdata('emessage', 'No data found, Please insert some data');
+                $this->session->set_flashdata('emessage', validation_errors());
                 redirect($_SERVER['HTTP_REFERER']);
             }
-        } // LOGIN CHECK ENDS HERE
-
+        } // POST DATA ENDS
         else {
-            redirect("login/admin_login", "refresh");
+            $this->session->set_flashdata('emessage', 'No data found, Please insert some data');
+            redirect($_SERVER['HTTP_REFERER']);
         }
-    }
+    } // LOGIN CHECK ENDS HERE
 
+    else {
+        redirect("login/admin_login", "refresh");
+    }
+}
 
     public function delete_team($idd)
     {
@@ -413,6 +471,33 @@ class System extends CI_finecontrol
     }
 
 
+        public function update_team($idd)
+        {
+            if (!empty($this->session->userdata('admin_data'))) {
+                $data['user_name']=$this->load->get_var('user_name');
+
+                // echo SITE_NAME;
+                // echo $this->session->userdata('image');
+                // echo $this->session->userdata('position');
+                // exit;
+                $id=base64_decode($idd);
+                $data['id']=$idd;
+                $this->db->select('*');
+                $this->db->from('tbl_admin_sidebar');
+                // $this->db->where('student_shift',$cvf);
+                $data['side']= $this->db->get();
+                $this->db->select('*');
+                $this->db->from('tbl_team');
+                $this->db->where('id', $id);
+                $data['team_data']= $this->db->get()->row();
+
+
+                $this->load->view('admin/common/header_view', $data);
+                $this->load->view('admin/team/update_team');
+                $this->load->view('admin/common/footer_view');
+            } else {
+                redirect("login/admin_login", "refresh");
+            }
 
     // 		function blog(){
     //
@@ -755,4 +840,5 @@ class System extends CI_finecontrol
     //
     //
     // }
+}
 }
