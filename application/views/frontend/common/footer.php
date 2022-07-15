@@ -97,6 +97,27 @@
     </div>
 
  <script>
+    $( document ).ready(function() {
+$("#user_btn").click(function(event){
+  if($( "#Demo" ).hasClass( "w3-show" )){
+    $('#Demo').removeClass( "w3-show" );
+  }else{
+    $("#Demo").addClass( "w3-show" );
+  }
+});
+var ignoreClickOnMeElement = document.getElementById('user_btn');
+document.addEventListener('click', function(event) {
+    var isClickInsideElement = ignoreClickOnMeElement.contains(event.target);
+    if (!isClickInsideElement) {
+      $('#Demo').removeClass( "w3-show" );
+    }
+  });
+  });
+    
+      setTimeout(function () { 
+         $(".alert").fadeOut();
+      }, 2000);             
+    
    function isNumberKey(evt){
        var charCode = (evt.which) ? evt.which : evt.keyCode
        if (charCode > 31 && (charCode < 48 || charCode > 57))

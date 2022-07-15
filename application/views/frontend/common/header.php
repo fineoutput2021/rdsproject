@@ -226,28 +226,7 @@
     </div>
   </div>
   <?}?>
-  <script>
-
-
-
-$( document ).ready(function() {
-$("#user_btn").click(function(event){
-  if($( "#Demo" ).hasClass( "w3-show" )){
-    $('#Demo').removeClass( "w3-show" );
-  }else{
-    $("#Demo").addClass( "w3-show" );
-  }
-});
-var ignoreClickOnMeElement = document.getElementById('user_btn');
-document.addEventListener('click', function(event) {
-    var isClickInsideElement = ignoreClickOnMeElement.contains(event.target);
-    if (!isClickInsideElement) {
-      $('#Demo').removeClass( "w3-show" );
-    }
-  });
-  });
-</script>
-                    
+          
                   </div>
                 </div>
                 </div>
@@ -400,3 +379,5 @@ document.addEventListener('click', function(event) {
       <strong><? echo $this->session->flashdata('emessage'); ?></strong>
     </div>
     <? } ?>
+
+    
