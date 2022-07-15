@@ -10,6 +10,7 @@ class Home extends CI_Controller
         parent::__construct();
         $this->load->model("admin/login_model");
         $this->load->model("admin/base_model");
+          $this->load->library('pagination');
     }
 
     //=================================== INDEX  ========================================
@@ -167,14 +168,172 @@ class Home extends CI_Controller
     }
 
     //==================================== MEMBERS ==============================
-    public function members()
+    public function members($t="")
     {
-        $this->db->select('*');
-        $this->db->from('tbl_member');
-        $this->db->where('is_active', 1);
-        $this->db->where('exe', 2);
-        $this->db->order_by('id', 'desc');
-        $data['members_data']= $this->db->get();
+        // $this->db->select('*');
+        // $this->db->from('tbl_member');
+        // $this->db->where('is_active', 1);
+        // $this->db->where('exe', 2);
+        // $this->db->order_by('id', 'desc');
+        // $data['members_data']= $this->db->get();
+
+        if ($t == 1) {
+          $this->db->select('*');
+          $this->db->from('tbl_member');
+          $this->db->where('is_active', 1);
+          $this->db->where('exe', 2);
+          $this->db->order_by('id', 'desc');
+            $count = $this->db->count_all_results();
+            // echo $count;
+            // exit;
+            $config['base_url'] = base_url().'Home/members/';
+            // echo $count;
+            // exit;
+            $config['total_rows'] = $count;
+
+            $config['per_page'] = 2;
+
+            $config['uri_segment'] = 5;
+
+            $config['full_tag_open'] = '<ul class="b-diw" style="list-style-type:none; display: flex; margin-bottom: 48px;">';
+
+            $config['full_tag_close'] = '</ul>';
+
+            $config['first_link'] = 'First';
+
+            $config['last_link'] = 'Last';
+
+            $config['first_tag_open'] = '<li  class="btn bro-3" style="font-size:20px;">';
+
+            $config['first_tag_close'] = '</li>';
+
+            $config['prev_link'] = '&laquo';
+
+            $config['prev_tag_open'] = '<li class="prev btn bro-3">';
+
+            $config['prev_tag_close'] = '</li>';
+
+            $config['next_link'] = '&raquo';
+
+            $config['next_tag_open'] = '<li  class="btn bro-3">';
+
+            $config['next_tag_close'] = '</li>';
+
+            $config['last_tag_open'] = '<li  class="btn bro-2">';
+
+            $config['last_tag_close'] = '</li>';
+
+            $config['cur_tag_open'] = '<li class="active btn bro-2" style="background-color:#2e3e4e; color:white; text-align:center;" >';
+
+            $config['cur_tag_close'] = '</a></li >';
+
+            $config['num_tag_open'] = '<li class="btn bro-3">';
+
+            $config['num_tag_close'] = '</li>';
+
+            $this->pagination->initialize($config);
+
+            // $page = ($this->uri->segment(5)) ? $this->uri->segment(5) : 0;
+            // echo $page;
+            // exit;
+
+            $this->db->select('*');
+            $this->db->from('tbl_member');
+            $this->db->where('is_active', 1);
+            $this->db->where('exe', 2);
+            $this->db->order_by('id', 'desc');
+            $this->db->limit($config["per_page"], 0);
+            $members = $this->db->get();
+
+
+
+
+            $data['links'] = $this->pagination->create_links();
+            // print_r($data['links']);
+            // exit;
+
+            $data['member_data'] = $members;
+        } else {
+          $this->db->select('*');
+          $this->db->from('tbl_member');
+          $this->db->where('is_active', 1);
+          $this->db->where('exe', 2);
+          $this->db->order_by('id', 'desc');
+            $count = $this->db->count_all_results();
+            // echo count;
+              $config['base_url'] = base_url().'Home/members/';
+            // echo $count;
+            // exit;
+            $config['total_rows'] = $count;
+
+            $config['per_page'] = 2;
+
+            $config['uri_segment'] = 5;
+
+            $config['full_tag_open'] = '<ul class="b-diw" style="list-style-type:none; display: flex; margin-bottom: 48px;">';
+
+            $config['full_tag_close'] = '</ul>';
+
+            $config['first_link'] = 'First';
+
+            $config['last_link'] = 'Last';
+
+            $config['first_tag_open'] = '<li class="btn bro-4">';
+
+            $config['first_tag_close'] = '</li>';
+
+            $config['prev_link'] = '&laquo';
+
+            $config['prev_tag_open'] = '<li class="btn bro-4" class="prev">';
+
+            $config['prev_tag_close'] = '</li>';
+
+            $config['next_link'] = '&raquo';
+
+            $config['next_tag_open'] = '<li>';
+
+            $config['next_tag_close'] = '</li>';
+
+            $config['last_tag_open'] = '<li>';
+
+            $config['last_tag_close'] = '</li>';
+
+            $config['cur_tag_open'] = '<li class="active btn bro-2"><a href="'.base_url().'/Home/members">';
+
+            $config['cur_tag_close'] = '</a></li >';
+
+            $config['num_tag_open'] = '<li class="btn bro-3">';
+
+            $config['num_tag_close'] = '</li>';
+
+
+
+            $this->pagination->initialize($config);
+            // $page = ($this->uri->segment(5)) ? $this->uri->segment(5) : 0;
+            // echo $page;
+            // exit;
+            if (!empty($t)) {
+                $page = $t;
+            } else {
+                $page = 0;
+            }
+
+            $this->db->select('*');
+          $this->db->from('tbl_member');
+          $this->db->where('is_active', 1);
+          $this->db->where('exe', 2);
+          $this->db->order_by('id', 'desc');
+            $this->db->limit($config["per_page"], $page);
+            $members = $this->db->get();
+
+
+            $data['links'] = $this->pagination->create_links();
+            // print_r($data['links']);
+            // exit;
+
+            $data['members_data'] = $members;
+        }
+
 
         $this->load->view('frontend/common/header', $data);
         $this->load->view('frontend/members');
@@ -303,7 +462,7 @@ class Home extends CI_Controller
             $this->db->from('tbl_member');
             $this->db->where('email',$email);
             $member_data= $this->db->get()->row();
-            
+
 
             if(!empty($member_data)){
               if($member_data->is_active==1){
@@ -431,7 +590,7 @@ public function view_all_dues($idd){
 }
 //====================== Search Member  =======================================
 public function search_member(){
-    
+
     $string = $_GET['string'];
     $data['string'] = $string;
     $this->db->select('*');

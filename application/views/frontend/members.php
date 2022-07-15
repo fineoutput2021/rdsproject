@@ -60,7 +60,11 @@
                 </div>
             </div>
         </div>
-
+        <div class="text-center">
+          <div class="b-diw" style="list-style-type:none;display: flex;justify-content: center;">
+          <?php echo $links; ?>
+          </div>
+        </div>
     </div>
 </section>
 <!--End cart area-->
