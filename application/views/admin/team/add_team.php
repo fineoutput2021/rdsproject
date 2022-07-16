@@ -29,7 +29,7 @@
                       </div>
                     <? } ?>
                                 <div class="col-lg-10">
-                                   <form action="<?php echo base_url() ?>dcadmin/system/add_team_data" method="POST" id="slide_frm" enctype="multipart/form-data">
+                                   <form action="<?php echo base_url() ?>dcadmin/System/add_team_data/<? echo base64_encode(1); ?>" method="POST" id="slide_frm" enctype="multipart/form-data">
                                 <div class="table-responsive">
                                     <table class="table table-hover">
 
