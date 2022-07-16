@@ -7,17 +7,17 @@
     {
         padding: 5px 20px;
         color: white;
-    } 
+    }
     .b-diw > ul>li.active
     {
         background-color: #f36727;
         border-radius: 0px;
     }
-    .b-diw > ul>li>a:hover 
+    .b-diw > ul>li>a:hover
     {
         color: white;
     }
- 
+
 
 </style>
 
@@ -54,7 +54,7 @@
                             </tr>
                         </thead>
                         <tbody>
-<?php $i=1; foreach($members_data->result() as $member) { ?>
+                          <?php  foreach($members_data->result() as $member) { ?>
                             <tr>
                                 <td class="text-center">
                                   <?=$i?>

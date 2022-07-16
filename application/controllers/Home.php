@@ -10,7 +10,7 @@ class Home extends CI_Controller
         parent::__construct();
         $this->load->model("admin/login_model");
         $this->load->model("admin/base_model");
-          $this->load->library('pagination');
+        $this->load->library('pagination');
     }
 
     //=================================== INDEX  ========================================
@@ -170,169 +170,69 @@ class Home extends CI_Controller
     //==================================== MEMBERS ==============================
     public function members($t="")
     {
-        // $this->db->select('*');
-        // $this->db->from('tbl_member');
-        // $this->db->where('is_active', 1);
-        // $this->db->where('exe', 2);
-        // $this->db->order_by('id', 'desc');
-        // $data['members_data']= $this->db->get();
+        $this->db->select('*');
+        $this->db->from('tbl_member');
+        $this->db->where('is_active', 1);
+        $this->db->where('exe', 2);
+        $this->db->order_by('id', 'desc');
+        $count = $this->db->count_all_results();
+        // echo count;
+        $config['base_url'] = base_url().'Home/members/';
+        // echo $count;
+        // exit;
+        $per_page = 15;
+        $config['total_rows'] = $count;
+        $config['per_page'] = $per_page;
+        $config['num_links'] = 5;
 
-        if ($t == 1) {
-          $this->db->select('*');
-          $this->db->from('tbl_member');
-          $this->db->where('is_active', 1);
-          $this->db->where('exe', 2);
-          $this->db->order_by('id', 'desc');
-            $count = $this->db->count_all_results();
-            // echo $count;
-            // exit;
-            $config['base_url'] = base_url().'Home/members/';
-            // echo $count;
-            // exit;
-            $config['total_rows'] = $count;
+        $config['full_tag_open'] = '<ul class="pagination">';
 
-            $config['per_page'] = 2;
+        $config['full_tag_close'] = '</ul>';
 
-            $config['uri_segment'] = 5;
+        $config['use_page_numbers'] = true;
 
-            $config['full_tag_open'] = '<ul class="b-diw" style="list-style-type:none; display: flex; margin-bottom: 48px;">';
+        $config['next_link'] = 'First';
+        $config['first_tag_open'] = '<li class="first page">';
+        $config['first_tag_close'] = '</li>';
 
-            $config['full_tag_close'] = '</ul>';
+        $config['last_link'] = 'Last';
+        $config['last_tag_open'] = '<li class="last page">';
+        $config['last_tag_close'] = '</li>';
 
-            $config['first_link'] = 'First';
+        $config['next_link'] = 'Next';
+        $config['next_tag_open'] = '<li class="next page">';
+        $config['next_tag_close'] = '</li>';
 
-            $config['last_link'] = 'Last';
+        $config['prev_link'] = ' Previous';
+        $config['prev_tag_open'] = '<li class="prev page">';
+        $config['prev_tag_close'] = '</li>';
 
-            $config['first_tag_open'] = '<li  class="btn bro-3" style="font-size:20px;">';
+        $config['cur_tag_open'] = '<li class="active"><a href="">';
+        $config['cur_tag_close'] = '</a></li>';
 
-            $config['first_tag_close'] = '</li>';
-
-            $config['prev_link'] = '&laquo';
-
-            $config['prev_tag_open'] = '<li class="prev btn bro-3">';
-
-            $config['prev_tag_close'] = '</li>';
-
-            $config['next_link'] = '&raquo';
-
-            $config['next_tag_open'] = '<li  class="btn bro-3">';
-
-            $config['next_tag_close'] = '</li>';
-
-            $config['last_tag_open'] = '<li  class="btn bro-2">';
-
-            $config['last_tag_close'] = '</li>';
-
-            $config['cur_tag_open'] = '<li class="active btn bro-2" style="background-color:#2e3e4e; color:white; text-align:center;" >';
-
-            $config['cur_tag_close'] = '</a></li >';
-
-            $config['num_tag_open'] = '<li class="btn bro-3">';
-
-            $config['num_tag_close'] = '</li>';
-
-            $this->pagination->initialize($config);
-
-            // $page = ($this->uri->segment(5)) ? $this->uri->segment(5) : 0;
-            // echo $page;
-            // exit;
-
-            $this->db->select('*');
-            $this->db->from('tbl_member');
-            $this->db->where('is_active', 1);
-            $this->db->where('exe', 2);
-            $this->db->order_by('id', 'desc');
-            $this->db->limit($config["per_page"], 0);
-            $members = $this->db->get();
+        $config['num_tag_open'] = '<li class="page">';
+        $config['num_tag_close'] = '</li>';
 
 
-
-
-            $data['links'] = $this->pagination->create_links();
-            // print_r($data['links']);
-            // exit;
-
-            $data['member_data'] = $members;
+        $this->pagination->initialize($config);
+        if (!empty($t)) {
+            $page = $t;
+              $i = $per_page * ($page - 1) + 1;
         } else {
-          $this->db->select('*');
-          $this->db->from('tbl_member');
-          $this->db->where('is_active', 1);
-          $this->db->where('exe', 2);
-          $this->db->order_by('id', 'desc');
-            $count = $this->db->count_all_results();
-            // echo count;
-              $config['base_url'] = base_url().'Home/members/';
-            // echo $count;
-            // exit;
-            $config['total_rows'] = $count;
-
-            $config['per_page'] = 2;
-
-            $config['uri_segment'] = 5;
-
-            $config['full_tag_open'] = '<ul class="b-diw" style="list-style-type:none; display: flex; margin-bottom: 48px;">';
-
-            $config['full_tag_close'] = '</ul>';
-
-            $config['first_link'] = 'First';
-
-            $config['last_link'] = 'Last';
-
-            $config['first_tag_open'] = '<li class="btn bro-4">';
-
-            $config['first_tag_close'] = '</li>';
-
-            $config['prev_link'] = '&laquo';
-
-            $config['prev_tag_open'] = '<li class="btn bro-4" class="prev">';
-
-            $config['prev_tag_close'] = '</li>';
-
-            $config['next_link'] = '&raquo';
-
-            $config['next_tag_open'] = '<li>';
-
-            $config['next_tag_close'] = '</li>';
-
-            $config['last_tag_open'] = '<li>';
-
-            $config['last_tag_close'] = '</li>';
-
-            $config['cur_tag_open'] = '<li class="active btn bro-2"><a href="'.base_url().'/Home/members">';
-
-            $config['cur_tag_close'] = '</a></li >';
-
-            $config['num_tag_open'] = '<li class="btn bro-3">';
-
-            $config['num_tag_close'] = '</li>';
-
-
-
-            $this->pagination->initialize($config);
-            // $page = ($this->uri->segment(5)) ? $this->uri->segment(5) : 0;
-            // echo $page;
-            // exit;
-            if (!empty($t)) {
-                $page = $t;
-            } else {
-                $page = 0;
-            }
-
-            $this->db->select('*');
-          $this->db->from('tbl_member');
-          $this->db->where('is_active', 1);
-          $this->db->where('exe', 2);
-          $this->db->order_by('id', 'desc');
-            $this->db->limit($config["per_page"], $page);
-            $members = $this->db->get();
-
-
-            $data['links'] = $this->pagination->create_links();
-            // print_r($data['links']);
-            // exit;
-
-            $data['members_data'] = $members;
+            $page = 0;
+            $i=1;
         }
+        $this->db->select('*');
+        $this->db->from('tbl_member');
+        $this->db->where('is_active', 1);
+        $this->db->where('exe', 2);
+        $this->db->order_by('id', 'desc');
+        $this->db->limit($config["per_page"], $page);
+        $members = $this->db->get();
+        $data['links'] = $this->pagination->create_links();
+        $data['members_data'] = $members;
+        $data['i'] = $i;
+
 
 
         $this->load->view('frontend/common/header', $data);
@@ -441,168 +341,156 @@ class Home extends CI_Controller
 
     public function login()
     {
-      if(empty($this->session->userdata('member_data'))){
-
-          $this->load->helper(array('form', 'url'));
-        $this->load->library('form_validation');
-        $this->load->helper('security');
-        if($this->input->post())
-        {
-        $this->form_validation->set_rules('email', 'email', 'required|xss_clean|trim');
-        $this->form_validation->set_rules('password', 'password', 'required|xss_clean|trim');
+        if (empty($this->session->userdata('member_data'))) {
+            $this->load->helper(array('form', 'url'));
+            $this->load->library('form_validation');
+            $this->load->helper('security');
+            if ($this->input->post()) {
+                $this->form_validation->set_rules('email', 'email', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('password', 'password', 'required|xss_clean|trim');
 
 
-        	if($this->form_validation->run()== TRUE)
-        	{
+                if ($this->form_validation->run()== true) {
+                    $email=$this->input->post('email');
+                    $password=$this->input->post('password');
 
-            $email=$this->input->post('email');
-        			 $password=$this->input->post('password');
+                    $this->db->select('*');
+                    $this->db->from('tbl_member');
+                    $this->db->where('email', $email);
+                    $member_data= $this->db->get()->row();
 
+
+                    if (!empty($member_data)) {
+                        if ($member_data->is_active==1) {
+                            if ($member_data->password==md5($password)) {
+                                // echo "hi";die();
+                                $this->session->set_userdata('member_data', 1);
+                                $this->session->set_userdata('member_id', $member_data->id);
+                                $this->session->set_userdata('member_name', $member_data->name);
+
+                                $this->session->set_flashdata('smessage', 'Successfully Login');
+                                redirect($_SERVER['HTTP_REFERER']);
+                            } else {
+                                $this->session->set_flashdata('emessage', 'Wrong Password');
+                                redirect($_SERVER['HTTP_REFERER']);
+                            }
+                        } else {
+                            $this->session->set_flashdata('emessage', 'Member is blocked! Please contact to admin');
+                            redirect($_SERVER['HTTP_REFERER']);
+                        }
+                    } else {
+                        $this->session->set_flashdata('emessage', 'Member Not Found');
+                        redirect($_SERVER['HTTP_REFERER']);
+                    }
+                } else {
+                    $this->session->set_flashdata('emessage', validation_errors());
+                    redirect($_SERVER['HTTP_REFERER']);
+                }
+            } else {
+                $this->session->set_flashdata('emessage', 'Please insert some data, No data available');
+                redirect($_SERVER['HTTP_REFERER']);
+            }
+        } else {
+            redirect("/", "refresh");
+        }
+    }
+
+    //======================== MEMBER LOGOUT ============================
+    public function logout()
+    {
+        if (!empty($this->session->userdata('member_data'))) {
+            $this->session->unset_userdata('member_data');
+            $this->session->unset_userdata('member_id');
+            $this->session->unset_userdata('member_name');
+            $this->session->set_flashdata('smessage', 'Successfully Logout');
+            redirect($_SERVER['HTTP_REFERER']);
+        } else {
+            redirect("/", "refresh");
+        }
+    }
+
+    //====================== MY PROFILE =======================================
+    public function my_profile($idd)
+    {
+        if (!empty($this->session->userdata('member_data'))) {
+            $id=base64_decode($idd);
+            $data['id']=$idd;
             $this->db->select('*');
             $this->db->from('tbl_member');
-            $this->db->where('email',$email);
-            $member_data= $this->db->get()->row();
+            $this->db->where('id', $id);
+            $this->db->where('is_active', 1);
+            $data['member_data']= $this->db->get()->row();
 
-
-            if(!empty($member_data)){
-              if($member_data->is_active==1){
-                if($member_data->password==md5($password)){
-                    // echo "hi";die();
-                  $this->session->set_userdata('member_data',1);
-                  $this->session->set_userdata('member_id',$member_data->id);
-                  $this->session->set_userdata('member_name',$member_data->name);
-
-                  $this->session->set_flashdata('smessage', 'Successfully Login');
-                  redirect($_SERVER['HTTP_REFERER']);
-
-                }else{
-                  $this->session->set_flashdata('emessage','Wrong Password');
-                  redirect($_SERVER['HTTP_REFERER']);
-                }
-
-              }else{
-                $this->session->set_flashdata('emessage','Member is blocked! Please contact to admin');
-                redirect($_SERVER['HTTP_REFERER']);
-              }
-            }else{
-              $this->session->set_flashdata('emessage','Member Not Found');
-              redirect($_SERVER['HTTP_REFERER']);
+            $this->db->select('*');
+            $this->db->from('tbl_pending_dues');
+            $this->db->where('member_id', $id);
+            $this->db->where('is_active', 1);
+            $data['pending_data']= $this->db->get();
+            $total = 0;
+            foreach ($data['pending_data']->result() as $pending) {
+                $total = $total + $pending->amount;
             }
-
-        }else{
-
-        $this->session->set_flashdata('emessage',validation_errors());
-        redirect($_SERVER['HTTP_REFERER']);
-
+            $data['total_pending']=$total;
+            $this->load->view('frontend/common/header', $data);
+            $this->load->view('frontend/my_profile');
+            $this->load->view('frontend/common/footer');
+        } else {
+            redirect("/", "refresh");
         }
-
-        }
-        else{
-
-        $this->session->set_flashdata('emessage','Please insert some data, No data available');
-        redirect($_SERVER['HTTP_REFERER']);
-
-        }
-      }else{
-      redirect("/","refresh");
-      }
-
     }
+    //====================== View Paid Amount =======================================
+    public function view_all_paid($idd)
+    {
+        if (!empty($this->session->userdata('member_data'))) {
+            $id=base64_decode($idd);
+            $data['id']=$idd;
+            $this->db->select('*');
+            $this->db->from('tbl_pending_dues');
+            $this->db->where('member_id', $id);
+            $this->db->where('is_active', 0);
+            $data['paid_data']= $this->db->get();
 
-//======================== MEMBER LOGOUT ============================
-public function logout(){
-if(!empty($this->session->userdata('member_data'))){
-  $this->session->unset_userdata('member_data');
-  $this->session->unset_userdata('member_id');
-  $this->session->unset_userdata('member_name');
-  $this->session->set_flashdata('smessage', 'Successfully Logout');
-  redirect($_SERVER['HTTP_REFERER']);
-
-}else{
-redirect("/","refresh");
-}
-}
-
-//====================== MY PROFILE =======================================
-public function my_profile($idd){
-  if(!empty($this->session->userdata('member_data'))){
-     $id=base64_decode($idd);
-    $data['id']=$idd;
-    $this->db->select('*');
-    $this->db->from('tbl_member');
-    $this->db->where('id',$id);
-    $this->db->where('is_active',1);
-    $data['member_data']= $this->db->get()->row();
-
-    $this->db->select('*');
-    $this->db->from('tbl_pending_dues');
-    $this->db->where('member_id',$id);
-    $this->db->where('is_active',1);
-    $data['pending_data']= $this->db->get();
-    $total = 0;
-    foreach($data['pending_data']->result() as $pending) {
-      $total = $total + $pending->amount;
+            $this->load->view('frontend/common/header', $data);
+            $this->load->view('frontend/all_paid');
+            $this->load->view('frontend/common/footer');
+        } else {
+            redirect("/", "refresh");
+        }
     }
-    $data['total_pending']=$total;
-    $this->load->view('frontend/common/header', $data);
-    $this->load->view('frontend/my_profile');
-    $this->load->view('frontend/common/footer');
-  }else{
-  redirect("/","refresh");
-  }
-}
-//====================== View Paid Amount =======================================
-public function view_all_paid($idd){
-  if(!empty($this->session->userdata('member_data'))){
-     $id=base64_decode($idd);
-    $data['id']=$idd;
-    $this->db->select('*');
-    $this->db->from('tbl_pending_dues');
-    $this->db->where('member_id',$id);
-    $this->db->where('is_active',0);
-    $data['paid_data']= $this->db->get();
+    //====================== View dues Amount =======================================
+    public function view_all_dues($idd)
+    {
+        if (!empty($this->session->userdata('member_data'))) {
+            $id=base64_decode($idd);
+            $data['id']=$idd;
+            // echo $id;die();
+            $this->db->select('*');
+            $this->db->from('tbl_pending_dues');
+            $this->db->where('member_id', $id);
+            $this->db->where('is_active', 1);
+            $data['pending_data']= $this->db->get();
 
-    $this->load->view('frontend/common/header', $data);
-    $this->load->view('frontend/all_paid');
-    $this->load->view('frontend/common/footer');
-  }else{
-  redirect("/","refresh");
-  }
-}
-//====================== View dues Amount =======================================
-public function view_all_dues($idd){
-  if(!empty($this->session->userdata('member_data'))){
-     $id=base64_decode($idd);
-    $data['id']=$idd;
-    // echo $id;die();
-    $this->db->select('*');
-    $this->db->from('tbl_pending_dues');
-    $this->db->where('member_id',$id);
-    $this->db->where('is_active',1);
-    $data['pending_data']= $this->db->get();
+            $this->load->view('frontend/common/header', $data);
+            $this->load->view('frontend/all_due');
+            $this->load->view('frontend/common/footer');
+        } else {
+            redirect("/", "refresh");
+        }
+    }
+    //====================== Search Member  =======================================
+    public function search_member()
+    {
+        $string = $_GET['string'];
+        $data['string'] = $string;
+        $this->db->select('*');
+        $this->db->from('tbl_member');
+        $this->db->like('name', $string);
+        $data['seach_data']= $this->db->get();
 
-    $this->load->view('frontend/common/header', $data);
-    $this->load->view('frontend/all_due');
-    $this->load->view('frontend/common/footer');
-  }else{
-  redirect("/","refresh");
-  }
-}
-//====================== Search Member  =======================================
-public function search_member(){
-
-    $string = $_GET['string'];
-    $data['string'] = $string;
-    $this->db->select('*');
-    $this->db->from('tbl_member');
-    $this->db->like('name',$string);
-    $data['seach_data']= $this->db->get();
-
-    $this->load->view('frontend/common/header', $data);
-    $this->load->view('frontend/search_member');
-    $this->load->view('frontend/common/footer');
-
-}
+        $this->load->view('frontend/common/header', $data);
+        $this->load->view('frontend/search_member');
+        $this->load->view('frontend/common/footer');
+    }
     //====================================================== 404 ===========================
     public function error404()
     {
