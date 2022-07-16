@@ -94,7 +94,7 @@
                 <td>
                   <?=$post->date_from?>
                 </td>
-                <td><?=$post->date_to?>
+                <td><?if(!empty($post->date_to)){echo $post->date_to;}else{echo 'Present';}?>
                 </td>
               </tr>
               <?php $i++; } ?>
