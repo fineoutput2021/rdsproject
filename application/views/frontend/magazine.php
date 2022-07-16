@@ -29,8 +29,8 @@
           <?}else{?>
           <img src="<?=base_url()?>assets/frontend/images/user.png" alt="Member Image" class="img-fluid">
           <?}?>
-          <h6 class="mt-2 text-center"><a href="<?=base_url().$magazine->file?>" target="_blank" rel="noreferrer" style="color: black;"><?=$magazine->name?></a></h6>
-          <p style="color:black;text-align:center;"><?=$magazine->description?></p>
+          <h5 class="mt-2 text-center"><a href="<?=base_url().$magazine->file?>" target="_blank" rel="noreferrer" style="color: black;"><b><?=$magazine->name?></b></a></h5>
+          <p style="color:black;text-align:justify; padding:2px"><?=$magazine->description?></p>
         </div>
       </div>
       <?php $i++; }

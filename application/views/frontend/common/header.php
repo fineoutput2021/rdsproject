@@ -39,14 +39,14 @@
     z-index: 100;
     margin-top: 0;
   }
- .btn-two:hover .a1 
+ .btn-two:hover .a1
  {
   display:block !important;
- } 
-  
+ }
+
   @media (max-width: 991px)
   {
-    .hide 
+    .hide
     {
       display: none !important;
     }
@@ -70,7 +70,7 @@
 
   @media (max-width: 506px)
   {
-    .btn-two 
+    .btn-two
     {
       padding:0px !important;
     }
@@ -78,7 +78,7 @@
 
   @media (min-width: 386px) and (max-width:506px)
   {
-    .btn-two 
+    .btn-two
     {
       padding:22px 0px !important;
     }
@@ -94,30 +94,30 @@
 
   @media (min-width: 411px) and (max-width:550px)
   {
-    .scc 
+    .scc
     {
       width:89% !important;
     }
   }
 
-  
+
   @media (max-width: 400px)
   {
-    .scc 
+    .scc
     {
       width:89% !important;
     }
   }
   @media (max-width: 767px)
   {
-    .kgf 
+    .kgf
     {
       margin-top:-55px !important;
     }
   }
   @media (max-width: 414px)
   {
-    .kgf 
+    .kgf
     {
       margin-top:-45px !important;
     }
@@ -139,10 +139,10 @@
 }
 
 .w3-border {
-  
+
     border-bottom: 3px solid #f36727 !important;
     border-radius: 5px;
-  
+
 }
 
 .w3-dropdown-content {
@@ -222,11 +222,11 @@
     <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border" style="min-width:100px; background-color:none;">
       <a href="<?=base_url()?>Home/my_profile/<?=base64_encode($this->session->userdata('member_id'))?>" class="w3-bar-item w3-button">My Profile</a>
       <a href="<?=base_url()?>Home/logout" class="w3-bar-item w3-button">Log Out</a>
-   
+
     </div>
   </div>
   <?}?>
-          
+
                   </div>
                 </div>
                 </div>
@@ -237,19 +237,19 @@
                                         <div class="form-group">
                                         <button type="submit" style="background:#ed6f36;margin-right:0px;"><i class="fa fa-search" style="color:white;"></i></button>
                                             <input class="scc" type="search" placeholder="Search Member" name="string" value="" style="width:94%;position:relative;">
-                                            
+
                                         </div>
                                     </form>
                                 </li>
                     <li><a href="<?=base_url()?>">Home</a></li>
                     <li><a href="<?=base_url()?>Home/executive_council">EXECUTIVE COUNCIL </a></li>
                     <li class=""><a href="<?=base_url()?>Home/members">MEMBERS </a>
-                    
+
                       <!-- <ul>
                         <li><a href="<?=base_url()?>Home/members">List of Officers</a></li>
                         <li><a href="<?=base_url()?>Home/search_members">Search Member</a></li>
                       </ul> -->
-                    </li> 
+                    </li>
                     <li class="dropdown"><a href="#">QUICK LINKS </a>
                       <ul>
                         <li><a href="<?=base_url()?>Home/letters_memorandum">Letters & Memorandum</a></li>
@@ -287,7 +287,7 @@
     width: 150px;">
                       <li><a href="<?=base_url()?>Home/my_profile/<?=base64_encode($this->session->userdata('member_id'))?>">My Profile</a></li>
                         <li><a href="<?=base_url()?>Home/logout">Log Out</a></li>
-                      </ul></li>  
+                      </ul></li>
               </div>
               <?}?>
                      </li>
@@ -352,9 +352,9 @@
           <div class="modal-body ">
             <div class="contact-info-form1">
               <H4 class="text-center pt-2"> RDS ASSOCIATION</H4>
-              <form id="contact-info-form" name="contact_info_form" class="default-form" action="#" method="post">
+              <form id="contact-info-form" name="contact_info_form" class="default-form" action="<?=base_url()?>Home/form_submit_forgotpassword" method="post" enctype="multipart/form-data">
                 <div class="input-box1 text-center mt-5">
-                  <input type="text" name="form_name" value="" placeholder="Enter Email" required class="form-control">
+                  <input type="text" name="reset_email" value="" placeholder="Enter Email" required class="form-control">
                 </div>
                 <div class="input-box1 text-center mt-3 mb-5">
                   <button class="btn-one" type="submit">Submit</button>
@@ -379,5 +379,3 @@
       <strong><? echo $this->session->flashdata('emessage'); ?></strong>
     </div>
     <? } ?>
-
-    

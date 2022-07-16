@@ -31,7 +31,7 @@
                                 <th >SR. No.</th>
                                 <th>Year</th>
                                 <th>Amount</th>
-                                <th>Action</th>
+                                <!-- <th>Action</th> -->
                             </tr>
                         </thead>
                         <tbody class="text-center">
@@ -46,9 +46,9 @@
                                 <td>
                                     ₹<?=$data->amount?>
                                 </td>
-                                <td>
+                                <!-- <td>
                                   <a href="#"><input type="button" value="Pay Now" class="paybutton"></a>
-                                </td>
+                                </td> -->
                             </tr>
                             <?php $i++; } ?>
                         </tbody>

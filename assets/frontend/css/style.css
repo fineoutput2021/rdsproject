@@ -2882,7 +2882,7 @@ select:focus {
     display: block;
     background: #39345a;
     border-radius: 5px;
-    padding: 35px 40px 17px;
+    padding: 35px 30px 17px;
 }
 .contact-info-box ul {
     position: relative;
