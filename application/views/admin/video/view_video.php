@@ -12,7 +12,7 @@ Video
 <section class="content">
 <div class="row">
 <div class="col-lg-12">
-<a class="btn btn-info cticket" href="<?php echo base_url() ?>dcadmin/Video/add_video" role="button" style="margin-bottom:12px;"> Add video</a>
+<a class="btn btn custom_btn" href="<?php echo base_url() ?>dcadmin/Video/add_video" role="button" style="margin-bottom:12px;"> Add video</a>
           <div class="panel panel-default">
               <div class="panel-heading">
                   <h3 class="panel-title"><i class="fa fa-money fa-fw"></i>View video</h3>
