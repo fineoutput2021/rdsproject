@@ -219,8 +219,11 @@ class Home extends CI_Controller
         if (!empty($t)) {
             $page = $t;
             $i = $per_page * ($page - 1) + 1;
+            $start = ($page - 1) * $config['per_page'];
         } else {
             $page = 0;
+            $start = 0;
+
             $i=1;
         }
         $this->db->select('*');
@@ -228,7 +231,7 @@ class Home extends CI_Controller
         $this->db->where('is_active', 1);
         $this->db->where('exe', 2);
         $this->db->order_by('id', 'desc');
-        $this->db->limit($config["per_page"], $page);
+        $this->db->limit($config["per_page"], $start);
         $members = $this->db->get();
         $data['links'] = $this->pagination->create_links();
         $data['members_data'] = $members;
@@ -644,7 +647,7 @@ class Home extends CI_Controller
             $this->db->from('tbl_forgot_pass');
             $this->db->where('txn_id', $txn_id);
             $u2= $this->db->get()->row();
-            $ui=$u2->user_id;
+            $ui=$u2->member_id;
             $data['auth']=$txn_id;
             $this->load->helper(array( 'form', 'url' ));
             $this->load->library('form_validation');
