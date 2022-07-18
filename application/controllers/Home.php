@@ -307,7 +307,7 @@ class Home extends CI_Controller
         $this->db->select('*');
         $this->db->from('tbl_gallery');
         $this->db->where('is_active', 1);
-        // $this->db->order_by('id', 'desc');
+        $this->db->order_by('id', 'desc');
         $data['gallery_data']= $this->db->get();
         $this->load->view('frontend/common/header', $data);
         $this->load->view('frontend/gallery');
