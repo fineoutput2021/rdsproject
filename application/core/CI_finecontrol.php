@@ -56,7 +56,7 @@ class CI_finecontrol extends CI_Controller
 
             $global_data = array('user_name'=>$da->name,
                             'image'=>$da->image,
-                            'position'=>$da->power,
+                            'position'=>$postion,
                             'sidebar'=>$dam
                                     );
 
